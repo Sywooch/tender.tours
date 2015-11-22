@@ -26,14 +26,19 @@ class User extends ActiveRecord implements IdentityInterface
     public function behaviors()
     {
         return [
-            TimestampBehavior::className(),
+            'timestamp' => [
+                'class' => 'yii\behaviors\TimestampBehavior',
+                'attributes' => [
+                    ActiveRecord::EVENT_BEFORE_INSERT => ['CREATED_AT']
+                ],
+            ],
         ];
     }    
     
     public function rules()
     {
         return [
-            ['CREATED_AT', 'default', 'value' => date('Y-m-d H-i-s')],
+            //['CREATED_AT', 'default', 'value' => date('Y-m-d H-i-s')],
             ['STATUS', 'default', 'value' => self::STATUS_ACTIVE],
             ['STATUS', 'in', 'range' => [self::STATUS_ACTIVE, self::STATUS_DISABLED]],
             ['TYPE', 'in', 'range' => [self::TYPE_TOURIST, self::TYPE_AGENT]],
@@ -57,8 +62,8 @@ class User extends ActiveRecord implements IdentityInterface
     
     public function validatePassword($password)
     {
-        return md5($password) === $this->PASSWORD_HASH;
-        //return Yii::$app->security->validatePassword($password, $this->PASSWORD_HASH);
+        //return md5($password) === $this->PASSWORD_HASH;
+        return Yii::$app->security->validatePassword($password, $this->PASSWORD_HASH);
     }
     
     /*
@@ -68,10 +73,9 @@ class User extends ActiveRecord implements IdentityInterface
         //$this->PASSWORD_HASH = Yii::$app->security->generatePasswordHash($password);
     }
     */
-    public function setPassword()
+    public function setPassword($password)
     {
-        $password = ''; // сгенерировать пароль [A-Za-z0-9-_] 8 символов
-        $this->PASSWORD_HASH = md5($password);
+        $this->PASSWORD_HASH = Yii::$app->security->generatePasswordHash($password);
     }
     
     public static function findIdentityByAccessToken($token, $type = null)

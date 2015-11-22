@@ -8,7 +8,7 @@ use \yii\web\IdentityInterface;
 use \yii\behaviors\TimestampBehavior;
 
 
-class User extends ActiveRecord //implements IdentityInterface
+class UserInfo extends ActiveRecord //implements IdentityInterface
 {
     
     public static function tableName()
