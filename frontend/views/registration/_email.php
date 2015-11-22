@@ -5,7 +5,7 @@ use yii\widgets\ActiveForm;
 
 ?>
 
-<h2>Поздравляем!</h2>
+<h2>Поздравляем  !!!</h2>
 
 <br/>
 <b><?= $model->name ?></b>

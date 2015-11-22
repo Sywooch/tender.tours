@@ -88,7 +88,7 @@ class RegistrationController extends Controller {
                 ]);
                 if ($this->sendEmail($model->email, $body)) {
                     $transaction->commit();
-                    // нужен редирект на страницу с подтверждением
+                    // нужен редирект на страницу с подтверждением 
                     return $this->goBack();
                 }
                 else {
