@@ -22,7 +22,7 @@ class RegistrationController extends Controller {
     // 6. Экшен для туриста
     // 6-1. Вьюшки для экшенов
     public function actionPreRegistration() {
-        if (!Yii::$app->request->isAjax)
+        if (!Yii::$app->request->isAjax){
             throw new \yii\web\NotFoundHttpException();
 
         $model = new PreRegistrationForm();
@@ -32,7 +32,7 @@ class RegistrationController extends Controller {
             $model->load(['PreRegistrationForm' => Yii::$app->request->post()]);
             $model->validate();
             $errorMessage = '2314123412341234';            
-        
+        }
 
             
             
