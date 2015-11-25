@@ -18,10 +18,10 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'css/style.css',
+//        'css/style.css',
     ];
     public $js = [
-        'js/script.js',
+//        'js/script.js',
     ];
     public $depends = [
         'frontend\assets\JqueryAsset',

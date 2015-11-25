@@ -12,7 +12,9 @@ use yii\widgets\ActiveForm;
 <br/>
 <p>Ваш логин: <?= $model->email ?></p>
 <p>Пароль: <?= $model->getPassword() ?></p>
+<p>Для подтверждения e-mail и продолжения регистрации перейдите по ссылке:
+    <?= $model->conflink; ?></p>
 
 
 
-<a href="mytender.ru">Сайт</a>
+<a href="tender.tours">Сайт</a>

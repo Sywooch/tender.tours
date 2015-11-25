@@ -3,15 +3,8 @@
 /* @var $content string */
 
 use yii\helpers\Html;
-use yii\helpers\Url;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
-use yii\widgets\Breadcrumbs;
-use frontend\assets\BootstrapAsset;
 use frontend\assets\AppAsset;
-use common\widgets\Alert;
 
-//BootstrapAsset::register($this);
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
@@ -23,147 +16,118 @@ AppAsset::register($this);
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <?= Html::csrfMetaTags() ?>
         <title><?= Html::encode($this->title) ?></title>
+        
         <?php $this->head() ?>
+        
+        <link rel="stylesheet" href="css/calendar-ui.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/login.css">
+        <link href="css/jquery.rating.css" rel="stylesheet" type="text/css" /> 
+        
     </head>
     <body class="main-body">
         <?php $this->beginBody() ?>
-        <div class="container all-text">
-            <div class="row">
-                <div class="col-md-12 title-top-block">
-                    <div class="registr-btn-group">
-                        <?php if (Yii::$app->user->isGuest) { ?>
-                            <div class="dropdown registr-bt-1">
-                                <a class="registr-bt-text" data-toggle="dropdown" href="#">Вход</a>
-                                <?= $this->render('/_partial/_login') ?>
-                            </div>
-                        <?php } else { ?>
-                            <div class="dropdown registr-bt-1">
-                                <a class="registr-bt-text" href="<?= Url::to('login/logout') ?>">Выход</a>
-                            </div>
-                        <?php } ?>
-
-
-                        <div class="dropdown registr-bt-2">
-                            <a class="registr-bt-text" data-toggle="dropdown" href="#">Регистрация</a>
-                            <ul class="dropdown-menu registr-bt-menu-styles2" role="menu" aria-labelledby="dLabel">
-                                <li><a class="registration-man" href="<?= Url::toRoute(['registration/', 'type' => 'tourist']) ?>" target="_blank">турист</a></li>
-                                <li><a class="registration-man" href="<?= Url::toRoute(['registration/', 'type' => 'agent']) ?>" target="_blank">турагент</a></li>
+        
+        <header class="header main-container">
+            <div id="header-menu" class="header-menu glyphicon glyphicon-align-justify">
+                <div id="menu" class="modal-menu">
+                    <div class="col-lg-4">
+                        <div class="nav">
+                            <ul>
+                                <li><a href="#">asfsaff</a></li>
+                                <li><a href="#">asfsaff</a></li>
+                                <li><a href="#">asfsaff</a></li>
+                                <li><a href="#">asfsaff</a></li>
+                                <li><a href="#">asfsaff</a></li>
+                                <li><a href="#">asfsaff</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="row">
-                <div class="col-md-12 logo-icon-block">
-                    <div class="logo-icon">
+            <div class="log-reg">
+                <span id="log" class="account">LOGIN</span>
+                <span id="reg" class="account">REGISTRATION</span>
+            </div>
+            <div id="login" class="modal-window">
+                <div class="modal-close glyphicon glyphicon-remove"></div>
+                <section class="container">
+                    <div class="login">
+                        <h1>Войти в личный кабинет</h1>
+                        <form method="get" action="/registration/tender">
+                            <p><input type="text" name="login" value="" placeholder="Логин или Email"></p>
+                            <p><input type="password" name="password" value="" placeholder="Пароль"></p>
+                            <p class="remember_me">
+                                <label>
+                                    <input type="checkbox" name="remember_me" id="remember_me">
+                                    Запомнить меня
+                                </label>
+                            </p>
+                            <p class="submit"><input type="submit" name="commit" value="Войти"></p>
+                        </form>
                     </div>
+
+                    <div class="login-help">
+                        <a href="index.html">Забыли пароль?</a> Восстановите его!
+                    </div>
+                </section>
+            </div>
+            <div id="regist" class="modal-window">
+                <div class="modal-close glyphicon glyphicon-remove"></div>
+                <section class="container">
+                    <div class="login registration-form"></div>
+                </section>
+            </div>
+            <div id="overlay"></div>
+        </header>
+
+        <div id="center-layer" class="center-layer">
+            <div class="center-layer-head">
+                <div class="center-layer-title">MY TENDER</div>
+                <div class="center-layer-text">Проект My Tender представляет собой платформу, на которой взаимодействуют две категории аудитории.</div>
+                <a class="view-tenders" href="#">ПОСМОТРЕТЬ ТЕНДЕРА</a>
+            </div>
+            <div id="publication" class="publication-link">
+                ПУБЛИКАЦИЯ ТЕНДЕРА
+                <div class="glyphicon glyphicon-arrow-down"></div>
+            </div>
+        </div>   
+
+        <div id="tender-menu" class="tender-menu main-container row">
+            <div id="country" class="col-xs-2">
+                <p>Страна</p><br>
+                <input class="input" type="text">
+            </div>
+            <div id="date" class="col-xs-2">
+                <p>Дата</p><br>
+                <input type="text" id="datepicker1" placeholder="Дата заезда"><br>
+                <input type="text" id="datepicker2" placeholder="Дата выезда">
+            </div>
+            <div id="budjet" class="col-xs-2">
+                <p>Бюджет</p><br>
+                <input class="input" type="text"> $
+            </div>
+            <div id="stars" class="col-xs-2">
+                <p>Звезд</p><br>
+                <div id="rating_1">
+                    <input type="hidden" name="vote-id" value="1"/>
                 </div>
             </div>
-
-
-            <div class="row">
-                <div class="col-md-12 logo-info-block">
-                    <div class="internal-logo-block">
-                        <div class="logo-name">
-                            My tender
-                        </div>
-                        <div class="info-under-logo">
-                            информация  информация  информация 
-                        </div>
-                    </div>
+            <div id="people" class="col-xs-2">
+                <p>Людей</p><br>
+                <div id="rating_2">
+                    <input type="hidden" name="vote-id" value="1"/>
                 </div>
             </div>
-
-
-
-            <div class="row title-main-block">
-                <div class="internal-title-main-block">
-                    <div class="col-md-2 title-blocks">
-                        <div class="main-block-content">
-                            <div class="main-block-name">
-                                Тематика
-                            </div>
-                            <div class="main-block-info">
-                                <span class="glyphicon glyphicon-file"></span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-2 title-blocks">
-                        <div class="main-block-content">
-                            <div class="main-block-name">
-                                Бюджет поездки
-                            </div>
-                            <div class="main-block-info">
-                                <span class="glyphicon glyphicon-usd"></span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-2 title-blocks">
-                        <div class="main-block-content">
-                            <div class="main-block-name">
-                                Количесвто звезд
-                            </div>
-                            <div class="main-block-info">
-                                <span class="glyphicon glyphicon-star"></span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-2 title-blocks">
-                        <div class="main-block-content">
-                            <div class="main-block-name">
-                                Период поездки
-                            </div>
-                            <div class="main-block-info">
-                                <span class="glyphicon glyphicon-time"></span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-2 title-blocks">
-                        <div class="main-block-content">
-                            <div class="main-block-name">
-                                Детали
-                            </div>
-                            <div class="main-block-info">
-                                <span class="glyphicon glyphicon-info-sign"></span>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
+            <div class="col-xs-2 tender-menu-button-next">
+                <a id="next" class="next-button" href="#">ДАЛЕЕ</a>
             </div>
-
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="main-tender-btn-block"><a class="main-tender-btn-block-link" href="tender.html" target="_blank">
-                            <div class="main-tender-btn-name">
-                                Разместить тендер
-                            </div>
-                            <div class="search-icon"><span class="glyphicon glyphicon-search"></span></div></a>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12 main-view-tender-block">
-                    <div class="main-view-tender-inside-block">
-                        <div class="or">
-                            или
-                        </div>
-                        <div class="view-tender-bt"><a class="view-tender-bt-link" href="tourist_cab2.html" target="_blank">
-                                <div class="view-tender-bt-text">просмотреть тендера</div>
-                                <div class="spinning-icon"><span class="glyphicon glyphicon-refresh"></span></div></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
         </div>
 
         <?php $this->endBody() ?>
+        <script src="js/jquery-ui.js"></script>
+        <script src="js/jquery.rating-2.0.min.js"></script>
+        <script src="js/script.js"></script>
     </body>
 </html>
 <?php $this->endPage() ?>

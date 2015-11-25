@@ -1,4 +1,353 @@
-
-.main-body {
-    background: url('../images/background.jpg');
+.main-container{
+    max-width:1080px;
+    margin: 0 auto;
 }
+
+body{
+    background: #fff;
+    font:14px/1 Arial,sans-serif;
+    min-height:200px;
+}
+
+.header {
+    height: 70px; /* Высота слоя в пикселах */
+    position: relative;
+}
+
+.header-menu {
+    position: absolute;
+    left: 0;
+    top:50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.log-reg {
+    position: absolute;
+    right: 0;
+    top:50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.account{
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.center-layer {
+    position: absolute; 
+    width: 100%; /* Ширина слоя в пикселах */
+    top: 70px; /* Положение слоя от верхнего края */
+    background: url('http://lookw.ru/1/142/1380316328-331145-moril.jpg') no-repeat 0 0 ;
+    background-size: cover;
+    bottom: 0;
+    text-align: center;
+    color: #fff;
+    transition: bottom .2s linear;
+}
+
+.center-layer.active{
+    bottom:180px;
+}
+
+.center-layer:after{
+    content:"";
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    background:rgba(0,0,0,.5);
+}
+
+.center-layer-head{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    margin-top:-50px;
+    max-width:35%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+}
+
+.center-layer-title{
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+.center-layer-text{
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 30px;
+}
+
+.view-tenders{
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    border:2px solid #fff;
+}
+
+.view-tenders, .view-tenders:hover{
+    color: #fff;
+    text-decoration: none;   
+}
+
+.publication-link{
+    position: absolute;
+    bottom:30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    font-size:20px;
+    cursor:pointer;
+}
+
+
+
+.tender-menu {
+    position: absolute; /* Абсолютное позиционирование */
+    width: 100%; /* Ширина слоя в пикселах */
+    height: 0; /* Высота слоя в пикселах */
+    left: 50%; /* Положение слоя от левого края */
+    bottom: 0; /* Положение слоя от верхнего края */
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: height .2s linear, opacity .2s linear;
+    overflow: hidden;
+}
+
+
+
+.tender-menu #budjet input{
+    margin-top: 27px;
+}
+
+
+
+.tender-menu.active{
+    opacity: 1;
+    height:180px;
+}
+
+
+.tender-menu > *{
+    text-transform: uppercase;
+    font-size: 14px;
+    padding-top: 15px;
+    padding-bottom: 30px;
+}
+
+.tender-menu .col-xs-2 p{
+    margin-top: 15px;
+    text-decoration: underline;
+}
+
+.tender-menu > *.tender-menu-button-next{
+    padding-top: 85px;
+}
+
+
+
+.tender-menu .input{
+    width: 100px;
+    box-shadow: none;
+    outline: none;
+}
+
+
+
+.next-button{
+    box-sizing: border-box;
+    display:block;
+    height: 50px;
+    border:2px solid #000;
+    text-align: center;
+    padding-top: 16px;
+}
+
+.next-button{
+    color:#000;
+    text-decoration: none;
+}
+
+.next-button:hover{
+    background: #e4d9d9;
+    text-decoration: none;
+    color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#overlay{
+    position: fixed;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    z-index: 99;
+    background: rgba(0,0,0,.3);
+    transition: all .2s linear;
+    opacity:0;
+    visibility: hidden;
+}
+
+
+
+#overlay.active{
+    opacity:1;
+    visibility: visible;
+}
+
+.modal-window{
+    position: fixed;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    z-index: 100;
+    background: #fff;
+    width:100%;
+    max-width:400px;
+    max-height:90%;
+    padding:20px;
+    height:300px;
+    transition: all .2s linear;
+    opacity:0;
+    visibility: hidden;
+
+}
+
+.modal-window.active{
+    opacity:1;
+    visibility: visible;
+}
+
+.modal-close{
+    position: absolute;
+    right: 5px;
+    top:5px;
+    cursor:pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*MENU*/
+
+
+
+#overlay-menu{
+    position: fixed;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    z-index: 99;
+    background: rgba(0,0,0,.3);
+    transition: all .2s linear;
+    opacity:0;
+    visibility: hidden;
+}
+
+
+
+#overlay-menu.active{
+    opacity:1;
+    visibility: visible;
+}
+
+.modal-menu{
+    position: fixed;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    z-index: 100;
+    background: #fff;
+    width:100%;
+    max-width:400px;
+    max-height:90%;
+    padding:20px;
+    height:300px;
+    transition: all .2s linear;
+    opacity:100;
+    visibility: hidden;
+
+}
+
+.modal-menu.active{
+    opacity:100;
+    visibility: visible;
+    height: 1000px;
+}
+
+.modal-close{
+    position: absolute;
+    right: 5px;
+    top:5px;
+    cursor:pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -3,16 +3,12 @@
 namespace frontend\controllers;
 
 use Yii;
-use frontend\models\TouristRegForm;
-use frontend\models\AgentRegForm;
-use frontend\models\TenderRegForm;
+use frontend\models\PreRegistrationForm;
 use yii\filters\AccessControl;
 use frontend\models\User;
 use yii\web\Controller;
-use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use yii\db\Expression;
-use yii\behaviors\TimestampBehavior;
+use yii\swiftmailer\Mailer;
 
 
 /**
@@ -21,29 +17,91 @@ use yii\behaviors\TimestampBehavior;
 class RegistrationController extends Controller {
 
     public $layout = 'inner';
-    
-    
-    public function behaviors() {
-        return [
-            'access' => [
-                'class' => AccessControl::className(),
-                'rules' => [
-                    [
-                        'actions' => ['agent', 'tourist', 'tender'],
-                        'allow' => true,
-                        'roles' => ['?'],
-                    ],
-                ],
-            ],
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    
-                ],
-            ],
-        ];
-    }
+      
 
+    // 6. Экшен для туриста
+    // 6-1. Вьюшки для экшенов
+    public function actionPreRegistration() {
+        if (!Yii::$app->request->isAjax)
+            throw new \yii\web\NotFoundHttpException();
+
+        $model = new PreRegistrationForm();
+        $errorMessage = '';
+
+        if (Yii::$app->request->isPost) {
+            $model->load(['PreRegistrationForm' => Yii::$app->request->post()]);
+            $model->validate();
+            $errorMessage = '2314123412341234';            
+        
+
+            
+            
+            
+
+//        $transaction = Yii::$app->db->beginTransaction();
+//        $isError = false;
+//        
+//        try {
+//            if ($model->preRregister()) {                
+//                $body = $this->renderPartial('_email', [
+//                    'model' => $model,                          // отправка почты
+//                ]);
+//                if ($this->sendEmail($model->email, $body)) {
+//                    $transaction->commit();
+//                    // нужен редирект на страницу с подтверждением 
+//                    return $this->goBack();
+//                }
+//                else {
+//                    $transaction->rollBack();
+//                    // нужен редирект на страницу с подтверждением
+//                    
+//                    $model->addError('_errors', 'Не удалось отправить письмо!');
+//
+//                    // страница для ошибка 404 в конфиге
+//                    // ошибка 500
+//                }
+//            }
+//            else {
+//                $transaction->rollBack();
+//                $isError = true;
+//            }
+//        }
+//        catch (\yii\db\Exception $e) {
+//            $transaction->rollBack();
+//            $isError = true;
+//        }
+//        if ($isError) {
+//            $this->addError('_errors', 'Произошла внутренняя ошибка!');
+//            //throw new Exception('Произошла внутренняя ошибка!');
+//            return false;
+//        }
+        
+        
+        }
+        
+        return $this->renderPartial('_pre_registration', [
+            'model' => $model,
+            'errorMessage' => $errorMessage
+        ]);
+    }
+    
+   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     // 5. 
     // 5-1. Вьюшки для экшенов
@@ -57,65 +115,10 @@ class RegistrationController extends Controller {
         }
 
         if ($model->load(['AgentRegForm' => Yii::$app->request->post()])
-                && $model->register()) {
+                && $model->preRegister()) {
             return $this->goBack();
         }
         return $this->render('agent', [
-            'model' => $model
-        ]);
-    }
-
-    // 6. Экшен для туриста
-    // 6-1. Вьюшки для экшенов
-    public function actionTourist() {
-        $model = new TouristRegForm();
-        
-        if (Yii::$app->getRequest()->isGet) {
-            return $this->render('tourist', [
-                'model' => $model,
-            ]);
-        }
-
-        $transaction = Yii::$app->db->beginTransaction();
-        $isError = false;
-        try {
-            if ($model->load(['TouristRegForm' => Yii::$app->request->post('TouristRegForm')])
-                    && $model->register()) {
-
-                // ттправка почты
-                $body = $this->renderPartial('_email', [
-                    'model' => $model,
-                ]);
-                if ($this->sendEmail($model->email, $body)) {
-                    $transaction->commit();
-                    // нужен редирект на страницу с подтверждением 
-                    return $this->goBack();
-                }
-                else {
-                    $transaction->rollBack();
-                    // нужен редирект на страницу с подтверждением
-                    $model->addError('_errors', 'Не удалось отпраиить письмо!');
-
-                    // страница для ошибка 404 в конфиге
-                    // ошибка 500
-                }
-            }
-            else {
-                $transaction->rollBack();
-                $isError = true;
-            }
-        }
-        catch (\yii\db\Exception $e) {
-            $transaction->rollBack();
-            $isError = true;
-        }
-        if ($isError) {
-            $this->addError('_errors', 'Произошла внутренняя ошибка!');
-            //throw new Exception('Произошла внутренняя ошибка!');
-            return false;
-        }
-        
-        return $this->render('tourist', [
             'model' => $model
         ]);
     }
@@ -143,8 +146,8 @@ class RegistrationController extends Controller {
     public function sendEmail($email, $body)
     {
         return Yii::$app->mailer->compose()
-            ->setTo($email)
             ->setFrom(['my.tender.tours@gmail.com' => 'Сайт mytender.ru'])
+            ->setTo($email)            
             ->setSubject('Регистрация на сайте')
             ->setTextBody($body)
             ->send();

@@ -6,6 +6,7 @@ use Yii;
 use \yii\db\ActiveRecord;
 use \yii\web\IdentityInterface;
 use \yii\behaviors\TimestampBehavior;
+use \yii\db\Expression;
 
 
 class User extends ActiveRecord implements IdentityInterface
@@ -18,6 +19,12 @@ class User extends ActiveRecord implements IdentityInterface
     const TYPE_AGENT = 10;
     
     
+    private $_password;
+    public function getRawPassword() {
+        return $this->_password;
+    }
+    
+    
     public static function tableName()
     {
         return '{{%user}}';
@@ -26,20 +33,15 @@ class User extends ActiveRecord implements IdentityInterface
     public function behaviors()
     {
         return [
-            'timestamp' => [
-                'class' => 'yii\behaviors\TimestampBehavior',
-                'attributes' => [
-                    ActiveRecord::EVENT_BEFORE_INSERT => ['CREATED_AT']
-                ],
-            ],
+            
         ];
     }    
     
     public function rules()
     {
         return [
-            //['CREATED_AT', 'default', 'value' => date('Y-m-d H-i-s')],
-            ['STATUS', 'default', 'value' => self::STATUS_ACTIVE],
+            ['CREATED_AT', 'default', 'value' => new \yii\db\Expression('NOW()')],
+            ['STATUS', 'default', 'value' => self::STATUS_DISABLED],
             ['STATUS', 'in', 'range' => [self::STATUS_ACTIVE, self::STATUS_DISABLED]],
             ['TYPE', 'in', 'range' => [self::TYPE_TOURIST, self::TYPE_AGENT]],
         ];
@@ -73,6 +75,15 @@ class User extends ActiveRecord implements IdentityInterface
         //$this->PASSWORD_HASH = Yii::$app->security->generatePasswordHash($password);
     }
     */
+    
+    public function generatePassword() {
+        $this->_password = Yii::$app->security->generateRandomString(8);
+        $this->setPassword($this->_password);
+        return $this->_password;
+    }
+    
+    
+    
     public function setPassword($password)
     {
         $this->PASSWORD_HASH = Yii::$app->security->generatePasswordHash($password);
@@ -130,5 +141,14 @@ class User extends ActiveRecord implements IdentityInterface
     {
         $this->password_reset_token = null;
     }
-
+    
+    public function generareRegistrationToken()
+    {
+        $this->REGISTRATION_TOKEN = Yii::$app->security->generateRandomString() . '_' . time();
+    }
+    
+    public function removeRegistrationToken()
+    {
+        $this->REGISTRATION_TOKEN = null;
+    }
 }
