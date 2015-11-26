@@ -5,7 +5,8 @@
         <group>
             <file>file:/home/laring/server/mytender/frontend/models/PreRegistrationForm.php</file>
             <file>file:/home/laring/server/mytender/frontend/controllers/RegistrationController.php</file>
-            <file>file:/home/laring/server/mytender/frontend/models/User.php</file>
+            <file>file:/home/laring/server/mytender/frontend/views/registration/_pre_registration.php</file>
+            <file>file:/home/laring/server/mytender/frontend/views/registration/_email.php</file>
         </group>
     </open-files>
 </project-private>

@@ -5,8 +5,6 @@ namespace frontend\models;
 use Yii;
 use \yii\db\ActiveRecord;
 use \yii\web\IdentityInterface;
-use \yii\behaviors\TimestampBehavior;
-use \yii\db\Expression;
 
 
 class User extends ActiveRecord implements IdentityInterface
@@ -18,7 +16,9 @@ class User extends ActiveRecord implements IdentityInterface
     const TYPE_TOURIST = 5;
     const TYPE_AGENT = 10;
     
+   
     
+
     private $_password;
     public function getRawPassword() {
         return $this->_password;
@@ -79,7 +79,6 @@ class User extends ActiveRecord implements IdentityInterface
     public function generatePassword() {
         $this->_password = Yii::$app->security->generateRandomString(8);
         $this->setPassword($this->_password);
-        return $this->_password;
     }
     
     
@@ -142,7 +141,7 @@ class User extends ActiveRecord implements IdentityInterface
         $this->password_reset_token = null;
     }
     
-    public function generareRegistrationToken()
+    public function generateRegistrationToken()
     {
         $this->REGISTRATION_TOKEN = Yii::$app->security->generateRandomString() . '_' . time();
     }

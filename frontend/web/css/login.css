@@ -119,11 +119,10 @@ input[type=submit] {
   box-shadow: inset 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.15);
 }
 #regist input[type=submit] {
+    display: block;
   padding: 0 18px;
   height: 35px;
-    width: 90px;
-    margin-right:;
-    float: left;
+    margin: 0 auto;
     text-transform: uppercase;
   font-size: 12px;
   font-weight: bold;
@@ -145,23 +144,19 @@ input[type=submit] {
   box-shadow: inset 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.15);
 }
 
-#regist .turist input[type=submit]{
-    margin-right: 30px;
-}
-
 input[type=submit]:active {
   background: #cde5ef;
   border-color: #9eb9c2 #b3c0c8 #b4ccce;
   -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
 }
+
 #regist input[type=submit]:active {
   background: #cde5ef;
   border-color: #9eb9c2 #b3c0c8 #b4ccce;
   -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
 }
-
 
 .lt-ie9 input[type=text], .lt-ie9 input[type=password] {
   line-height: 34px;

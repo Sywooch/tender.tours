@@ -17,139 +17,102 @@ use yii\swiftmailer\Mailer;
 class RegistrationController extends Controller {
 
     public $layout = 'inner';
-      
 
-    // 6. Экшен для туриста
-    // 6-1. Вьюшки для экшенов
+
     public function actionPreRegistration() {
-        if (!Yii::$app->request->isAjax){
+        // Если пришел НЕ ajax-запрос, возвращаем Not Found
+        if (!Yii::$app->request->isAjax) {
             throw new \yii\web\NotFoundHttpException();
-
-        $model = new PreRegistrationForm();
-        $errorMessage = '';
-
-        if (Yii::$app->request->isPost) {
-            $model->load(['PreRegistrationForm' => Yii::$app->request->post()]);
-            $model->validate();
-            $errorMessage = '2314123412341234';            
         }
 
+        $model = new PreRegistrationForm();
+        
+        // Далее точно POST и корректные данные
+        if (Yii::$app->request->isPost &&
+                $model->load(['PreRegistrationForm' => Yii::$app->request->post()]) &&
+                $model->validate()) {
             
-            
-            
+            $user = new User();
+            $user->USERNAME = $model->email;
+            $user->EMAIL = $model->email;
+            $user->generatePassword();
+            $user->generateRegistrationToken();
 
-//        $transaction = Yii::$app->db->beginTransaction();
-//        $isError = false;
-//        
-//        try {
-//            if ($model->preRregister()) {                
-//                $body = $this->renderPartial('_email', [
-//                    'model' => $model,                          // отправка почты
-//                ]);
-//                if ($this->sendEmail($model->email, $body)) {
-//                    $transaction->commit();
-//                    // нужен редирект на страницу с подтверждением 
-//                    return $this->goBack();
-//                }
-//                else {
-//                    $transaction->rollBack();
-//                    // нужен редирект на страницу с подтверждением
-//                    
-//                    $model->addError('_errors', 'Не удалось отправить письмо!');
-//
-//                    // страница для ошибка 404 в конфиге
-//                    // ошибка 500
-//                }
-//            }
-//            else {
-//                $transaction->rollBack();
-//                $isError = true;
-//            }
-//        }
-//        catch (\yii\db\Exception $e) {
-//            $transaction->rollBack();
-//            $isError = true;
-//        }
-//        if ($isError) {
-//            $this->addError('_errors', 'Произошла внутренняя ошибка!');
-//            //throw new Exception('Произошла внутренняя ошибка!');
-//            return false;
-//        }
-        
-        
+            $transaction = Yii::$app->db->beginTransaction();
+            try {
+                if (!$user->save()) {
+                    throw new \yii\db\Exception('Ошибка записи пользователя в БД');
+                }
+                
+                $body = $this->renderPartial('_email', [
+                    'model' => $model,
+                    'password' => $user->getRawPassword(),
+                    'registrationToken' => $user->REGISTRATION_TOKEN
+                ]);
+                if (!$this->sendEmail($model->email, $body)) {
+                    throw new \yii\base\Exception('Не удалось отправить письмо');
+                }
+                
+                $transaction->commit();
+                // нужно делать редирект на страницу с описанием дальнейших действий
+                return $this->goHome();
+            }
+            catch (\yii\base\Exception $e) {
+                $transaction->rollBack();
+                $model->addError('_error', 'Ошибка регистрации! Повторите попытку позже.');
+            }
         }
         
         return $this->renderPartial('_pre_registration', [
-            'model' => $model,
-            'errorMessage' => $errorMessage
+                    'model' => $model,
         ]);
     }
-    
-   
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
     // 5. 
     // 5-1. Вьюшки для экшенов
     public function actionAgent() {
         $model = new AgentRegForm();
-        
+
         if (Yii::$app->getRequest()->isGet) {
             return $this->render('agent', [
-                'model' => $model,
+                        'model' => $model,
             ]);
         }
 
-        if ($model->load(['AgentRegForm' => Yii::$app->request->post()])
-                && $model->preRegister()) {
+        if ($model->load(['AgentRegForm' => Yii::$app->request->post()]) && $model->preRegister()) {
             return $this->goBack();
         }
         return $this->render('agent', [
-            'model' => $model
+                    'model' => $model
         ]);
     }
-    
+
     // 7. Экшен для тенееаа
     // 7-1. Вьюшки для экшенов
     public function actionTender() {
         $model = new TenderRegForm();
-        
+
         if (Yii::$app->getRequest()->isGet) {
             return $this->render('tender', [
-                'model' => $model,
+                        'model' => $model,
             ]);
         }
 
-        if ($model->load(['TenderRegForm' => Yii::$app->request->post()])
-                && $model->register()) {
+        if ($model->load(['TenderRegForm' => Yii::$app->request->post()]) && $model->register()) {
             return $this->goBack();
         }
         return $this->render('tender', [
-            'model' => $model
+                    'model' => $model
         ]);
     }
+
     
-    public function sendEmail($email, $body)
-    {
+    private function sendEmail($email, $body) {
         return Yii::$app->mailer->compose()
-            ->setFrom(['my.tender.tours@gmail.com' => 'Сайт mytender.ru'])
-            ->setTo($email)            
-            ->setSubject('Регистрация на сайте')
-            ->setTextBody($body)
-            ->send();
+                        ->setFrom(['my.tender.tours@gmail.com' => 'Сайт mytender.ru'])
+                        ->setTo($email)
+                        ->setSubject('Регистрация на сайте')
+                        ->setTextBody($body)
+                        ->send();
     }
 }

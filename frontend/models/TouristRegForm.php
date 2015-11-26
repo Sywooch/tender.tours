@@ -65,5 +65,17 @@ class TouristRegForm extends Model {
         }
         return false;
     }
+    
+    
+//    if ($user->save()) {
+//                $tourist = new Tourist();
+//                $tourist->USER_ID = $user->getId();
+//                $tourist->NAME = $this->name;
+//                $tourist->POSTED_TENDERS = 0;                
+//                if ($tourist->save()) {
+//                    return true;
+//                }
+//            }
+    
 
 }
