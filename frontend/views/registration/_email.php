@@ -1,4 +1,5 @@
 <?php
+use yii\helpers\Url;
 
 ?>
 
@@ -14,4 +15,4 @@
 
 
 
-<a href="<?= Yii::$app->homeUrl ?>/registration/confirm/<?= $registrationToken ?>">Завершить регистрацию</a>
+<a href="http://mytender.com/<?= $registrationToken ?>">Завершить регистрацию</a>

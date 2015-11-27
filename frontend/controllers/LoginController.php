@@ -10,31 +10,6 @@ use yii\filters\AccessControl;
 
 class LoginController extends Controller {
 
-    public function behaviors() {
-        return [
-            'access' => [
-                'class' => AccessControl::className(),
-                'rules' => [
-                    [
-                        'actions' => ['index', 'logout', 'error'],
-                        'allow' => true,
-                    ],
-                    [
-                        'actions' => ['logout', 'index'],
-                        'allow' => true,
-                        'roles' => ['@'],
-                    ],
-                ],
-            ],
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'logout' => ['post'],
-                ],
-            ],
-        ];
-    }
-
     public function beforeAction() {
         if ($this->action->id == 'index') {
             Yii::$app->controller->enableCsrfValidation = false;
@@ -43,7 +18,8 @@ class LoginController extends Controller {
     }
 
     public function actionIndex() {
-        if (!Yii::$app->user->isGuest || Yii::$app->getRequest()->isGet) {
+        
+        if (!Yii::$app->user->isGuest  || !Yii::$app->request->isAjax) {
             return $this->goHome();
         }
         
@@ -52,7 +28,10 @@ class LoginController extends Controller {
                 && $model->login()) {
             return $this->goBack();
         }
-        return $this->goHome();
+        
+        return $this->renderPartial('_login', [
+                    'model' => $model,
+        ]);
     }
 
     public function actionLogout() {

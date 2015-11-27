@@ -62,7 +62,6 @@ $(function(){
 $(function() {    $( "#datepicker1").datepicker({});  });
 $(function() {    $( "#datepicker2").datepicker({});  });
 
-
 $(document).on('click', '#reg', function() {
    $.ajax({
        url: '/registration/pre-registration',
@@ -75,10 +74,10 @@ $(document).on('click', '#reg', function() {
 
 $(document).on('click', '#log', function() {
    $.ajax({
-       url: '/',
+       url: '/login/index',
        dataType: 'html',
        success: function(data) {
-           //$('#regist .registration-form').html(data);
+           $('#login .login-form').html(data);
        }
    });
 });
