@@ -1,3 +1,4 @@
+
 .main-container{
     max-width:1080px;
     margin: 0 auto;
@@ -7,9 +8,6 @@
     display: none;
 }
 
-.registration-form {
-    height: auto;
-}
 
 .registration-form .title-registration{    
     left: 50%;
@@ -41,48 +39,75 @@
 /*РЕГИСТРАЦИЯ туриста*/
 
 .form-registration-tourist{
-  position: absolute;
-/*
+    position: fixed;
     left:50%;
     right:0;
-*/
-/*
-    left: 0;
-    right:0;
-*/
     top:900px;
     bottom:0;
     z-index: 10;
     opacity: 0;
-    background: red;
+    background: #000;
     transition:  .6s linear;
 }
 
 .form-registration-tourist.active{
     top: 70px;
     opacity: 0.9;
-    
-
 }
+
+#button-agent.active{
+    display: none;
+}
+
+
+.form-registration-tourist .send-number-tourist{
+    margin-top: 200px;
+    text-align: center;
+    color: #fff;
+    font:20px/1 Arial,sans-serif;
+    font-weight: 500;
+}
+
+
+
+.form-registration-tourist .send-number-tourist input[type=text]{
+    margin-top: 50px;
+    background: #000;
+    border: 1px solid #fff;
+    outline: none;
+    color: #fff;
+}
+
+.form-registration-tourist .send-number-tourist input[type=button]{
+    margin-top: 30px;
+    background: #000;
+    width: 200px;
+    height: 50px;
+    font:16px/1 Arial,sans-serif;
+}
+
+
+.form-registration-tourist .send-number-tourist input[type=button]:hover{
+    background: #fff;
+    color: #000;
+}
+
+
+
+
 
 
 /*РЕГИСТРАЦИЯ агента*/
 
 .form-registration-agent{
    position: absolute;
-/*
-    left:50%;
-    right:0;
-*/
-/*
-    left: 0;
-    right:0;
-*/
+    left:0;
+    right:50%;
     top:900px;
     bottom:0;
     z-index: 10;
     opacity: 0;
-    background: green;
+    background: #000;
     transition:  .6s linear;    
 }
 
@@ -93,7 +118,9 @@
 
 }
 
-
+#button-tourist.active{
+    display: none;
+}
 
 
 
