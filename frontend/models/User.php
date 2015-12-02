@@ -151,7 +151,7 @@ class User extends ActiveRecord implements IdentityInterface
         $this->REGISTRATION_TOKEN = null;
     }
     
-    public function findByRegistrationToken($REGISTRATION_TOKEN)
+    public static function findByRegistrationToken($REGISTRATION_TOKEN)
     {
         return static::findOne(['REGISTRATION_TOKEN' => $REGISTRATION_TOKEN, 'STATUS' => self::STATUS_DISABLED]);
     }

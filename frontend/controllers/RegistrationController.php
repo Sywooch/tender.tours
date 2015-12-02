@@ -69,8 +69,7 @@ class RegistrationController extends Controller {
 
     public function actionRegConfirm($id) {
         // получаем юзера ($user) из таблицы по RegToken = $id
-        $user = new User();
-        $user->findByRegistrationToken($id);
+        $user = User::findByRegistrationToken($id);
         
         
         // если ничего не нашлось, кидаем HttpNotFound
