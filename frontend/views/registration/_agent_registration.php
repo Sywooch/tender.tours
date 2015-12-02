@@ -13,7 +13,7 @@ $this->title = 'Регистрация турагента';
 <h2>Регистрация турагента</h2>
 
 
-<form class="form-horizontal" action="<?= Url::current()" role="form" name="RegForm" method="POST">
+<form class="form-horizontal" action="<?= Url::current()?>" role="form" name="RegForm" method="POST">
   <div class="form-group">
     <label for="Company-name" class="col-sm-4 control-label">Название компании: </label>
       <input type="text" class="form-control-registration" name="company" placeholder="Название вашей компании"
