@@ -1,14 +1,14 @@
 .main-container{
     max-width:1080px;
     margin: 0 auto;
-    min-width: 990px;
+    
 }
 
 
 .kabinet-container{
     max-width:90%;
     margin: 0 auto;
-    min-width: 990px;        
+    min-width: 900px;
 }
 
 body{
@@ -74,7 +74,7 @@ body{
     position: absolute; 
     width: 100%; /* Ширина слоя в пикселах */
     top: 70px; /* Положение слоя от верхнего края */
-    background: url(/images/background.jpg) no-repeat 0 0 ;
+    background: url(../images/bg-image-min.png) no-repeat 0 0 ;
     background-size: cover;
     bottom: 0;
     text-align: center;
@@ -182,11 +182,13 @@ body{
 
 .tender-menu .col-xs-2 p{
     margin-top: 15px;
+    text-decoration: underline;
 }
 
 
 .tender-menu #people p{
     margin-bottom: 30px;
+    
 }
 
 .tender-menu #stars p{
@@ -210,10 +212,18 @@ body{
     margin-top: 27px;
 }
 
+
+#reviewMan-input, #reviewStars-input{
+    margin-top: 10px;
+    float: left;
+}
+
+
 .next-button{
-    box-sizing: border-box;
+    
     display:block;
     height: 50px;
+    width: 120px;
     border:2px solid #000;
     text-align: center;
     padding-top: 16px;
@@ -298,7 +308,7 @@ body{
     right:0;
     top:900px;
     bottom:0;
-    z-index: 11;
+    z-index:9999;
     opacity: 0;
     background: #000;
     transition:  .6s linear;
@@ -315,12 +325,6 @@ body{
 margin-top: 100px;
 }
 
-.modal-close{
-    position: absolute;
-    right: 5px;
-    top:5px;
-    cursor:pointer;
-}
 
 
 .navigation{
@@ -338,18 +342,19 @@ margin-top: 100px;
 .navigation li{
     position:relative;
     list-style-type: none;
-    padding: 31px 0;
     width: 260px;
-    border-bottom: 1px solid #fff;
     text-align: center;
 }
 
 .navigation li a{
+    display: block;
+    padding: 31px 0;
     text-align: center;
     font:14px/1 Arial,sans-serif;
     text-decoration: none;
     color: #fff;
     text-transform: uppercase;
+    border-bottom: 1px solid #fff;
 }
 
 .navigation li a:hover{
@@ -363,8 +368,8 @@ margin-top: 100px;
 
 
 .contacts{
-    display: block;
-    padding-left: 150px;
+    position: relative;
+    padding-left: 100px;
     margin-top: 25px;
 }
 
@@ -463,12 +468,20 @@ margin-top: 100px;
 .contacts input::-webkit-input-placeholder {color:#413f3f;}
 .contacts input:-moz-placeholder {color:#413f3f;}
 
+
+
+
+
+
+
 /*SOCIALS*/
+
+
+
 
 .social{
     position: relative;
     overflow: hidden;
-    width: 100%;
 }
 
 
@@ -476,6 +489,7 @@ margin-top: 100px;
     position: relative;
     left: 50%;
     float: left;
+    padding: 0;
 }
 
 .social ul li{
@@ -483,7 +497,7 @@ margin-top: 100px;
     list-style-type: none;
     float: left;
     color: #fff;
-    right: 50%;
+    left: -50%;
     margin-right: 15px;
     padding-top: 50px;
 }
@@ -523,6 +537,8 @@ margin-top: 100px;
 
 
 
+/*regConfirm*/
+
 /*LOGIN-MASSAGE*/
 
 .massage img{
@@ -544,4 +560,83 @@ margin-top: 100px;
 .massage div span{
     font-weight: bold;
     text-decoration: underline;
+}
+
+
+
+
+/*МОБ ВЕРСИЯ*/
+
+
+@media screen and (max-width: 880px){
+    
+    .tender-menu{padding-top: 10px;}
+    
+    .tender-menu .col-xs-2{width: 100%; text-align: center; margin: 10px 0 0 0; padding: 0;}
+    
+    .center-layer.active{ bottom:450px;}
+
+    .tender-menu.active{ opacity: 1; height:450px; }
+    
+    .next-button{ display:inline-block;}
+
+   #reviewMan-input, #reviewStars-input{ margin-top: 0;  left:50%; transform: translateX(-50%); height: 25px;}
+    
+    .tender-menu .col-xs-2 p{ text-decoration: underline; margin: 0; padding: 0;}
+    
+    .tender-menu #people p, .tender-menu #stars p,  .tender-menu #budjet p{margin-bottom: 0;}
+    
+    .tender-menu #budjet input, .tender-menu #country input{margin-top: 0;}
+    
+    .tender-menu .input{width: 150px; margin-left: 0;}
+    
+    .country .input, { margin-top: 0;}
+    
+    
+    
+    
+    
+    .center-layer-title{
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.center-layer-text{
+    font-size: 14px;
+    line-height: 1.2;
+    margin-top: 15px;
+}
+
+.view-tenders{
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    border:2px solid #fff;
+}
+    
+    
+/*MENU*/
+    
+    .content-menu{margin-top: 10px;}
+
+    
+    .navigation-menu, .contacts-menu{ width: 100%; margin: 0;  padding: 0;}
+    
+    .navigation ul{ width: 100%; margin: 0; padding: 0; height: auto;}
+    
+    .navigation li{margin: 0 auto;}
+    
+    .navigation li a { padding: 20px;}
+    
+    .contacts{padding: 0; margin-top: 70px;  float: none;}
+    
+    .hot-line-number{display: block; margin: 0 auto; margin-bottom: 50px;}
+    
+    .button-zvonok {display: block; margin: 0 auto; margin-bottom: 25px;}
+    
+    .contacts input[type=text]{display: block; margin: 0 auto; margin-bottom: 25px;}
+    
+    .button-send{display: block; margin: 0 auto;}
+
 }
