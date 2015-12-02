@@ -20,13 +20,8 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
     
-    document.getElementById('header-menu').addEventListener('click', function () {
-        document.getElementById('menu').classList.add('active');
-        document.getElementById('overlay-menu').classList.add('active');
-        document.getElementById('menu').querySelector('.modal-close').addEventListener('click',function(){
-            document.getElementById('modal-close').classList.remove('active');     
-            
-        });
+        document.getElementById('header-menu').addEventListener('click', function () {
+        document.getElementById('menu').classList.toggle('active');        
     });
 });
 

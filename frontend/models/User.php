@@ -54,9 +54,9 @@ class User extends ActiveRecord implements IdentityInterface
 
     public static function findByUsername($username)
     {
-        return static::findOne(['USERNAME' => $username, 'STATUS' => self::STATUS_ACTIVE]);
+        return static::findOne(['USERNAME' => $username]);
     }
-
+    
     public function getId()
     {
         return $this->getPrimaryKey();
@@ -149,5 +149,10 @@ class User extends ActiveRecord implements IdentityInterface
     public function removeRegistrationToken()
     {
         $this->REGISTRATION_TOKEN = null;
+    }
+    
+    public function findByRegistrationToken($REGISTRATION_TOKEN)
+    {
+        return static::findOne(['REGISTRATION_TOKEN' => $REGISTRATION_TOKEN, 'STATUS' => self::STATUS_DISABLED]);
     }
 }

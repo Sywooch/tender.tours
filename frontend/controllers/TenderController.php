@@ -21,33 +21,30 @@ class TenderController extends Controller
     public $layout = 'inner';
     
     
-    public function filters() {
-        return [
-            'accessControl'
-        ];
-    }
+//    public function filters() {
+//        return [
+//            'accessControl'
+//        ];
+//    }
     
-    public function accessRules()
-    {
-        return array(
-            array('allow',
-                'actions'=>array('create'),
-                'roles'=>array('createNews'),
-            ),
-        );
-    }
+//    public function accessRules()
+//    {
+//        return array(
+//            array('allow',
+//                'actions'=>array('create'),
+//                'roles'=>array('createNews'),
+//            ),
+//        );
+//    }
 
-    /**
-     * @inheritdoc
-     */
-    public function actions()
-    {
-        return [
-            'error' => [
-                'class' => 'yii\web\ErrorAction',
-            ],
-        ];
-    }
+//    public function actions()
+//    {
+//        return [
+//            'error' => [
+//                'class' => 'yii\web\ErrorAction',
+//            ],
+//        ];
+//    }
 
     /**
      * Displays homepage.
@@ -57,5 +54,10 @@ class TenderController extends Controller
     public function actionIndex()
     {
         return $this->render('index');
+    }
+    
+    public function actionList(){
+        $this->layout = 'inner';
+        return $this->render('list');
     }
 }

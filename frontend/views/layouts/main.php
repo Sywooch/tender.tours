@@ -3,7 +3,9 @@
 /* @var $content string */
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 use frontend\assets\AppAsset;
+
 
 AppAsset::register($this);
 ?>
@@ -27,23 +29,10 @@ AppAsset::register($this);
     </head>
     <body class="main-body">
         <?php $this->beginBody() ?>
-        
         <header class="header main-container">
+            <div class="logo"><a href="">My tender</a></div>
             <div id="header-menu" class="header-menu glyphicon glyphicon-align-justify">
-                <div id="menu" class="modal-menu">
-                    <div class="col-lg-4">
-                        <div class="nav">
-                            <ul>
-                                <li><a href="#">asfsaff</a></li>
-                                <li><a href="#">asfsaff</a></li>
-                                <li><a href="#">asfsaff</a></li>
-                                <li><a href="#">asfsaff</a></li>
-                                <li><a href="#">asfsaff</a></li>
-                                <li><a href="#">asfsaff</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
             <div class="log-reg">
                 <span id="log" class="account">LOGIN</span>
@@ -68,7 +57,7 @@ AppAsset::register($this);
             <div class="center-layer-head">
                 <div class="center-layer-title">MY TENDER</div>
                 <div class="center-layer-text">Проект My Tender представляет собой платформу, на которой взаимодействуют две категории аудитории.</div>
-                <a class="view-tenders" href="#">ПОСМОТРЕТЬ ТЕНДЕРА</a>
+                <a class="view-tenders" href="/tender/list">ПОСМОТРЕТЬ ТЕНДЕРА</a>
             </div>
             <div id="publication" class="publication-link">
                 ПУБЛИКАЦИЯ ТЕНДЕРА

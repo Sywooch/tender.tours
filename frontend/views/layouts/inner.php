@@ -4,12 +4,7 @@
 /* @var $content string */
 
 use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
-use yii\widgets\Breadcrumbs;
-use frontend\assets\BootstrapAsset;
 use frontend\assets\AppAsset;
-use common\widgets\Alert;
 
 //BootstrapAsset::register($this);
 AppAsset::register($this);
@@ -24,6 +19,10 @@ AppAsset::register($this);
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
+    <link rel="stylesheet" href="/css/style-list.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style-raiting.css">
+    <link rel="stylesheet" href="/css/style-raiting-man.css">
     
 </head>
 <body>

@@ -1,0 +1,91 @@
+body{
+    font:14px/1 Arial,sans-serif;
+    min-height:200px;
+    background: url('http://lookw.ru/1/142/1380316328-331145-moril.jpg') no-repeat 0 0 ;
+    overflow: hidden;
+}
+
+#wrapper{
+    display: block;
+    background: url(/images/mail.png) no-repeat 0 0; 
+    max-width: 700px;
+    top: 70px;
+    background-size: 600px 800px;
+    min-height: 1000px;
+    bottom: 0;
+    text-align: center;
+    transition: bottom .2s linear;
+    z-index: 1;
+    margin: 50px auto;
+}
+
+
+.container{
+    width: 500px;
+    padding-left: 50px;
+}
+
+header{
+    display: block;
+    padding-top: 200px;
+}
+
+header .logo{
+    font:24px/1 Arial,sans-serif;
+    font-weight: bold;
+    
+}
+
+.content{
+    display: block;
+    padding-top: 50px;
+}
+
+.content h1{
+    font:24px/1 Arial,sans-serif;
+}
+.content .name{
+    padding-top: 20px;
+    font:24px/1 Arial,sans-serif;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+.content .data-registration{
+    padding-top: 50px;
+    text-align: left;
+    padding-left: 50px;
+}
+
+
+.content .data-registration span{
+    font:24px/1 Arial,sans-serif;
+    text-decoration: underline;
+    color: #7c7b77;
+    padding-right: 30px;
+    
+}
+
+
+.content .link{
+    padding-top: 50px;
+    font:18px/1 Arial,sans-serif;
+    color: #7c7b77;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
