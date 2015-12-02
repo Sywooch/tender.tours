@@ -11,8 +11,7 @@
   /*end of fix floating problems*/
   
   position: relative;
-  float: left;
-    margin-top: 10px;
+   
 }
 
 #reviewStars-input input {

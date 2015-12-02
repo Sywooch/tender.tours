@@ -1,14 +1,179 @@
+
+/*_________________________REGISTRATION ond LOGIN Modal Window______________________________*/
+/*_________________________REGISTRATION ond LOGIN Modal Window______________________________*/
+/*_________________________REGISTRATION ond LOGIN Modal Window______________________________*/
+/*_________________________REGISTRATION ond LOGIN Modal Window______________________________*/
+
+.container {
+  margin: 40px auto;
+  width: 320px;
+}
+.login h1 {
+  margin: -20px -20px 21px;
+  line-height: 40px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #555;
+  text-align: center;
+  text-shadow: 0 1px white;
+}
+.login p {
+  margin: 20px 0 0;
+}
+.login p:first-child {
+  margin-top: 0;
+}
+.login input[type=text], .login input[type=password] {
+  width: 278px;
+}
+.login p.remember_me {
+  float: left;
+  line-height: 31px;
+}
+.login p.remember_me label {
+  font-size: 12px;
+  color: #777;
+  cursor: pointer;
+}
+.login p.remember_me input {
+  position: relative;
+  bottom: 1px;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+.login p.submit {
+  text-align: right;
+}
+.login-help {
+  margin: 10px 0;
+  font-size: 11px;
+  color: #555;
+  text-align: center;
+  text-shadow: 0 1px #2a85a1;
+}
+.login-help a {
+  color: #444;
+  text-decoration: none;
+}
+.login-help a:hover {
+  color: #9a5a52;
+}
+:-moz-placeholder {
+  color: #c9c9c9 !important;
+  font-size: 13px;
+}
+::-webkit-input-placeholder {
+  color: #ccc;
+  font-size: 13px;
+}
+input {
+  font-family: 'Lucida Grande', Tahoma, Verdana, sans-serif;
+  font-size: 14px;
+}
+input[type=text], input[type=password] {
+  margin: 5px;
+  padding: 0 10px;
+  width: 200px;
+  height: 34px;
+  color: #404040;
+  background: white;
+  border: 1px solid;
+  border-color: #c4c4c4 #d1d1d1 #d4d4d4;
+  border-radius: 2px;
+  outline: 5px solid #eff4f7;
+  -moz-outline-radius: 3px;
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+input[type=text]:focus, input[type=password]:focus {
+  border-color: #7dc9e2;
+  outline-color: #dceefc;
+  outline-offset: 0;
+}
+input[type=submit] {
+  padding: 0 18px;
+  height: 29px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #527881;
+  text-shadow: 0 1px #e3f1f1;
+  background: #cde5ef;
+  border: 1px solid;
+  border-color: #b4ccce #b3c0c8 #9eb9c2;
+  border-radius: 5px;
+  outline: 0;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  background-image: -webkit-linear-gradient(top, #edf5f8, #cde5ef);
+  background-image: -moz-linear-gradient(top, #edf5f8, #cde5ef);
+  background-image: -o-linear-gradient(top, #edf5f8, #cde5ef);
+  background-image: linear-gradient(to bottom, #edf5f8, #cde5ef);
+  -webkit-box-shadow: inset 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+#regist input[type=submit] {
+    display: block;
+  padding: 0 18px;
+  height: 35px;
+    width: 90px;
+    margin: 0 auto;
+    text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  color: #527881;
+  text-shadow: 0 1px #e3f1f1;
+  background: #cde5ef;
+  border: 1px solid;
+  border-color: #b4ccce #b3c0c8 #9eb9c2;
+  border-radius: 5px;
+  outline: 0;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  background-image: -webkit-linear-gradient(top, #edf5f8, #cde5ef);
+  background-image: -moz-linear-gradient(top, #edf5f8, #cde5ef);
+  background-image: -o-linear-gradient(top, #edf5f8, #cde5ef);
+  background-image: linear-gradient(to bottom, #edf5f8, #cde5ef);
+  -webkit-box-shadow: inset 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+#regist .turist input[type=submit]{
+    margin-right: 30px;
+}
+input[type=submit]:active {
+  background: #cde5ef;
+  border-color: #9eb9c2 #b3c0c8 #b4ccce;
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+}
+#regist input[type=submit]:active {
+  background: #cde5ef;
+  border-color: #9eb9c2 #b3c0c8 #b4ccce;
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+}
+.lt-ie9 input[type=text], .lt-ie9 input[type=password] {
+  line-height: 34px;
+}
+
+
+/*_________________________INDEX.HTML______________________________*/
+/*_________________________INDEX.HTML______________________________*/
+/*_________________________INDEX.HTML______________________________*/
+/*_________________________INDEX.HTML______________________________*/
+
 .main-container{
     max-width:1080px;
     margin: 0 auto;
-    min-width: 990px;
+    
 }
 
 
 .kabinet-container{
     max-width:90%;
     margin: 0 auto;
-    min-width: 990px;        
+
 }
 
 body{
@@ -164,13 +329,10 @@ body{
     margin-top: 27px;
 }
 
-
-
 .tender-menu.active{
     opacity: 1;
     height:180px;
 }
-
 
 .tender-menu > *{
     text-transform: uppercase;
@@ -182,11 +344,13 @@ body{
 
 .tender-menu .col-xs-2 p{
     margin-top: 15px;
+    text-decoration: underline;
 }
 
 
 .tender-menu #people p{
     margin-bottom: 30px;
+    
 }
 
 .tender-menu #stars p{
@@ -210,10 +374,20 @@ body{
     margin-top: 27px;
 }
 
+
+#reviewMan-input, #reviewStars-input{
+    margin-top: 10px;
+    float: left;
+    height: 25px;
+    
+}
+
+
 .next-button{
-    box-sizing: border-box;
+    
     display:block;
     height: 50px;
+    width: 120px;
     border:2px solid #000;
     text-align: center;
     padding-top: 16px;
@@ -244,13 +418,12 @@ body{
     right:0;
     top:0;
     bottom:0;
-    z-index: 99;
+    z-index: 100;
     background: rgba(0,0,0,.3);
     transition: all .2s linear;
     opacity:0;
     visibility: hidden;
 }
-
 
 
 #overlay.active{
@@ -298,7 +471,7 @@ body{
     right:0;
     top:900px;
     bottom:0;
-    z-index: 11;
+    z-index:10;
     opacity: 0;
     background: #000;
     transition:  .6s linear;
@@ -315,12 +488,6 @@ body{
 margin-top: 100px;
 }
 
-.modal-close{
-    position: absolute;
-    right: 5px;
-    top:5px;
-    cursor:pointer;
-}
 
 
 .navigation{
@@ -338,18 +505,19 @@ margin-top: 100px;
 .navigation li{
     position:relative;
     list-style-type: none;
-    padding: 31px 0;
     width: 260px;
-    border-bottom: 1px solid #fff;
     text-align: center;
 }
 
 .navigation li a{
+    display: block;
+    padding: 31px 0;
     text-align: center;
     font:14px/1 Arial,sans-serif;
     text-decoration: none;
     color: #fff;
     text-transform: uppercase;
+    border-bottom: 1px solid #fff;
 }
 
 .navigation li a:hover{
@@ -357,14 +525,12 @@ margin-top: 100px;
 }
 
 
-
-
 /*CONTACTS*/
 
 
 .contacts{
-    display: block;
-    padding-left: 150px;
+    position: relative;
+    padding-left: 100px;
     margin-top: 25px;
 }
 
@@ -395,15 +561,9 @@ margin-top: 100px;
 
 
 
-
-
-
-
-
 .hot-line-number span{
     line-height: 50px;
 }
-
 
 
 .button-zvonok{
@@ -463,12 +623,11 @@ margin-top: 100px;
 .contacts input::-webkit-input-placeholder {color:#413f3f;}
 .contacts input:-moz-placeholder {color:#413f3f;}
 
-/*SOCIALS*/
 
+/*SOCIALS*/
 .social{
     position: relative;
     overflow: hidden;
-    width: 100%;
 }
 
 
@@ -476,6 +635,7 @@ margin-top: 100px;
     position: relative;
     left: 50%;
     float: left;
+    padding: 0;
 }
 
 .social ul li{
@@ -483,7 +643,7 @@ margin-top: 100px;
     list-style-type: none;
     float: left;
     color: #fff;
-    right: 50%;
+    left: -50%;
     margin-right: 15px;
     padding-top: 50px;
 }
@@ -498,7 +658,10 @@ margin-top: 100px;
 }
 
 
-/*EROR 404*/
+/*_________________________EROR 404______________________________*/
+/*_________________________EROR 404______________________________*/
+/*_________________________EROR 404______________________________*/
+/*_________________________EROR 404______________________________*/
 
 .eror-404 img{
     position: absolute;
@@ -510,7 +673,10 @@ margin-top: 100px;
 }
 
 
-/*EROR 500*/
+/*_________________________EROR 500______________________________*/
+/*_________________________EROR 500______________________________*/
+/*_________________________EROR 500______________________________*/
+/*_________________________EROR 500______________________________*/
 
 .eror-500 img{
     position: absolute;
@@ -522,30 +688,581 @@ margin-top: 100px;
 }
 
 
+/*_________________________formRegistration______________________________*/
+/*_________________________formRegistration______________________________*/
+/*_________________________formRegistration______________________________*/
+/*_________________________formRegistration______________________________*/
 
-/*LOGIN-MASSAGE*/
-
-.massage img{
-    position: absolute;
+.registration-form .title-registration{    
     left: 50%;
-    top:50%;
-    margin-top:-50px;
-    max-width:35%;
-    transform: translate(-50%,-50%);
-}
-.massage div{
-    position: absolute;
-    bottom:250px;
-    left: 50%;
+    text-align: center;
     transform: translateX(-50%);
     text-align: center;
-    font:24px/1 Arial,sans-serif;   
+    font:24px/1 Arial,sans-serif;
+    z-index: 10;
+    margin-top: 220px;
+    
 }
-.massage div span{
-    font-weight: bold;
+
+
+.registration-form .registration{    
+    text-align: center;
+    font:24px/1 Arial,sans-serif;
+    margin-top: 150px;
+}
+
+
+ .button-registration input{
+    width: 50%;
+    height: 100px;
+}
+
+/*ВСПЛЫВАЮЩИЕ ФОРМЫ РЕГИСТРАЦИИ*/
+
+/*РЕГИСТРАЦИЯ туриста*/
+
+.form-registration-tourist{
+    position: fixed;
+    left:50%;
+    right:0;
+    top:900px;
+    bottom:0;
+    z-index: 10;
+    opacity: 0;
+    background: #000;
+    transition:  .6s linear;
+}
+
+.form-registration-tourist.active{
+    top: 70px;
+    opacity: 0.9;
+}
+
+#button-agent.active{
+    display: none;
+}
+
+
+.form-registration-tourist .send-number-tourist{
+    margin-top: 200px;
+    text-align: center;
+    color: #fff;
+    font:20px/1 Arial,sans-serif;
+    font-weight: 500;
+}
+
+
+
+.form-registration-tourist .send-number-tourist input[type=text]{
+    margin-top: 50px;
+    background: #000;
+    border: 1px solid #fff;
+    outline: none;
+    color: #fff;
+}
+
+.form-registration-tourist .send-number-tourist input[type=button]{
+    margin-top: 30px;
+    background: #000;
+    width: 200px;
+    height: 50px;
+    font:16px/1 Arial,sans-serif;
+}
+
+
+.form-registration-tourist .send-number-tourist input[type=button]:hover{
+    background: #fff;
+    color: #000;
+}
+
+
+/*РЕГИСТРАЦИЯ агента*/
+
+.form-registration-agent{
+   position: absolute;
+    left:0;
+    right:50%;
+    top:900px;
+    bottom:0;
+    z-index: 10;
+    opacity: 0;
+    background: #000;
+    transition:  .6s linear;    
+}
+
+.form-registration-agent.active{
+    top: 70px;
+    opacity: 0.9;
+    
+
+}
+
+#button-tourist.active{
+    display: none;
+}
+
+
+/*_________________________kabinetTourist______________________________*/
+/*_________________________kabinetTourist______________________________*/
+/*_________________________kabinetTourist______________________________*/
+/*_________________________kabinetTourist______________________________*/
+
+
+.kabinet-tourist{
+    margin-top: 120px;
+}
+
+/*HEADER NAVIGATION*/
+
+.search{
+    position: absolute;
+    right:  200px;
+    top:50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.search-bt{
+    position: absolute;
+    right: 170px;
+    top:50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.out-bt{
+    position: absolute;
+    right: 20px;
+    top:50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.search input[type=search]{
+    height: 35px;
+}
+
+
+.kabinet-link:nth-child(3){
+    margin-right: 400px;
+}
+
+.kabinet-link a{
+    margin-left: 20px;
+    color: #000;
+}
+
+.kabinet-link a:hover{
     text-decoration: underline;
 }
 
+/*КАБИНЕТ-ТУРИСТ-МЕНЮ*/
+
+
+.kabinet-tourist-menu{
+    margin-bottom:70px; 
+}
+
+.kabinet-tourist-menu li{
+    float: left;
+    list-style-type: none;
+    display: block;
+}
+
+.kabinet-tourist-menu li a{
+    padding: 15px 30px;
+    margin-right: 10px;
+    border: 1px solid #000;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.kabinet-tourist-menu li a:hover{
+    background: #e6e6e8;
+}
+
+.kabinet-tourist-menu li a:focus{
+    background: #e6e6e8;
+}
+
+
+
+/*TABLE TOURSE*/
+
+.glyphicon{
+    margin-right: 5px;
+}
+
+
+/*_________________________List______________________________*/
+/*_________________________List______________________________*/
+/*_________________________List______________________________*/
+/*_________________________List______________________________*/
+
+/*ВЕРХНИЙ ФИЛЬТР*/
+
+
+.tender-list-select{
+    margin-top: 100px;
+}
+
+.tender-list-select > *{
+    text-transform: uppercase;
+    font-size: 14px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 0;
+    margin-left: 0;
+    
+}
+
+
+.tender-list-select .col-xs-2{
+    padding-left: 0;
+}
+
+.tender-list-select .select {
+    width: 80%;
+    height: 40px;
+    box-shadow: none;
+    outline: none;
+    margin-left: 0;
+    border: 1px solid #8e8e8e;
+    padding-left: 10px;
+    color: #8e8e8e;
+}
+
+.tender-list-select #hot-tourse{
+    padding-top: 25px;
+    color: #8e8e8e;    
+}
+
+
+
+.filtr-button{
+    box-sizing: border-box;
+    display:block;
+    height: 40px;
+    border:2px solid #8e8e8e;
+    background: #8e8e8e;
+    text-align: center;
+    padding-top: 12px;
+    font:12px/1 Arial,sans-serif;
+    color:#fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+.filtr-button:hover{
+    background: #ffbf51;
+    border-color: #ffbf51;    
+    text-decoration: none;
+    color: #fff;
+}
+
+.filtr-button:focus{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/*ГЕНЕРИРУЮЩИЙСЯ СПИСОК ТЕНДЕРОВ*/
+
+/*ЗАГОЛОВОК*/
+
+.tender-list-zag{
+    margin-top: 70px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #000;
+    font:14px/1 Arial,sans-serif;
+    font-weight: bold;
+    color: #131313;
+}
+
+.tender-list-zag .col-xs-2{
+    padding-left: 0;
+}
+
+/*СПИСОК*/
+
+.tender-list-generate{
+    margin-top: 25px;
+    text-transform: none;
+    font-size: 14px;
+    padding-bottom: 20px;
+    padding-right: 0;
+    border-bottom: 1px solid #8e8e8e;
+}
+
+.tender-list-generate .col-xs-2{
+    padding-left: 0;
+}
+
+.tender-list-generate .col-xs-2 p{
+    padding-top: 12px;
+}
+
+
+.tender-list-button-coment{
+    padding-right: 0;
+}
+
+.coment-button{
+    box-sizing: border-box;
+    display:block;
+    height: 40px;
+    border:2px solid #8e8e8e;
+    background: #fff;
+    text-align: center;
+    padding-top: 12px;
+    font:12px/1 Arial,sans-serif;
+    color:#8e8e8e;
+    text-decoration: none;
+    margin-right: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+
+.coment-button:hover{
+    background: #ffbf51;
+    border-color: #ffbf51;    
+    text-decoration: none;
+    color: #fff;
+}
+
+.coment-button:focus{
+    text-decoration: none;
+}
+
+
+/*ССЫЛКИ СТРАНИЦ*/
+
+
+.pageinator{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+
+.pageinator ul{
+    position: relative;
+    left: 50%;
+    float: left;
+    margin-top: 60px;
+}
+
+.pageinator ul li{
+    position: relative;
+    list-style-type: none;
+    float: left;
+    color: #626262;
+    right: 50%;
+}
+
+
+.pageinator ul li a{
+    color: #626262;
+    display: block;
+    padding: 17px 20px;
+    border: 1px solid #dadada;
+    border-radius: 5px;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+
+.pageinator ul li a:hover{
+    background: #dadada;
+}
+
+
+
+/*_________________________otziviPoTenderam______________________________*/
+/*_________________________otziviPoTenderam______________________________*/
+/*_________________________otziviPoTenderam______________________________*/
+/*_________________________otziviPoTenderam______________________________*/
+
+
+.otzivi-tender{
+    position: absolute; 
+    width: 100%; /* Ширина слоя в пикселах */
+    top: 70px; /* Положение слоя от верхнего края */
+    background: url(../images/bg-image2.png) #ebebeb no-repeat 0px 0 ;
+    background-size:cover;
+    height: 185px;
+    text-align: center;
+    transition: bottom .2s linear;
+    z-index: 1;
+    color: #fff;
+    font:30px/1 Arial,sans-serif;
+    text-transform: uppercase;
+    
+}
+
+.otzivi-tender-head-top div{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    max-width:35%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+}
+
+
+.otzivi-tender:after{
+    content:"";
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    background:rgba(0,0,0,.5);
+}
+
+
+
+.otzivi-tender-head-bottom{
+    margin-top: 185px;
+    background: #ebebeb;
+    height: 65px;
+}
+
+
+.tender-info{
+    height: 65px;
+}
+
+
+.tender-info-left, .tender-info-right{
+    padding: 0;
+    padding-top: 25px;
+    color: #595959;
+    font:16px/1 Arial,sans-serif;
+}
+
+.tender-info-right div{
+    float: right;
+}
+
+
+/*ТАБЛИЦА*/
+/*ЗАГОЛОВОК*/
+
+.tender-otzivi-zag{
+    margin-top: 70px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #000;
+    font:14px/1 Arial,sans-serif;
+    font-weight: bold;
+    color: #131313;
+}
+
+.tender-otzivi-zag .col-xs-2{
+    padding-left: 0;
+}
+
+/*СПИСОК*/
+
+.tender-otzivi-generate{
+    margin-top: 25px;
+    height: 60px;
+    text-transform: none;
+    font-size: 14px;
+    padding-bottom: 20px;
+    padding-right: 0;
+    border-bottom: 1px solid #8e8e8e;
+}
+
+.tender-otzivi-generate .col-xs-2{
+    padding-left: 0;
+}
+
+.tender-otzivi-generate .col-xs-2 p{
+    padding-top: 12px;
+}
+
+
+.tender-otzivi-button-coment{
+    padding-right: 0;
+}
+
+.mail-answer{
+    margin-top: 10px;
+}
+
+.mail-answer i{
+    margin-right:10px;
+}
+
+
+/*_________________________MOBILE VERSION______________________________*/
+/*_________________________MOBILE VERSION______________________________*/
+/*_________________________MOBILE VERSION______________________________*/
+/*_________________________MOBILE VERSION______________________________*/
+
+@media screen and (max-width: 1120px){
+    .logo{left: 15px;}
+    .header-menu{left: 175px;}
+    .log-reg{right: 15px;}
+}
+
+
+@media screen and (max-width: 880px){
+    
+/*ТЕНДЕР МЕНЮ*/
+    .logo{left: 15px;}
+    .header-menu{left: 175px;}
+    
+    
+    
+    .tender-menu{padding-top: 10px;}
+    .tender-menu .col-xs-2{width: 100%; text-align: center; margin: 10px 0 0 0; padding: 0;}
+    .center-layer.active{ bottom:450px;}
+    .tender-menu.active{ opacity: 1; height:450px; }
+    .next-button{ display:inline-block;}
+   #reviewMan-input, #reviewStars-input{ margin-top: 0;  left:50%; transform: translateX(-50%); height: 25px;}
+    .tender-menu .col-xs-2 p{ text-decoration: underline; margin: 0; padding: 0;}
+    .tender-menu #people p, .tender-menu #stars p,  .tender-menu #budjet p{margin-bottom: 0;}
+    .tender-menu #budjet input, .tender-menu #country input{margin-top: 0;}
+    .tender-menu .input{width: 150px; margin-left: 0;}
+    .country .input, { margin-top: 0;}
+    
+
+    
+    .center-layer-title{ font-size: 18px;}
+    .center-layer-text{display: block; font-size: 14px; line-height: 1.2; margin-top: 15px; width: 100%;}
+    .view-tenders{ margin-top: 15px; padding: 10px 15px;}
+    .center-layer-head{max-width:100%; }
+    
+
+    
+/*MENU*/
+    
+    .content-menu{margin-top: 10px;}
+    .navigation-menu, .contacts-menu{ width: 100%; margin: 0;  padding: 0;}
+    .navigation ul{ width: 100%; margin: 0; padding: 0; height: auto;}
+    .navigation li{margin: 0 auto;}
+    .navigation li a { padding: 20px;}
+    .contacts{padding: 0; margin-top: 70px;  float: none;}
+    .hot-line-number{display: block; margin: 0 auto; margin-bottom: 50px;}
+    .button-zvonok {display: block; margin: 0 auto; margin-bottom: 25px;}
+    .contacts input[type=text]{display: block; margin: 0 auto; margin-bottom: 25px;}
+    .button-send{display: block; margin: 0 auto;}
+
+}
+
+@media screen and (max-width: 450px){
+    .header .logo{display: none;}
+    .header-menu{left: 15px;}
+}
 
 
 
@@ -560,20 +1277,4 @@ margin-top: 100px;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  

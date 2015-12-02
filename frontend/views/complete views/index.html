@@ -5,7 +5,6 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/style-raiting.css">
     <link rel="stylesheet" href="css/style-raiting-man.css">
     <link rel="stylesheet" href="css/calendar-ui.css">
@@ -13,48 +12,6 @@
     <script src="js/jquery-ui.js"></script>
     <script src="js/script.js"></script>
     <script type="text/javascript" src="js/jquery.rating-2.0.min.js"></script>
-
-   
-   
-   
-    <script type="text/javascript">
-$(function(){
-	$('#rating_1').rating({
-		fx: 'full',
-        image: 'images/stars.png',
-        loader: 'images/ajax-loader.gif',
-		url: 'rating.php',
-        callback: function(responce){
-            
-            this.vote_success.fadeOut(2000);
-        }
-	});
-});
-
-$(function(){
-	
-	$('#rating_2').rating({
-		fx: 'full',
-        image: 'images/man.png',
-        loader: 'images/ajax-loader.gif',
-		url: 'rating.php',
-        callback: function(responce){
-            
-            this.vote_success.fadeOut(2000);
-        }
-	});
-});
-
-
-
-$(function() {    $( "#datepicker1").datepicker({});  });
-$(function() {    $( "#datepicker2").datepicker({});  });
-
-
-</script>
-   
-   
-    
 </head>
 
 <body>  
@@ -69,7 +26,7 @@ $(function() {    $( "#datepicker2").datepicker({});  });
                 <span id="reg" class="account">Регистрация</span>
             </div>
             <div id="login" class="modal-window">
-                <div id="modal-close" class="modal-close glyphicon glyphicon-remove"></div>
+                <div id="modal-close-login" class="modal-close glyphicon glyphicon-remove"></div>
                 <section class="container">
                     <div class="login">
                       <h1>Войти в личный кабинет</h1>
@@ -96,7 +53,7 @@ $(function() {    $( "#datepicker2").datepicker({});  });
                 </section>
             </div>
             <div id="regist" class="modal-window">
-                <div class="modal-close glyphicon glyphicon-remove"></div>
+                <div id="modal-close-regist" class="modal-close glyphicon glyphicon-remove"></div>
                 <section class="container">
                     <div class="login">
                       <h1>Регистрация</h1>
@@ -112,9 +69,9 @@ $(function() {    $( "#datepicker2").datepicker({});  });
             <div id="overlay"></div>
     </header>
                 
-     <div id="menu" class="modal-menu row">
-                   <div class="content-menu">
-                        <div id="navigation" class="col-xs-6">
+     <div id="menu" class="modal-menu">
+                   <div class="content-menu main-container">
+                        <div id="navigation-menu" class="navigation-menu col-xs-6">
                                <nav class="navigation">
                                     <ul>
                                         <li><a href="#">туристам</a></li>
@@ -126,7 +83,7 @@ $(function() {    $( "#datepicker2").datepicker({});  });
                                 </nav>
                         </div>
 
-                        <div id="contacts" class="col-xs-6">                        
+                        <div id="contacts-menu" class="contacts-menu col-xs-6">                        
                              <div class="contacts">
                                  <div class="hot-line-number"><p>050 837 39 53<br><span>Горячая линия</span></p></div>
                                  <div class="button-zvonok"><a id="zvonok" class="zvonok" href="#">Заказать звонок</a></div>
@@ -168,12 +125,12 @@ $(function() {    $( "#datepicker2").datepicker({});  });
         </div>
         <div id="date" class="col-xs-2">
             <p>Дата</p><br>
-            <input type="text" id="datepicker1" placeholder="Дата заезда"><br>
+            <input type="text" id="datepicker1" placeholder="Дата заезда">
             <input type="text" id="datepicker2" placeholder="Дата выезда">
         </div>
         <div id="budjet" class="col-xs-2">
             <p>Бюджет</p><br>
-            <input class="input" type="text"> $
+            <input class="input" type="text">
         </div>
         <div id="stars" class="col-xs-2">
             <p>Звезд</p><br>
