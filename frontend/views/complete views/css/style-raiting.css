@@ -1,0 +1,70 @@
+/*sprite with stars*/
+#reviewStars-input input:checked ~ label, #reviewStars-input label, #reviewStars-input label:hover, #reviewStars-input label:hover ~ label {
+  background: url(../images/stars2.png) no-repeat;
+}
+
+#reviewStars-input {
+  
+  /*fix floating problems*/
+  overflow: hidden;
+  *zoom: 1;
+  /*end of fix floating problems*/
+  
+  position: relative;
+   
+}
+
+#reviewStars-input input {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  
+  width: 22px;
+  height: 21px;
+  
+  position: absolute;
+  top: 0;
+  z-index: 0;
+}
+
+#reviewStars-input input:checked ~ label {
+  background-position: 0 -22px;
+  height: 24px;
+  width: 22px;
+}
+
+#reviewStars-input label {
+  background-position: 0 0;
+  height: 22px;
+  width: 22px;
+  float: right;    
+  cursor: pointer;
+  margin-right: 4px;
+  
+  position: relative;
+  z-index: 1;
+}
+
+#reviewStars-input label:hover, #reviewStars-input label:hover ~ label {
+  background-position: 0 -22px;
+  height: 24px;
+  width: 22px;
+}
+
+#reviewStars-input #star-0 {
+  left: 0px;
+}
+#reviewStars-input #star-1 {
+  left: 20px;
+}
+#reviewStars-input #star-2 {
+  left: 40px;
+}
+#reviewStars-input #star-3 {
+  left: 80px;
+}
+#reviewStars-input #star-4 {
+  left: 100px;
+}
+#reviewStars-input #star-5 {
+  left: 110px;
+}

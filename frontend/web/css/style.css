@@ -1,25 +1,13 @@
 .main-container{
     max-width:1080px;
     margin: 0 auto;
-    
-}
-
-
-.kabinet-container{
-    max-width:90%;
-    margin: 0 auto;
-    min-width: 900px;
 }
 
 body{
     background: #fff;
     font:14px/1 Arial,sans-serif;
     min-height:200px;
-    z-index: 1;
-    
 }
-
-/*HEADER*/
 
 .header {
     height: 70px; /* Высота слоя в пикселах */
@@ -28,31 +16,12 @@ body{
 
 .header-menu {
     position: absolute;
-    left: 160px;
-    top:50%;
-    transform: translateY(-50%);
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 100;
-}
-
-.logo {
-    position: absolute;
     left: 0;
     top:50%;
     transform: translateY(-50%);
     font-size: 24px;
     cursor: pointer;
-    z-index: 100;
-    
 }
-
-.logo a{
-    color: #000;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
 
 .log-reg {
     position: absolute;
@@ -68,20 +37,16 @@ body{
     cursor: pointer;
 }
 
-/*CENTER CONTENT*/
-
 .center-layer {
     position: absolute; 
     width: 100%; /* Ширина слоя в пикселах */
     top: 70px; /* Положение слоя от верхнего края */
-    background: url(../images/bg-image-min.png) no-repeat 0 0 ;
+    background: url('http://lookw.ru/1/142/1380316328-331145-moril.jpg') no-repeat 0 0 ;
     background-size: cover;
     bottom: 0;
     text-align: center;
     color: #fff;
     transition: bottom .2s linear;
-    z-index: 1;
-    
 }
 
 .center-layer.active{
@@ -143,8 +108,6 @@ body{
 }
 
 
-/*TENDER MENU*/
-
 
 .tender-menu {
     position: absolute; /* Абсолютное позиционирование */
@@ -177,22 +140,11 @@ body{
     font-size: 14px;
     padding-top: 15px;
     padding-bottom: 30px;
-    padding-right: 0;
 }
 
 .tender-menu .col-xs-2 p{
     margin-top: 15px;
     text-decoration: underline;
-}
-
-
-.tender-menu #people p{
-    margin-bottom: 30px;
-    
-}
-
-.tender-menu #stars p{
-    margin-bottom: 30px;
 }
 
 .tender-menu > *.tender-menu-button-next{
@@ -205,22 +157,12 @@ body{
     width: 100px;
     box-shadow: none;
     outline: none;
-    margin-left: 0;
 }
 
-.country .input{
-    margin-top: 27px;
-}
-
-
-#reviewMan-input, #reviewStars-input{
-    margin-top: 10px;
-    float: left;
-}
 
 
 .next-button{
-    
+    box-sizing: border-box;
     display:block;
     height: 50px;
     width: 120px;
@@ -235,7 +177,7 @@ body{
 }
 
 .next-button:hover{
-    background: #d7d7d7;
+    background: #e4d9d9;
     text-decoration: none;
     color: #000;
 }
@@ -273,7 +215,7 @@ body{
     left:50%;
     top:50%;
     transform: translate(-50%,-50%);
-    z-index: 200;
+    z-index: 100;
     background: #fff;
     width:100%;
     max-width:400px;
@@ -317,7 +259,7 @@ body{
 .modal-menu.active{
     top: 70px;
     opacity: 0.9;
-    
+
 
 }
 
@@ -327,10 +269,7 @@ margin-top: 100px;
 
 
 
-.navigation{
-    width: 100%;
-    min-width: 300px;
-}
+/*MENU*/
 
 .navigation ul{
     list-style:none;
@@ -346,15 +285,17 @@ margin-top: 100px;
     text-align: center;
 }
 
-.navigation li a{
-    display: block;
-    padding: 31px 0;
-    text-align: center;
-    font:14px/1 Arial,sans-serif;
-    text-decoration: none;
-    color: #fff;
-    text-transform: uppercase;
-    border-bottom: 1px solid #fff;
+#overlay-menu{
+    position: fixed;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    z-index: 99;
+    background: rgba(0,0,0,.3);
+    transition: all .2s linear;
+    opacity:0;
+    visibility: hidden;
 }
 
 .navigation li a:hover{
@@ -362,35 +303,14 @@ margin-top: 100px;
 }
 
 
-
-
-/*CONTACTS*/
-
-
-.contacts{
-    position: relative;
-    padding-left: 100px;
-    margin-top: 25px;
+#overlay-menu.active{
+    opacity:1;
+    visibility: visible;
 }
 
-
-.hot-line-number{
-    position: relative;
-    width: 170px;
-    height: 125px;
-    border: 1px solid #fff;
-    color: #fff;
-    text-align: left;
-    line-height: 25px;
-    padding: 40px 0 0 20px;
-    font:16px Arial,sans-serif;
-}
-
-
-.hot-line-number::after{
-	position:absolute;
-	top:-14px;
-	left:50%;
+.modal-menu{
+    position: fixed;
+    left:50%;
 	width:25px;
 	height:25px;
 	margin-left:-15px;
@@ -521,33 +441,30 @@ margin-top: 100px;
     margin-top:-50px;
     max-width:35%;
     transform: translate(-50%,-50%);
+    z-index: 100;
+    background: #fff;
+    width:100%;
+    max-width:400px;
+    max-height:90%;
+    padding:20px;
+    height:300px;
+    transition: all .2s linear;
+    opacity:100;
+    visibility: hidden;
+
 }
 
-
-/*EROR 500*/
-
-.eror-500 img{
-    position: absolute;
-    left: 50%;
-    top:50%;
-    margin-top:-50px;
-    max-width:35%;
-    transform: translate(-50%,-50%);
+.modal-menu.active{
+    opacity:100;
+    visibility: visible;
+    height: 1000px;
 }
 
-
-
-/*regConfirm*/
-
-/*LOGIN-MASSAGE*/
-
-.massage img{
+.modal-close{
     position: absolute;
-    left: 50%;
-    top:50%;
-    margin-top:-50px;
-    max-width:35%;
-    transform: translate(-50%,-50%);
+    right: 5px;
+    top:5px;
+    cursor:pointer;
 }
 .massage div{
     position: absolute;
@@ -569,34 +486,34 @@ margin-top: 100px;
 
 
 @media screen and (max-width: 880px){
-    
+
     .tender-menu{padding-top: 10px;}
-    
+
     .tender-menu .col-xs-2{width: 100%; text-align: center; margin: 10px 0 0 0; padding: 0;}
-    
+
     .center-layer.active{ bottom:450px;}
 
     .tender-menu.active{ opacity: 1; height:450px; }
-    
+
     .next-button{ display:inline-block;}
 
    #reviewMan-input, #reviewStars-input{ margin-top: 0;  left:50%; transform: translateX(-50%); height: 25px;}
-    
+
     .tender-menu .col-xs-2 p{ text-decoration: underline; margin: 0; padding: 0;}
-    
+
     .tender-menu #people p, .tender-menu #stars p,  .tender-menu #budjet p{margin-bottom: 0;}
-    
+
     .tender-menu #budjet input, .tender-menu #country input{margin-top: 0;}
-    
+
     .tender-menu .input{width: 150px; margin-left: 0;}
-    
+
     .country .input { margin-top: 0;}
+
+
+
+
     
-    
-    
-    
-    
-    .center-layer-title{
+.center-layer-title{
     text-transform: uppercase;
     font-size: 18px;
 }
@@ -639,4 +556,218 @@ margin-top: 100px;
     
     .button-send{display: block; margin: 0 auto;}
 
+}
+
+ /*_________________________kabinetTourist______________________________*/
+/*_________________________kabinetTourist______________________________*/
+/*_________________________kabinetTourist______________________________*/
+/*_________________________kabinetTourist______________________________*/
+
+
+.kabinet-tourist{
+    margin-top: 120px;
+}
+
+/*HEADER NAVIGATION*/
+
+.search{
+    position: absolute;
+    right:  200px;
+    top:50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.search-bt{
+    position: absolute;
+    right: 170px;
+    top:50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.out-bt{
+    position: absolute;
+    right: 20px;
+    top:50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.search input[type=search]{
+    height: 35px;
+}
+
+
+.kabinet-link:nth-child(3){
+    margin-right: 400px;
+}
+
+.kabinet-link a{
+    margin-left: 20px;
+    color: #000;
+}
+
+.kabinet-link a:hover{
+    text-decoration: underline;
+}
+
+/*КАБИНЕТ-ТУРИСТ-МЕНЮ*/
+
+
+.kabinet-tourist-menu{
+    margin-bottom:70px; 
+}
+
+.kabinet-tourist-menu li{
+    float: left;
+    list-style-type: none;
+    display: block;
+}
+
+.kabinet-tourist-menu li a{
+    padding: 15px 30px;
+    margin-right: 10px;
+    border: 1px solid #000;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.kabinet-tourist-menu li a:hover{
+    background: #e6e6e8;
+}
+
+.kabinet-tourist-menu li a:focus{
+    background: #e6e6e8;
+}
+
+
+
+/*TABLE TOURSE*/
+
+.glyphicon{
+    margin-right: 5px;
+}
+
+/*_________________________formRegistration______________________________*/
+/*_________________________formRegistration______________________________*/
+/*_________________________formRegistration______________________________*/
+/*_________________________formRegistration______________________________*/
+
+.registration-form .title-registration{    
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+    text-align: center;
+    font:24px/1 Arial,sans-serif;
+    z-index: 10;
+    
+}
+
+registration-form{
+    overflow:hidden;
+}
+.registration-form .registration{    
+    text-align: center;
+    font:24px/1 Arial,sans-serif;
+    margin-top: 150px;
+}
+
+
+ .button-registration input{
+    width: 50%;
+    height: 100px;
+}
+
+/*ВСПЛЫВАЮЩИЕ ФОРМЫ РЕГИСТРАЦИИ*/
+
+/*РЕГИСТРАЦИЯ туриста*/
+
+.form-registration-tourist{
+    position: fixed;
+    left:50%;
+    right:0;
+    top:900px;
+    bottom:0;
+    z-index: 10;
+    opacity: 0;
+    background: #000;
+    transition:  .6s linear;
+    overflow:hidden;
+}
+
+.form-registration-tourist.active{
+    top: 70px;
+    opacity: 0.9;
+    overflow:hidden;
+}
+
+#button-agent.active{
+    display: none;
+}
+
+
+.form-registration-tourist .send-number-tourist{
+    margin-top:20px;
+    text-align: center;
+    color: #fff;
+    font:20px/1 Arial,sans-serif;
+    font-weight: 500;
+}
+
+
+
+.form-registration-tourist .send-number-tourist input[type=text]{
+    margin-top: 50px;
+    background: #000;
+    border: 1px solid #fff;
+    outline: none;
+    color: #fff;
+}
+
+.form-registration-tourist .send-number-tourist input[type=button]{
+    margin-top: 30px;
+    background: #000;
+    width: 200px;
+    height: 50px;
+    font:16px/1 Arial,sans-serif;
+}
+
+
+.form-registration-tourist .send-number-tourist input[type=button]:hover{
+    background: #fff;
+    color: #000;
+}
+
+
+/*РЕГИСТРАЦИЯ агента*/
+
+.form-registration-agent{
+   position: fixed;
+    left:0;
+    right:50%;
+    bottom:0;
+    z-index: 10;
+    opacity: 0;
+    top: 900px;
+    background: #000;
+    transition:  .6s linear;
+    overflow:hidden;
+}
+
+.form-registration-agent.active{
+    top: 70px;
+    opacity: 0.9;
+    overflow:hidden;
+    
+
+}
+
+#button-tourist.active{
+    display: none;
 }

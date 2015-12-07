@@ -31,22 +31,3 @@ $emailHasError = (/* if */ $model->hasErrors('password')) ? 'has-error' : /* els
         
     </form>
 </div>
-<script type='text/javascript'>
-$(document).on('submit', 'form#LoginForm', function(e) {
-    e.preventDefault();
-    $.ajax({
-       url: '/login/index',
-       method: 'POST',
-       data: $(this).serialize(),
-       dataType: 'html',
-       success: function(data) {
-           $('#login .login-form').html(data);
-       },
-       statusCode: {
-           302: function() {
-               window.location.href = '/';
-           }
-       }
-   });
-});
-</script>

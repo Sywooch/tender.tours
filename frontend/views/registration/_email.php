@@ -22,7 +22,8 @@ use yii\helpers\Url;
                 </div>
                 <div class="link">
                     <p>Для подтверждения e-mail и продолжения регистрации перейдите по ссылке:<br>
-                    <a href="<?= Url::home(true) ?>registration/reg-confirm/?id=<?= $registrationToken ?>"></a></p>
+                    <a href="<?= Url::home(true) ?>registration/reg-confirm/?id=<?= $registrationToken ?>">
+                        <?= Url::home(true) ?>registration/reg-confirm/?id=<?= $registrationToken ?></a></p>
                 </div>
             </div>
         </div>

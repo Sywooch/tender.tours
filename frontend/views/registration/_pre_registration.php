@@ -8,7 +8,7 @@ $emailHasError = (/* if */ $model->hasErrors('email')) ? 'has-error' : /* else *
 
 ?>
 
-<div class="login registration-form">
+<div id="registration_form_block">
     <h1>Регистрация</h1>
     <?php if ($model->hasErrors()) { ?>
     <div class="errors" style="color: red;">
@@ -34,22 +34,3 @@ $emailHasError = (/* if */ $model->hasErrors('email')) ? 'has-error' : /* else *
         <p class="submit"><input type="submit" value="Зарегистрироваться" /><p>
     </form>
 </div>
-<script type='text/javascript'>
-$(document).on('submit', 'form#PreRegistrationForm', function(e) {
-    e.preventDefault();
-    $.ajax({
-       url: '/registration/pre-registration',
-       method: 'POST',
-       data: $(this).serialize(),
-       dataType: 'html',
-       success: function(data) {
-           $('#regist .registration-form').html(data);
-       },
-       statusCode: {
-           302: function() {
-               window.location.href = '/';
-           }
-       }
-   });
-});
-</script>

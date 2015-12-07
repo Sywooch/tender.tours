@@ -19,10 +19,11 @@ AppAsset::register($this);
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
-    <link rel="stylesheet" href="/css/style-list.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/style-raiting.css">
     <link rel="stylesheet" href="/css/style-raiting-man.css">
+    
+    
     
 </head>
 <body>
@@ -36,12 +37,13 @@ AppAsset::register($this);
     </div>
     
     <footer class="footer">
-        <div class="container">
-            <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
-            <p class="pull-right"><?= Yii::powered() ?></p>
-        </div>
+
     </footer>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="/js/jquery-1.6.4.min.js"></script>
+    <script src="/js/script.js"></script>
 <?php $this->endBody() ?>
+   
 </body>
 </html>
 <?php $this->endPage() ?>

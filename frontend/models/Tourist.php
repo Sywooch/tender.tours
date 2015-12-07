@@ -16,14 +16,6 @@ class Tourist extends ActiveRecord //implements IdentityInterface
         return '{{%tourist}}';
     }
     
-    public function behaviors()
-    {
-        return [
-            
-        ];
-    }    
-    
-    // 1. ЗАПОЛНИТЬ
     public function rules()
     {
         return [

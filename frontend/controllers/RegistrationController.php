@@ -5,6 +5,9 @@ namespace frontend\controllers;
 use Yii;
 use frontend\models\PreRegistrationForm;
 use frontend\models\TouristRegForm;
+use frontend\models\Tourist;
+use frontend\models\AgentRegForm;
+use frontend\models\Agent;
 use yii\filters\AccessControl;
 use frontend\models\User;
 use yii\web\Controller;
@@ -68,104 +71,86 @@ class RegistrationController extends Controller {
     }
 
     public function actionRegConfirm($id) {
-        // получаем юзера ($user) из таблицы по RegToken = $id
         $user = User::findByRegistrationToken($id);
-        
-        
-        // если ничего не нашлось, кидаем HttpNotFound
-        
-        // если GET запрос - возвращаем форму рииистаации
-        // 
-        if (Yii::$app->request->isGet){
-            return $this->render('reg-confirm');
+        if ($user === null) {
+            return $this->render('404');
         }
-        // вьюшка состотт из 2 форм: для Туриста и для Агента
-        // <form action="/registration/reg-confirm/REG_TOKEN"
-        
-        // если POST, проверяем выбаанный юзером тип
-        // Если Турист - вызываешь функцию registrateTourist($user)
-        // Иначе - registrateAgent($user)
-        
-        // если вернулся True - редирект в кабинет в зависимости от типа
-        
-        // здесь ретурн вьюшки 
-    }
-    
-    private function registrateTourist($user) {
-        // заполняешь модель формы Туриста
-        // валиццция
-        // таанзакция
-        // save туриста
-        // меняешь у юзера статус на Активен
-        // // удалешь у юзера Рег Токен
-        // save юзера
-        // 
-        //есии где-то ошибки, return false
-        
-        return true;
-    }
-    private function registrateAgent($user) {
-        // заполняешь модель формы Агента
-        // валиццция
-        // таанзакция
-        // save агента
-        // меняешь у юзера статус на Активен
-        // // удалешь у юзера Рег Токен
-        // save юзера
-        // 
-        //есии где-то ошибки, return false
-        
-        return true;
-    }
-    
-    public function actionTourist() {
-        $model = new TouristRegForm;
-
-        try {
-            if (Yii::$app->getRequest()->isPost &&
-                    $model->load(['TouristRegForm' => Yii::$app->request->post('TouristRegForm')]) &&
-                    $model->validate()) {
-                $user = User::findByRegistrationToken($user->REGISTRATION_TOKEN);
-                $user->TYPE = User::TYPE_TOURIST;              
-                
-                if ($user->save()) {
-                    $tourist = new Tourist();
-                    $tourist->PHONE = $this->phone;
-                    $tourist->USER_ID = $user->getId();
-                    $tourist->POSTED_TENDERS = 0;
-                    
-                    if ($tourist->save()) {
-                        return $this->renderPartial('_phoneconfirm');
-                    }
+        if (Yii::$app->request->isGet) {
+            return $this->render('reg-confirm', ['user' => $user]);
+        }
+        if (Yii::$app->request->isPost) {
+            $user->TYPE = Yii::$app->request->post('type');
+            if ($user->TYPE == 'tourist') {
+                $user->TYPE = User::TYPE_TOURIST;
+                return $this->registrateTourist($user);
+            } else {
+                $user->TYPE = User::TYPE_AGENT;
+                return $this->registrateAgent($user);
                 }
             }
-        } catch (\yii\base\Exception $e) {
-            echo $e;
-        }
-
-        return $this->renderPartial('_tourist', [
-                    'model' => $model,
-        ]);
+        return $this->goHome();
     }
 
-    // 5. 
-    // 5-1. Вьюшки для экшенов
-    public function actionAgent() {
-        $model = new AgentRegForm();
-
-        if (Yii::$app->getRequest()->isGet) {
-            return $this->render('agent', [
-                        'model' => $model,
-            ]);
+    private function registrateTourist($user) {
+        $tourist = new Tourist();
+        $tourist->PHONE = Yii::$app->request->post('phone');
+        $tourist->USER_ID = $user->getId();
+        $tourist->POSTED_TENDERS = 0;
+        $tourist->validate();
+        $transaction = Yii::$app->db->beginTransaction();
+        try {
+            if ($tourist->save()) {
+                $transaction->commit();
+                }
+            else{
+                throw new \yii\db\Exception('Ошибка записи пользователя в БД');
+            }
+        } catch (Exception $ex) {
+            $transaction->rollBack();
+            $tourist->addError('_error', 'Ошибка регистрации! Повторите попытку позже.');
         }
-
-        if ($model->load(['AgentRegForm' => Yii::$app->request->post()]) && 
-                $model->register()) {
-            return $this->goBack();
+        $user->STATUS = User::STATUS_ACTIVE;
+        $user->REGISTRATION_TOKEN = NULL;
+        $user->save();
+        if ($user->hasErrors()){
+            return false;
         }
-        return $this->render('agent', [
-                    'model' => $model
-        ]);
+        return $this->render('tourist_cabinet');
+    }
+    
+    private function registrateAgent($user) {
+        $agent = new Agent();
+        $agent->USER_ID = $user->getId();
+        $agent->COMPANY = Yii::$app->request->post('company');
+        $agent->PHONE = Yii::$app->request->post('phone');        
+        $agent->FADDRESS = Yii::$app->request->post('faddress');
+        $agent->JADDRESS = Yii::$app->request->post('jaddress');
+        $agent->EDRPOU = Yii::$app->request->post('edrpou');
+        $agent->EDRPOUSCAN = Yii::$app->request->post('edrpouscan');
+        $agent->POSTED_FEEDBACKS = 0;
+        $agent->TARIFF_ID = 0;
+        $agent->BALANCE = 0;
+                
+        $agent->validate();
+        $transaction = Yii::$app->db->beginTransaction();
+        try {
+            if ($agent->save()) {
+                $transaction->commit();
+                }
+            else{
+                throw new \yii\db\Exception('Ошибка записи пользователя в БД');
+            }
+        } catch (Exception $ex) {
+            $transaction->rollBack();
+            $agent->addError('_error', 'Ошибка регистрации! Повторите попытку позже.');
+        }
+        $user->STATUS = User::STATUS_ACTIVE;
+        $user->REGISTRATION_TOKEN = NULL;
+        $user->save();
+        if ($user->hasErrors()){
+            return false;
+        }
+        return $this->render('agent_cabinet');
     }
 
     // 7. Экшен для тенееаа
@@ -192,7 +177,7 @@ class RegistrationController extends Controller {
         return Yii::$app->mailer->compose()
                         ->setFrom(['my.tender.tours@gmail.com' => 'Сайт mytender.ru'])
                         ->setTo($email)
-                        ->setTextBody($body)
+                        ->setHtmlBody($body)
                         ->setSubject('Регистрация на сайте')
                         ->send();
     }
