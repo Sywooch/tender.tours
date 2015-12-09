@@ -15,10 +15,12 @@ class JqueryAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web/assets';
     public $css = [
-        
+        'jquery/jquery-ui.min.css',
     ];
     public $js = [
         'jquery/jquery.min.js',
+        'jquery/jquery-ui.min.js',
+        'jquery/jquery.rating-2.0.min.js',
     ];
     public $depends = [
         

@@ -61,32 +61,6 @@ $(document).ready(function () {
     });
 });
 
-$(function () {
-    $('#rating_1').rating({
-        fx: 'full',
-        image: 'images/stars.png',
-        loader: 'images/ajax-loader.gif',
-        url: 'rating.php',
-        callback: function (responce) {
-            this.vote_success.fadeOut(2000);
-        }
-    });
-});
-
-$(function () {
-    $('#rating_2').rating({
-        fx: 'full',
-        image: 'images/man.png',
-        loader: 'images/ajax-loader.gif',
-        url: 'rating.php',
-        callback: function (responce) {
-            this.vote_success.fadeOut(2000);
-        }
-    });
-});
-
-
-
 
 $(document).on('click', '#reg', function (e) {
     e.preventDefault();
@@ -128,8 +102,6 @@ $(document).on('submit', 'form#LoginForm', function (e) {
     });
 });
 
-
-
 //функция поля календаря
 $(function () {
     $("#datepicker1").datepicker({});
@@ -137,3 +109,4 @@ $(function () {
 $(function () {
     $("#datepicker2").datepicker({});
 });
+

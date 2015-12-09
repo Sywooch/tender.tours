@@ -4,13 +4,8 @@ namespace frontend\models;
 
 use Yii;
 use yii\base\Model;
-use yii\db\Connection;
 
-class TenderRegForm extends Model {   
-    
-    // 2. Создать паблик свойства по таблице user_info и user
-    // Только те поля, которые будут в формах регистрации (турист, агент, тендер)
-    // Этих полей должно быть достаточно, чтобы заполнть таблицы user и user_info
+class TenderRegForm extends Model { 
     public $country;
     public $date_forward;
     public $date_back;
@@ -20,14 +15,13 @@ class TenderRegForm extends Model {
 
     public function rules() {
         return [
-            [['phone', 'faddress', 'jaddress', 'edrpou', 'edrpouscan'], 'required'],
-            ['phone', 'string', 'max' => 20],
+            [['country', 'date_forward', 'date_back', 'budget', 'stars', 'people_sum'], 'required'],
         ];
     }
 
-    public function attributeLabels() {
-        return [
-            'phone' => Yii::t('app', 'Телефон'),
-        ];
-    }
+//    public function attributeLabels() {
+//        return [
+//            'phone' => Yii::t('app', 'Телефон'),
+//        ];
+//    }
 }

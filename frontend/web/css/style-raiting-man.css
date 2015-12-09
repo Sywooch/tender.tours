@@ -1,9 +1,9 @@
 /*sprite with stars*/
-#reviewMan-input input:checked ~ label, #reviewMan-input label, #reviewMan-input label:hover, #reviewMan-input label:hover ~ label {
+#people_sum input:checked ~ label, #people_sum label, #people_sum label:hover, #people_sum label:hover ~ label {
   background: url(../images/man.png) no-repeat;
 }
 
-#reviewMan-input {
+#people_sum {
   
   /*fix floating problems*/
   overflow: hidden;
@@ -15,7 +15,7 @@
   margin-top: 10px;
 }
 
-#reviewMan-input input {
+#people_sum input {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   
@@ -27,13 +27,13 @@
   z-index: 0;
 }
 
-#reviewMan-input input:checked ~ label {
+#people_sum input:checked ~ label {
   background-position: 0 -22px;
   height: 24px;
   width: 22px;
 }
 
-#reviewMan-input label {
+#people_sum label {
   background-position: 0 0;
   height: 22px;
   width: 22px;
@@ -45,27 +45,27 @@
   z-index: 1;
 }
 
-#reviewMan-input label:hover, #reviewMan-input label:hover ~ label {
+#people_sum label:hover, #people_sum label:hover ~ label {
   background-position: 0 -22px;
   height: 24px;
   width: 22px;
 }
 
-#reviewMan-input #man-0 {
+#people_sum #man-0 {
   left: 0px;
 }
-#reviewMan-input #man-1 {
+#people_sum #man-1 {
   left: 20px;
 }
-#reviewMan-input #man-2 {
+#people_sum #man-2 {
   left: 40px;
 }
-#reviewMan-input #man-3 {
+#people_sum #man-3 {
   left: 80px;
 }
-#reviewMan-input #man-4 {
+#people_sum #man-4 {
   left: 100px;
 }
-#reviewMan-input #man-5 {
+#people_sum #man-5 {
   left: 110px;
 }

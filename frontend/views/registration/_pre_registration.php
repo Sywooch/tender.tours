@@ -8,7 +8,7 @@ $emailHasError = (/* if */ $model->hasErrors('email')) ? 'has-error' : /* else *
 
 ?>
 
-<div id="registration_form_block">
+<div class="login">
     <h1>Регистрация</h1>
     <?php if ($model->hasErrors()) { ?>
     <div class="errors" style="color: red;">

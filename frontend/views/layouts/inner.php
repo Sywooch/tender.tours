@@ -19,12 +19,8 @@ AppAsset::register($this);
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/style-raiting.css">
-    <link rel="stylesheet" href="/css/style-raiting-man.css">
     
-    
-    
+    <link rel="stylesheet" href="/css/calendar-ui.css">
 </head>
 <body>
 <?php $this->beginBody() ?>
@@ -37,11 +33,8 @@ AppAsset::register($this);
     </div>
     
     <footer class="footer">
-
+        <?= $this->render('../_partial/_footer')?>
     </footer>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-    <script src="/js/jquery-1.6.4.min.js"></script>
-    <script src="/js/script.js"></script>
 <?php $this->endBody() ?>
    
 </body>

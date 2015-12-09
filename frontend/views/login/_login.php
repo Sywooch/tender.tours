@@ -9,7 +9,7 @@ $emailHasError = (/* if */ $model->hasErrors('password')) ? 'has-error' : /* els
 ?>
 
 
-<div class="login registration-form">
+<div class="login">
     <h1>Войти в личный кабинет</h1>
     <form method="post" action="/login" name="LoginForm" id="login">
         <input type="hidden" name="_csrf" value="<?=Yii::$app->request->getCsrfToken()?>" />

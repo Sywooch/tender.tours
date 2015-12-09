@@ -18,9 +18,13 @@ return [
             'transport' => [
                 'class' => 'Swift_SmtpTransport',
                 'host' => 'smtp.gmail.com',
+//                'host' => 'mail.ukraine.com.ua',
                 'username' => 'my.tender.tours@gmail.com',
+//                'username' => 'robot@tender.tours',
                 'password' => 'Din@r111',
+//                'password' => 'eF6oaoP2G9V3',
                 'port' => '587',
+//                'port' => '25',
                 'encryption' => 'tls',
               ]
         ],

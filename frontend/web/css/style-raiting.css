@@ -1,9 +1,9 @@
 /*sprite with stars*/
-#reviewStars-input input:checked ~ label, #reviewStars-input label, #reviewStars-input label:hover, #reviewStars-input label:hover ~ label {
+#stars_sum input:checked ~ label, #stars_sum label, #stars_sum label:hover, #stars_sum label:hover ~ label {
   background: url(../images/stars2.png) no-repeat;
 }
 
-#reviewStars-input {
+#stars_sum {
   
   /*fix floating problems*/
   overflow: hidden;
@@ -15,7 +15,7 @@
     margin-top: 10px;
 }
 
-#reviewStars-input input {
+#stars_sum input {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   
@@ -27,13 +27,13 @@
   z-index: 0;
 }
 
-#reviewStars-input input:checked ~ label {
+#stars_sum input:checked ~ label {
   background-position: 0 -22px;
   height: 24px;
   width: 22px;
 }
 
-#reviewStars-input label {
+#stars_sum label {
   background-position: 0 0;
   height: 22px;
   width: 22px;
@@ -45,27 +45,27 @@
   z-index: 1;
 }
 
-#reviewStars-input label:hover, #reviewStars-input label:hover ~ label {
+#stars_sum label:hover, #stars_sum label:hover ~ label {
   background-position: 0 -22px;
   height: 24px;
   width: 22px;
 }
 
-#reviewStars-input #star-0 {
+#stars_sum #star-0 {
   left: 0px;
 }
-#reviewStars-input #star-1 {
+#stars_sum #star-1 {
   left: 20px;
 }
-#reviewStars-input #star-2 {
+#stars_sum #star-2 {
   left: 40px;
 }
-#reviewStars-input #star-3 {
+#stars_sum #star-3 {
   left: 80px;
 }
-#reviewStars-input #star-4 {
+#stars_sum #star-4 {
   left: 100px;
 }
-#reviewStars-input #star-5 {
+#stars_sum #star-5 {
   left: 110px;
 }
