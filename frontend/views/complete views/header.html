@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>MAIN</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-raiting.css">
+    <link rel="stylesheet" href="css/style-raiting-man.css">
+    <link rel="stylesheet" href="css/calendar-ui.css">
+    <script src="js/jquery-1.6.4.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/script.js"></script>
+    <script type="text/javascript" src="js/jquery.rating-2.0.min.js"></script>
+</head>
+
+<body>  
+   
+   
+    <header class="header main-container">
+            <div class="logo"><a href="">My tender</a></div>
+            <div id="header-menu" class="header-menu glyphicon glyphicon-align-justify"></div>
+            
+            <div class="log-reg">
+                <span id="log" class="account">Вход</span>
+                <span id="reg" class="account">Регистрация</span>
+            </div>
+            <div id="login" class="modal-window">
+                <div id="modal-close-login" class="modal-close glyphicon glyphicon-remove"></div>
+                <section class="container">
+                    <div class="login">
+                      <h1>Войти в личный кабинет</h1>
+                      <form method="get" action="/registration/tender">
+                        <p><input type="text" name="login" value="" placeholder="Логин или Email"></p>
+                        <p><input type="password" name="password" value="" placeholder="Пароль"></p>
+                        <p class="remember_me">
+<!--
+                          <label>
+                            <input type="checkbox" name="remember_me" id="remember_me">
+                            Запомнить меня
+                          </label>
+-->
+                        </p>
+                        <p class="submit"><input type="submit" name="commit" value="Войти"></p>
+                      </form>
+                    </div>
+
+<!--
+                    <div class="login-help">
+                      <a href="index.html">Забыли пароль?</a> Восстановите его!
+                    </div>
+-->
+                </section>
+            </div>
+            <div id="regist" class="modal-window">
+                <div id="modal-close-regist" class="modal-close glyphicon glyphicon-remove"></div>
+                <section class="container">
+                    <div class="login">
+                      <h1>Регистрация</h1>
+                      <form method="post" action="/registration/tender">
+                        <p><input type="text" name="name" value="" placeholder="Ваше Имя"></p>
+                        <p><input type="text" name="login" value="" placeholder="Ваш Email"></p>
+                        <p class="submit"><input type="submit" name="turist-agent" value="Агент"<p>
+                      </form>
+                    </div>
+                </section>
+        </div>
+            
+            <div id="overlay"></div>
+    </header>
+    
+</body>

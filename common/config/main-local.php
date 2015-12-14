@@ -28,5 +28,10 @@ return [
                 'encryption' => 'tls',
               ]
         ],
+        'sms' => [
+            'class' => 'yii\smsc\SmsC',
+            'login'     => 'larinoffski',
+            'password'   => 'Gbpl@,jkrf',
+        ],
     ],
 ];

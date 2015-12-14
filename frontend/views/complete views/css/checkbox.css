@@ -1,0 +1,50 @@
+/*sprite with stars*/
+#checked-input input:checked ~ label, #checked-input label, #checked-input label:hover, #checked-input label:hover ~ label {
+  background: url(../images/check2.png) no-repeat;
+}
+
+#checked-input {
+  
+  /*fix floating problems*/
+  overflow: hidden;
+  *zoom: 1;
+  /*end of fix floating problems*/
+  
+    position: relative;
+    width: 80px;
+    float: right;
+    color: #c69c6d;
+    margin-top: 15px;
+}
+
+#checked-input span{
+    margin-left: 10px;
+}
+
+#checked-input input {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  width: 13px;
+  height: 12px;
+  position: absolute;
+  z-index: 1;
+
+}
+
+
+#checked-input input:checked ~ label {
+  background-position: 0 -10px;
+  height: 11px;
+  width: 13px;
+}
+
+#checked-input label {
+  background-position: 0 0;
+  height: 11px;
+  width: 13px;
+  float: right;    
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+    top: 2px;
+}

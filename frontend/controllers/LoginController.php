@@ -24,8 +24,9 @@ class LoginController extends Controller {
         }
         
         $model = new LoginForm();
-        if ($model->load(['LoginForm' => Yii::$app->request->post()])
-                && $model->login()) {
+        $model->load(['LoginForm' => Yii::$app->request->post()]);
+        
+        if (Yii::$app->request->isPost && $model->login()) {
             return $this->goBack();
         }
         

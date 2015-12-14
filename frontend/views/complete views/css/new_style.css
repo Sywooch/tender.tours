@@ -1,0 +1,626 @@
+/*ШРИФТ*/
+@font-face{
+    font-family:HelveticaBold;
+    src: url('../fonts/Helvetica/HelveticaBold/HelveticaBold.eot');
+    src: url('../fonts/Helvetica/HelveticaBold/HelveticaBold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Helvetica/HelveticaBold/HelveticaBold.woff') format('woff'),
+         url('../fonts/Helvetica/HelveticaBold/HelveticaBold.ttf') format('truetype'),
+         url('../fonts/Helvetica/HelveticaBold/HelveticaBold.svg#HelveticaBold')  format('svg');
+    font-weight: bolder;
+    font-style: normal; 
+}
+
+@font-face{
+    font-family:HelveticaLight;
+    src: url('../fonts/Helvetica/HelveticaLight/HelveticaLight.eot');
+    src: url('../fonts/Helvetica/HelveticaLight/HelveticaLight.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Helvetica/HelveticaLight/HelveticaLight.woff') format('woff'),
+         url('../fonts/Helvetica/HelveticaLight/HelveticaLight.ttf') format('truetype'),
+         url('../fonts/Helvetica/HelveticaLight/HelveticaLight.svg#HelveticaLight')  format('svg');
+    font-weight: bolder;
+    font-style: italic; 
+}
+
+
+
+
+/*_________________________MAIN______________________________*/
+/*_________________________MAIN______________________________*/
+/*_________________________MAIN______________________________*/
+/*_________________________MAIN______________________________*/
+
+.main-container{
+    max-width:1080px;
+    margin: 0 auto;
+}
+
+body{
+    background: #fff;
+    font:14px/1 HelveticaLight, sans-serif;
+    min-height:200px;
+    z-index: 1;
+}
+
+/*HEADER*/
+
+.header {
+    height: 70px; /* Высота слоя в пикселах */
+    position: relative;
+    background: #fff;
+    z-index: 1003;
+}
+
+.header-menu {
+    position: absolute;
+    left: 200px;
+    top:50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.logo {
+    position: absolute;
+    left: 0;
+    top:50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 100;
+    font:24px/1 HelveticaLight, sans-serif;
+    
+}
+
+.logo a{
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.log-reg {
+    position: absolute;
+    right: 0;
+    top:50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: HelveticaLight;
+}
+
+.account{
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+/*Выпадающее меню АГЕНТ/ТУРИСТ*/
+
+.log-reg-form{
+    position: relative;
+    background: #fff;
+    z-index: 1002;
+}
+
+
+
+
+.log-reg-links{
+    position: absolute;
+    right: 0;
+    background: #fff;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    text-align: center;
+    min-width: 250px;
+    margin: 0;
+    padding: 0;
+    top: -110px;
+    -webkit-transition: top .5s  ;
+     -moz-transition: top .5s ;
+     -o-transition: top .5s ;
+     transition: top .5s  ;
+    
+}
+
+.log-reg-links.active{
+    top: 0px;
+}
+
+.log-reg-links li{
+    padding: 20px 0;
+    list-style-type: none;
+    cursor: pointer;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    color: #141414;
+    font:14px/1 HelveticaLight, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.log-reg-links li:hover{
+    background: #f2f2f2;
+    
+}
+
+
+/*LOGIN FORM*/
+
+
+.login-form-container{
+    position: relative;
+    background: #fff;
+    z-index: 1002;
+}
+
+
+.login-form{
+    position: absolute;
+    right: 0;
+    background: #fff;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    text-align: center;
+    min-width: 250px;
+    margin: 0;
+    padding: 0;
+    top: -230px;
+    -webkit-transition: top .5s  ;
+     -moz-transition: top .5s ;
+     -o-transition: top .5s ;
+     transition: top .5s  ; 
+}
+
+.login-form.active{
+    top: 0px;
+}
+
+.login-form input{
+    background: #fff;
+    color: #000;
+    border: none;
+    height: 25px;
+    margin-top: 20px;
+    width: 70%;
+    text-align: left;
+    border-bottom: 1px solid #000;
+    font:16px/1 HelveticaLight, sans-serif;
+    outline: none;
+}
+
+.login-form button{
+    margin: 40px 0;
+    width: 70%;
+    padding: 15px 15px;    
+    text-transform: uppercase;
+    border:1px solid #000;
+    background: transparent;
+    color: #000;
+}
+
+.login-form button:hover{
+    background: #c69c6d;
+    color: #000;
+    border-color: #c69c6d;          
+}
+
+/*CENTER LAYER*/
+.center-layer {
+    position: absolute; 
+    width: 100%; 
+    top: 70px; 
+    background: url(../images/bg-image-min.png) no-repeat 0 0 ;
+    background-size: cover;
+    bottom: 0;
+    text-align: center;
+    color: #fff;
+    transition: bottom .2s linear;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.center-layer:after{
+    content:"";
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    background:rgba(0,0,0,.5);
+}
+
+
+.center-layer-head{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    margin-top:-50px;    
+    max-width:500px;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+}
+
+.center-layer-text{
+    font-size: 22px;
+    line-height: 1.5;
+    margin-top: 30px;
+}
+
+.view-tenders{
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    border:2px solid #fff;
+    margin-right: 10px;
+}
+
+.view-tenders, .view-tenders:hover{
+    color: #fff;
+    text-decoration: none;  
+    width: 200px;
+    font:14px/1 HelveticaLight, sans-serif;
+    font-weight: 200;
+}
+
+.view-tenders:hover{
+    background: #c69c6d;
+    border-color: #c69c6d;
+    color: #000;
+}
+
+
+
+/*REGISTRATION AND TENDER_REGISTRATION*/
+
+.registration{
+    position: fixed;
+    left:0;
+    right:0;
+    top:900px;
+    bottom:0;
+    z-index:5;
+    opacity: 0;
+    background: #000;
+    transition:  .6s linear;
+    margin: 0 auto;
+    overflow-x: auto;
+}
+
+#tender-menu{
+    z-index: 5;
+}
+
+.registration.active{
+    opacity: 0.95;
+    top:70px;
+}
+
+#registration .fa-times, #tender-menu .fa-times{
+    position: absolute;
+    color: #fff;
+    left: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+
+
+
+/*REGISTRATION*/
+
+.form-registration{
+    position: relative;
+    left: 50%;
+/*    top:50%;    */
+    transform: translate(-50%,50%);
+    z-index: 10;
+    color: #fff;
+    width: 300px;
+}
+
+
+.form-registration-tender{
+    position: relative;
+    left: 50%;    
+    transform: translate(-50%);
+    z-index: 10;
+    color: #fff;
+    width: 300px;
+    top: 100px;
+    overflow-x: auto;
+}
+
+#form-registration-tourist-tender.active{
+    display: none;
+}
+
+#form-registration-tourist-after-tender{
+    display: none;
+}
+
+#form-registration-tourist-after-tender.active{
+    display: block;
+}
+
+
+.form-registration p{
+    font:18px/1 HelveticaBold, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #c69c6d;
+}
+
+.form-registration input[type=text]{
+    background: #000;
+    color: #fff;
+    border: none;
+    height: 25px;
+    margin-bottom: 25px;
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid #acacac;
+    font:16px/1 HelveticaLight, sans-serif;
+    outline: none;
+}
+
+.form-registration input[type=text]:focus{
+    background: #000;
+}
+    
+
+
+.form-registration input[type=submit]{
+    width: 300px;
+    margin: 20px auto;
+    display: block;
+    padding: 15px 15px;
+    text-transform: uppercase;
+    border:2px solid #c69c6d;
+    background: transparent;
+    color: #c69c6d;
+}
+
+.form-registration input[type=submit]:hover{
+    background: #c69c6d;
+    border-color: #c69c6d;
+    color: #000;
+}
+
+
+.form-registration .fa-check{
+    position: relative;
+    float: right;
+    margin-top: -50px;
+    color: #787878;
+}
+
+/*TENDER REGISTRATION*/
+
+
+.title-raiting{
+    float: left;
+    margin-right: 10px;
+    width: 50px;
+    margin-top: 5px;
+    color: #c69c6d;
+    font:15px/1 HelveticaLight, sans-serif;
+    
+}
+
+#reviewStars-input, #reviewMan-input {
+    float: left;
+    height: 25px;
+    margin:10px; 
+}
+
+#datepicker1, #datepicker2{
+    width: 300px;
+}
+
+
+
+
+
+/*MENU*/
+
+.modal-menu{
+    position: fixed;
+    left:0;
+    right:0;
+    top:900px;
+    bottom:0;
+    z-index:100;
+    opacity: 0;
+    background: #000;
+    transition:  .6s linear;
+}
+
+.modal-menu.active{
+    top: 70px;
+    opacity: 0.9; 
+}
+
+.content-menu{
+margin-top: 100px;
+}
+
+
+.navigation{
+    width: 100%;
+    min-width: 300px;
+}
+
+.navigation ul{
+    list-style:none;
+    float: right;
+    padding-right: 100px;
+    height: 385px;
+}
+
+.navigation li{
+    position:relative;
+    list-style-type: none;
+    width: 260px;
+    text-align: center;
+}
+
+.navigation li a{
+    display: block;
+    padding: 31px 0;
+    text-align: center;
+    font:14px/1 HelveticaLight,sans-serif;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    border-bottom: 1px solid #fff;
+    letter-spacing: 4px;
+}
+
+.navigation li a:hover{
+    text-decoration: underline;
+}
+
+
+/*CONTACTS*/
+
+.contacts{
+    position: relative;
+    padding-left: 100px;
+    margin-top: 25px;
+}
+
+
+.hot-line-number{
+    position: relative;
+    width: 170px;
+    height: 125px;
+    border: 1px solid #fff;
+    color: #fff;
+    text-align: left;
+    line-height: 25px;
+    padding: 40px 0 0 20px;
+    font:16px HelveticaLight,sans-serif;
+}
+
+
+.hot-line-number::after{
+	position:absolute;
+	top:-14px;
+	left:50%;
+	width:25px;
+	height:25px;
+	margin-left:-15px;
+	content:'';
+	background:url(../images/phone.png) no-repeat ;
+}
+
+
+
+.hot-line-number span{
+    line-height: 50px;
+}
+
+
+.button-zvonok{
+    box-sizing: border-box;
+    display:block;
+    height: 50px;
+    width: 170px;
+    border:1px solid #fff;
+    text-align: center;
+    padding-top: 16px;
+    margin-top: 40px;
+    color: #fff;
+    font:16px HelveticaLight,sans-serif;
+}
+
+.button-send{
+    box-sizing: border-box;
+    display:block;
+    height: 50px;
+    width: 170px;
+    border:1px solid #fff;
+    text-align: center;
+    padding-top: 16px;
+    color: #fff;
+    font:16px HelveticaLight,sans-serif;
+}
+
+.button-zvonok a, .button-send a{
+    color:#fff;
+    text-decoration: none;
+}
+
+.button-zvonok:hover, .button-send:hover{
+    text-decoration: underline;
+    color: #000;
+}
+
+.contacts p{
+    margin: 0;
+}
+
+.contacts input[type=text]{
+    border: none;
+    box-shadow: none;
+    background: #000;
+    outline: none;
+    border-bottom: 1px solid #fff;
+    width: 170px;
+    margin:  30px 0;
+    color: #fff;
+}
+
+.contacts input[type=text]:hover{
+    border-bottom: 1px solid #fff;
+}
+
+.contacts input::-webkit-input-placeholder {color:#413f3f;}
+.contacts input:-moz-placeholder {color:#413f3f;}
+
+
+/*SOCIALS*/
+.social{
+    position: relative;
+    overflow: hidden;
+}
+
+
+.social ul{
+    position: relative;
+    left: 50%;
+    float: left;
+    padding: 0;
+}
+
+.social ul li{
+    position: relative;
+    list-style-type: none;
+    float: left;
+    color: #fff;
+    left: -50%;
+    margin-right: 15px;
+    padding-top: 50px;
+}
+
+.social i{
+    color: #fff;
+}
+
+
+.social i:hover{
+    color: #868585;
+}
+
+
+
+
+
+
+
+
+
+
+
+

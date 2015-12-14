@@ -5,12 +5,6 @@ namespace frontend\models;
 use Yii;
 use yii\base\Model;
 
-/**
- * @property string $USERNAME
- * @property string $EMAIL
- * @property integer $TYPE
- * @property string $CREATED_AT
- */
 class PreRegistrationForm extends Model {
 
     public $name;

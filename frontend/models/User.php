@@ -10,14 +10,12 @@ use \yii\web\IdentityInterface;
 class User extends ActiveRecord implements IdentityInterface
 {
     const STATUS_DISABLED = 0;
+    const STATUS_MODERATE = 5;
     const STATUS_ACTIVE = 10;
     
     const TYPE_ADMIN = 1;
     const TYPE_TOURIST = 5;
-    const TYPE_AGENT = 10;
-    
-   
-    
+    const TYPE_AGENT = 10;    
 
     private $_password;
     public function getRawPassword() {
@@ -28,14 +26,7 @@ class User extends ActiveRecord implements IdentityInterface
     public static function tableName()
     {
         return '{{%user}}';
-    }
-    
-    public function behaviors()
-    {
-        return [
-            
-        ];
-    }    
+    } 
     
     public function rules()
     {
@@ -55,6 +46,11 @@ class User extends ActiveRecord implements IdentityInterface
     public static function findByUsername($username)
     {
         return static::findOne(['USERNAME' => $username, 'STATUS' => self::STATUS_ACTIVE]);
+    }
+    
+    public static function isUserEmailExist($email)
+    {
+        return static::findOne(['EMAIL' => $email]);
     }
     
     public function getId()

@@ -1,0 +1,1737 @@
+/*ШРИФТ*/
+@font-face{
+    font-family:HelveticaBold;
+    src: url('/fonts/Helvetica/HelveticaBold/HelveticaBold.eot');
+    src: url('/fonts/Helvetica/HelveticaBold/HelveticaBold.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/Helvetica/HelveticaBold/HelveticaBold.woff') format('woff'),
+         url('/fonts/Helvetica/HelveticaBold/HelveticaBold.ttf') format('truetype'),
+         url('/fonts/Helvetica/HelveticaBold/HelveticaBold.svg#HelveticaBold')  format('svg');
+    font-weight: bold;
+    font-style: normal; 
+}
+
+@font-face{
+    font-family:HelveticaLight;
+    src: url('/fonts/Helvetica/HelveticaLight/HelveticaLight.eot');
+    src: url('/fonts/Helvetica/HelveticaLight/HelveticaLight.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/Helvetica/HelveticaLight/HelveticaLight.woff') format('woff'),
+         url('/fonts/Helvetica/HelveticaLight/HelveticaLight.ttf') format('truetype'),
+         url('/fonts/Helvetica/HelveticaLight/HelveticaLight.svg#HelveticaLight')  format('svg');
+    font-weight: normal;
+    font-style: italic; }
+
+
+/*________________REGISTRATION ond LOGIN Modal Window_____________________*/
+/*________________REGISTRATION ond LOGIN Modal Window_____________________*/
+/*________________REGISTRATION ond LOGIN Modal Window_____________________*/
+/*________________REGISTRATION ond LOGIN Modal Window_____________________*/
+
+.container {
+    margin: 40px auto;    
+    max-width: 320px;
+}
+.login h1 {
+    margin: -20px -20px 21px;
+    line-height: 40px;
+    color: #8e8e8e;
+    text-align: center;
+    text-shadow: 0 1px white;
+    font:22px/1 helvetica, sans-serif;
+}
+.login p {
+    margin: 20px 0 0;
+}
+.login p:first-child {
+    margin-top: 0;
+}
+.login input, .login input{
+    width: 95%;
+}
+.login p.remember_me {
+    float: left;
+    line-height: 31px;
+}
+.login p.remember_me label {
+    font-size: 12px;
+    color: #777;
+    cursor: pointer;
+}
+.login p.remember_me input {
+    position: relative;
+    bottom: 1px;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+.login p.submit {
+    text-align: right;
+}
+.login-help {
+    margin: 10px 0;
+    font-size: 11px;
+    color: #555;
+    text-align: center;
+    text-shadow: 0 1px #2a85a1;
+}
+.login-help a {
+    color: #444;
+    text-decoration: none;
+}
+.login-help a:hover {
+    color: #9a5a52;
+}
+:-moz-placeholder {
+    color: #c9c9c9 !important;
+    font-size: 13px;
+}
+::-webkit-input-placeholder {
+    color: #ccc;
+    font-size: 13px;
+}
+input {
+    font-family: 'Lucida Grande', Tahoma, Verdana, sans-serif;
+    font-size: 14px;
+}
+input[type=text], input[type=password] {
+    margin: 5px;
+    padding: 0 10px;
+    width: 95%;
+    height: 34px;
+    color: #8e8e8e;
+    background: white;
+    border: 1px solid;
+    border-color: #8e8e8e;
+    border-radius: 2px;
+    outline: 5px solid #eff4f7;
+    -moz-outline-radius: 3px;
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
+    outline: none;
+}
+input[type=text]:focus, input[type=password]:focus {
+    border-color: #8e8e8e;
+    outline-color: #8e8e8e;
+    outline-offset: 0;
+}
+
+
+input[type=submit] {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    height: 29px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #8e8e8e;
+    text-transform: uppercase;
+    background: #fff;
+    border: 1px solid;
+    border: 1px solid #8e8e8e;
+    border-radius: 0px;
+    outline: 0;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+
+}
+#regist input[type=submit] {
+    display: block;
+    padding: 0 18px;
+    height: 35px;
+    width: 70%;
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    color: #8e8e8e;
+    border: 1px solid #8e8e8e;
+    border-radius: 0px;
+    outline: 0;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+
+}
+#regist .turist input[type=submit]{
+    margin-right: 30px;
+}
+input[type=submit]:hover{
+    background: #ffbf51;
+    border-color: #ffbf51;
+    color: #fff;
+}
+
+#regist input[type=submit]:hover{
+    background: #ffbf51;
+    border-color: #ffbf51;
+    color: #fff;
+}
+
+input[type=submit]:active {
+    background: #ffbf51;
+    border-color: #ffbf51;
+    color: #fff;
+
+}
+#regist input[type=submit]:active {
+    background: #ffbf51;
+    border-color: #ffbf51;
+    color: #fff;
+}
+
+.lt-ie9 input[type=text], .lt-ie9 input[type=password] {
+    line-height: 34px;
+}
+
+/*_________________________INDEX.HTML______________________________*/
+/*_________________________INDEX.HTML______________________________*/
+/*_________________________INDEX.HTML______________________________*/
+/*_________________________INDEX.HTML______________________________*/
+
+.main-container{
+    max-width:1080px;
+    margin: 0 auto;
+    
+}
+
+
+.kabinet-container{
+    max-width:1200px;
+    margin: 0 auto;
+    min-width: 1000px;
+
+}
+
+body{
+    background: #fff;
+    font:14px/1 helvetica,sans-serif;
+    min-height:200px;
+    z-index: 1;
+    
+}
+
+/*HEADER*/
+
+.header {
+    height: 70px; /* Высота слоя в пикселах */
+    position: relative;
+    background: #fff;
+}
+
+.header-menu {
+    position: absolute;
+    left: 160px;
+    top:50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.logo {
+    position: absolute;
+    left: 0;
+    top:50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 100;
+    
+}
+
+.logo a{
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+.log-reg {
+    position: absolute;
+    right: 0;
+    top:50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.account{
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+/*CENTER CONTENT*/
+
+.center-layer {
+    position: absolute; 
+    width: 100%; /* Ширина слоя в пикселах */
+    top: 70px; /* Положение слоя от верхнего края */
+    background: url(/images/background.jpg) no-repeat 0 0 ;
+    background-size: cover;
+    bottom: 0;
+    text-align: center;
+    color: #fff;
+    transition: bottom .2s linear;
+    z-index: 1;
+    
+}
+
+.center-layer.active{
+    bottom:180px;
+}
+
+.center-layer:after{
+    content:"";
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    background:rgba(0,0,0,.5);
+}
+
+.center-layer-head{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    margin-top:-50px;    
+    max-width:35%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+}
+
+.center-layer-head.active{
+    display: none;
+}
+
+.center-layer-title{
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+.center-layer-text{
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 30px;
+}
+
+.view-tenders{
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    border:2px solid #fff;
+}
+
+.view-tenders, .view-tenders:hover{
+    color: #fff;
+    text-decoration: none;   
+}
+
+.publication-link{
+    position: absolute;
+    bottom:30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    font-size:20px;
+    cursor:pointer;
+}
+
+/*TENDER MENU*/
+
+
+.tender-menu {
+    position: absolute; 
+    width: 100%; 
+    height: 0; 
+    left: 50%; 
+    bottom: 0; 
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: height .2s linear, opacity .2s linear;
+    overflow: hidden;
+}
+
+
+
+.tender-menu #budget input{
+    margin-top: 27px;
+}
+
+.tender-menu.active{
+    opacity: 1;
+    height:180px;
+}
+
+.tender-menu > *{
+    text-transform: uppercase;
+    font-size: 14px;
+    padding-top: 15px;
+    padding-bottom: 30px;
+    padding-right: 0;
+}
+
+.tender-menu .col-xs-2 p{
+    margin-top: 15px;
+    text-decoration: underline;
+    font-family: HelveticaLight;
+}
+
+
+.tender-menu #people p{
+    margin-bottom: 30px;
+    
+}
+
+.tender-menu #stars p{
+    margin-bottom: 30px;
+}
+
+.tender-menu > *.tender-menu-button-next{
+    padding-top: 85px;
+}
+
+
+
+.tender-menu .input{
+    width: 100px;
+    box-shadow: none;
+    outline: none;
+    margin-left: 0;
+}
+
+.country select{
+    margin-top: 25px;
+    width: 100px;
+    height: 35px;
+    border-radius: 3px;
+    -webkit-appearance: none;
+    background-image: url('../images/arrow-input.png');
+    background-position: right center;
+    background-repeat: no-repeat;
+    line-height: 1em;
+   
+    -moz-appearance: none;
+    text-indent: 0.01px; 
+    text-overflow: '';
+
+    -ms-appearance: none;
+    appearance: none!important;
+}
+
+#date input{
+    background-image: url('../images/arrow-input.png');
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+
+#people_sum, #stars_sum{
+    margin-top: 10px;
+    float: left;
+    height: 25px;
+    
+}
+
+
+.next-button{
+    
+    display:block;
+    height: 50px;
+    width: 120px;
+    border:2px solid #8e8e8e;
+    text-align: center;
+    padding-top: 16px;
+    margin-top: 60px;
+}
+
+.next-button{
+    color:#8e8e8e;
+    text-decoration: none;
+}
+
+.next-button:hover{
+    background: #ffbf51;
+    border-color: #ffbf51;
+    text-decoration: none;
+    color: #fff;
+}
+
+.next-button:focus{
+    text-decoration: none;
+    color: #fff;
+}
+/*MODAL WINDOWS LOGIN REGISTRATION*/
+
+#overlay{
+    position: fixed;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    z-index: 100;
+    background: rgba(0,0,0,.3);
+    transition: all .2s linear;
+    opacity:0;
+    visibility: hidden;
+}
+
+
+#overlay.active{
+    opacity:1;
+    visibility: visible;
+}
+
+.modal-window{
+    position: fixed;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    z-index: 200;
+    background: #fff;
+    width:100%;
+    max-width:400px;
+    max-height:90%;
+    padding:20px;
+    height:300px;
+    transition: all .2s linear;
+    opacity:0;
+    visibility: hidden;
+    background: #fff;
+
+}
+
+.modal-window.active{
+    opacity:1;
+    visibility: visible;
+}
+
+.modal-close{
+    position: absolute;
+    right: 5px;
+    top:5px;
+    cursor:pointer;
+}
+
+
+
+/*MENU*/
+
+.modal-menu{
+    position: fixed;
+    left:0;
+    right:0;
+    top:900px;
+    bottom:0;
+    z-index:10;
+    opacity: 0;
+    background: #000;
+    transition:  .6s linear;
+}
+
+.modal-menu.active{
+    top: 70px;
+    opacity: 0.9;
+    
+    
+
+}
+
+.content-menu{
+margin-top: 100px;
+}
+
+
+
+.navigation{
+    width: 100%;
+    min-width: 300px;
+}
+
+.navigation ul{
+    list-style:none;
+    float: right;
+    padding-right: 100px;
+    height: 385px;
+}
+
+.navigation li{
+    position:relative;
+    list-style-type: none;
+    width: 260px;
+    text-align: center;
+}
+
+.navigation li a{
+    display: block;
+    padding: 31px 0;
+    text-align: center;
+    font:14px/1 Arial,sans-serif;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    border-bottom: 1px solid #fff;
+}
+
+.navigation li a:hover{
+    text-decoration: underline;
+}
+
+
+/*CONTACTS*/
+
+
+.contacts{
+    position: relative;
+    padding-left: 100px;
+    margin-top: 25px;
+}
+
+
+.hot-line-number{
+    position: relative;
+    width: 170px;
+    height: 125px;
+    border: 1px solid #fff;
+    color: #fff;
+    text-align: left;
+    line-height: 25px;
+    padding: 40px 0 0 20px;
+    font:16px Arial,sans-serif;
+}
+
+
+.hot-line-number::after{
+	position:absolute;
+	top:-14px;
+	left:50%;
+	width:25px;
+	height:25px;
+	margin-left:-15px;
+	content:'';
+	background:url(/images/phone.png) no-repeat ;
+}
+
+
+
+.hot-line-number span{
+    line-height: 50px;
+}
+
+
+.button-zvonok{
+    box-sizing: border-box;
+    display:block;
+    height: 50px;
+    width: 170px;
+    border:1px solid #fff;
+    text-align: center;
+    padding-top: 16px;
+    margin-top: 40px;
+    color: #fff;
+    font:16px Arial,sans-serif;
+}
+
+.button-send{
+    box-sizing: border-box;
+    display:block;
+    height: 50px;
+    width: 170px;
+    border:1px solid #fff;
+    text-align: center;
+    padding-top: 16px;
+    color: #fff;
+    font:16px Arial,sans-serif;
+}
+
+.button-zvonok a, .button-send a{
+    color:#fff;
+    text-decoration: none;
+}
+
+.button-zvonok:hover, .button-send:hover{
+    text-decoration: underline;
+    color: #000;
+}
+
+.contacts p{
+    margin: 0;
+}
+
+.contacts input[type=text]{
+    border: none;
+    box-shadow: none;
+    background: #000;
+    outline: none;
+    border-bottom: 1px solid #fff;
+    width: 170px;
+    margin:  30px 0;
+    color: #fff;
+}
+
+.contacts input[type=text]:hover{
+    border-bottom: 1px solid #fff;
+}
+
+.contacts input::-webkit-input-placeholder {color:#413f3f;}
+.contacts input:-moz-placeholder {color:#413f3f;}
+
+
+/*SOCIALS*/
+.social{
+    position: relative;
+    overflow: hidden;
+}
+
+
+.social ul{
+    position: relative;
+    left: 50%;
+    float: left;
+    padding: 0;
+}
+
+.social ul li{
+    position: relative;
+    list-style-type: none;
+    float: left;
+    color: #fff;
+    left: -50%;
+    margin-right: 15px;
+    padding-top: 50px;
+}
+
+.social i{
+    color: #fff;
+}
+
+
+.social i:hover{
+    color: #868585;
+}
+
+
+/*_________________________EROR 404______________________________*/
+/*_________________________EROR 404______________________________*/
+/*_________________________EROR 404______________________________*/
+/*_________________________EROR 404______________________________*/
+
+.eror-404 img{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    margin-top:-50px;
+    max-width:35%;
+    transform: translate(-50%,-50%);
+}
+
+
+/*_________________________EROR 500______________________________*/
+/*_________________________EROR 500______________________________*/
+/*_________________________EROR 500______________________________*/
+/*_________________________EROR 500______________________________*/
+
+.eror-500 img{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    margin-top:-50px;
+    max-width:35%;
+    transform: translate(-50%,-50%);
+}
+
+
+/*_________________________formRegistration______________________________*/
+/*_________________________formRegistration______________________________*/
+/*_________________________formRegistration______________________________*/
+/*_________________________formRegistration______________________________*/
+
+.form-registration .title-registration{    
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+    text-align: center;
+    font:34px/1 HelveticaLight,sans-serif;
+    z-index: 10;
+    margin-top: 30px;
+    
+}
+
+.form-registration{ 
+    position: absolute;
+    width: 100%;
+    top: 70px; 
+    background: url(/images/registration_bg.jpg) no-repeat 0 0 ;
+    background-size: cover;
+    bottom: 0;
+    text-align: center;
+    transition: bottom .2s linear;
+    color: #fff;    
+    z-index: 1;
+}
+
+.form-registration:before{
+    content:"";
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    background:rgba(0,0,0,.5);
+}
+
+
+.form-registration .registration{    
+    text-align: center;
+    font:24px/1 HelveticaLight,sans-serif;
+    margin-top: 150px;
+}
+
+
+ .button-registration input[type=button]{
+    border: 2px solid #fff;
+    height: 80px;
+    width: 200px;
+    background-color: transparent;
+    font:24px/1 HelveticaLight,sans-serif;
+    transition:  .6s linear;
+    opacity: 1;
+}
+
+
+
+
+
+.form-registration-transition .close-registration{
+    position: fixed;
+    float: left;
+    margin-top: 15px;
+    display: block;
+    color: #fff;
+    cursor: pointer;
+    z-index: 200;
+    
+}
+
+/*ВСПЛЫВАЮЩИЕ ФОРМЫ РЕГИСТРАЦИИ*/
+
+/*РЕГИСТРАЦИЯ туриста*/
+
+.form-registration-tourist{
+    position: fixed;
+    right:0;
+    top:900px;
+    bottom:0;
+    z-index: 10;
+    opacity: 0;
+    background: #000;
+    transition:  .6s linear;
+    overflow:scroll;
+}
+
+.form-registration-tourist.active{
+    top: 70px;
+    opacity: 0.9;
+    overflow:hidden;
+    right: 0;    
+}
+
+#button-agent.active{
+    opacity: 0;
+}
+
+#phone-number-tourist{
+    width: 200px;
+}
+
+.form-registration-tourist .send-number-tourist{
+    margin-top:20px;
+    text-align: center;
+    color: #fff;
+    font:20px/1 HelveticaLight,sans-serif;
+    font-weight: 500;
+}
+
+
+
+.form-registration-tourist .send-number-tourist input[type=text]{
+    margin-top: 50px;
+    background: #000;
+    border: 1px solid #fff;
+    outline: none;
+    color: #fff;
+}
+
+.form-registration-tourist .send-number-tourist button[type=submit]{
+    margin-top: 30px;
+    background: #000;
+    width: 200px;
+    height: 50px;
+    font:16px/1 HelveticaLight,sans-serif;
+    color: #fff;
+}
+
+/*РЕГИСТРАЦИЯ агента*/
+
+.form-registration-agent{
+   position: fixed;
+    left:0;
+    right:50%;
+    bottom:0;
+    z-index: 10;
+    opacity: 0;
+    top: 900px;
+    background: #000;
+    transition:  .6s linear;
+    overflow:hidden;
+}
+
+.form-registration-agent.active{
+    top: 70px;
+    opacity: 0.9;
+}
+
+#button-tourist.active{
+    opacity: 0;
+}
+
+.registration-agent h2{
+    text-align: center;
+    color: #fff;
+}
+
+
+.form-horizontal{
+    width: 400px;
+}
+
+.control-label{
+    text-align: center; 
+    color: #fff;
+}
+  
+.form-group{
+    margin-top: 30px;
+}
+
+.form-group .form-control-registration{
+    display: block; 
+    margin: 0 auto; 
+    left: -50%;
+    background: #000;
+    outline-color: transparent;
+    color: #fff;  
+    width: 300px;
+}
+
+
+.form-group .form-control-registration:focus{
+    outline:none;
+}
+
+.form-group .form-control-registration.denger{
+    outline-color: #7e2424;
+}
+
+.registration-agent button[type=submit]{
+    margin:40px auto;
+    display: block;
+    background: #000;
+    width: 200px;
+    height: 50px;
+    font:16px/1 HelveticaLight,sans-serif;
+    color: #fff;
+}
+
+
+/*_________________________cabinetTourist______________________________*/
+/*_________________________cabinetTourist______________________________*/
+/*_________________________cabinetTourist______________________________*/
+/*_________________________cabinetTourist______________________________*/
+
+
+
+.kabinet-tourist{
+    position: absolute; 
+    width: 100%; /* Ширина слоя в пикселах */
+    top: 70px; /* Положение слоя от верхнего края */
+    background: url(https://sadelserradilmener.files.wordpress.com/2010/10/jersey-city-panorama-lq.jpg) #ebebeb no-repeat 0px 0 ;
+    background-size:100% 100%;
+    height: 185px;
+    text-align: center;
+    transition: bottom .2s linear;
+    z-index: 1;
+    color: #fff;
+    font:30px/1 Arial,sans-serif;
+    text-transform: uppercase;
+    min-width: 1000px;
+    
+}
+
+.kabinet-tourist-head-top div{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    max-width:35%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+}
+
+
+.kabinet-tourist:after{
+    content:"";
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    background:rgba(0,0,0,.5);
+}
+
+
+
+
+/*ТАБЛИЦА*/
+/*ЗАГОЛОВОК*/
+
+.kabinet-tourist-zag{
+    margin-top: 70px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #000;
+    font:14px/1 Helvetica,sans-serif;
+    font-weight: bold;
+    color: #131313; 
+    text-transform: uppercase;
+}
+
+.kabinet-tourist-zag {
+    margin-top: 300px;
+}
+
+.kabinet-tourist-zag .col-xs-2, .col-xs-1{
+    padding-left: 0;
+}
+
+/*СПИСОК*/
+
+.kabinet-tourist-generate{
+    margin-top: 25px;
+    height: 60px;
+    text-transform: none;
+    font-size: 14px;
+    padding-bottom: 20px;
+    padding-right: 0;
+    border-bottom: 1px solid #8e8e8e;
+}
+
+.kabinet-tourist-generate .col-xs-2, .col-xs-1{
+    padding-left: 0;
+}
+
+.kabinet-tourist-generate .col-xs-2 p, .col-xs-1 p{
+    padding-top: 12px;
+}
+
+.kabinet-tourist-generate #tourist div{
+    float: left;
+}
+
+
+#correct-button{
+    padding-right: 0;
+}
+#correct-button button{
+    width: 100%;
+    height: 45px;
+    margin-top: -5px;
+    background: transparent;
+    border: 2px solid #595959;
+    text-transform: uppercase;
+    color: #595959;
+}
+
+#correct-button button:hover{
+    background: #ffbf51;
+    color: #fff;
+    border-color: #ffbf51;
+}
+
+/*_________________________tenderBoard______________________________*/
+/*_________________________tenderBoard______________________________*/
+/*_________________________tenderBoard______________________________*/
+/*_________________________tenderBoard______________________________*/
+
+/*ВЕРХНИЙ ФИЛЬТР*/
+
+
+.tender-board{
+    margin-top: 20px;
+    border-top: 2px solid #d0d0d0;
+/*    box-shadow: inset 0 0 6px 0 rgba(0,0,0,0.3);*/
+    width: 100%;
+    border-bottom: 1px solid #ededed;
+    background: #fcfcfc;
+}
+
+.tender-list-select > *{
+    text-transform: uppercase;
+    font-size: 14px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 0;
+    margin-left: 0;
+    
+}
+
+
+.tender-list-select .col-xs-2{
+    padding-left: 0;
+}
+
+.tender-list-select .col-xs-2 select{
+    background: transparent;
+    border: 1px solid #8e8e8e;
+    color: #8e8e8e;
+    border-radius: 5px;
+}
+.tender-list-select .col-xs-2 select option >*{
+    color: #8e8e8e;
+}
+
+
+.tender-list-select .select {
+    width: 80%;
+    height: 40px;
+    box-shadow: none;
+    outline: none;
+    margin-left: 0;
+    border: 1px solid #8e8e8e;
+    padding-left: 10px;
+    color: #8e8e8e;
+}
+
+.tender-list-select #hot-tourse{
+    padding-top: 25px;
+    color: #8e8e8e;    
+}
+
+
+
+.filtr-button{
+    box-sizing: border-box;
+    display:block;
+    height: 40px;
+    border:2px solid #8e8e8e;
+    background: #8e8e8e;
+    text-align: center;
+    padding-top: 12px;
+    font:12px/1 Arial,sans-serif;
+    color:#fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+.filtr-button:hover{
+    background: #ffbf51;
+    border-color: #ffbf51;    
+    text-decoration: none;
+    color: #fff;
+}
+
+.filtr-button:focus{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/*ГЕНЕРИРУЮЩИЙСЯ СПИСОК ТЕНДЕРОВ*/
+
+/*ЗАГОЛОВОК*/
+
+.tender-list-zag{
+    margin-top: 70px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #131313;
+    font:14px/1 Arial,sans-serif;
+    font-weight: bold;
+    color: #131313;
+    text-transform: uppercase;
+}
+
+.tender-list-zag .col-xs-2{
+    padding-left: 0;
+}
+
+/*СПИСОК*/
+
+.tender-list-generate{
+    margin-top: 25px;
+    text-transform: none;
+    font-size: 14px;
+    padding-bottom: 20px;
+    padding-right: 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.tender-list-generate .col-xs-2{
+    padding-left: 0;
+}
+
+.tender-list-generate .col-xs-2 p{
+    padding-top: 12px;
+}
+
+.tender-list-button-coment{
+    padding-right: 0;
+}
+
+.coment-button{
+    box-sizing: border-box;
+    display:block;
+    height: 40px;
+    border:2px solid #8e8e8e;
+    background: #fff;
+    text-align: center;
+    padding-top: 12px;
+    font:12px/1 Arial,sans-serif;
+    color:#8e8e8e;
+    text-decoration: none;
+    margin-right: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+
+.coment-button:hover{
+    background: #ffbf51;
+    border-color: #ffbf51;    
+    text-decoration: none;
+    color: #fff;
+}
+
+.coment-button:focus{
+    text-decoration: none;
+}
+
+
+/*ССЫЛКИ СТРАНИЦ*/
+
+
+.pageinator{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+
+.pageinator ul{
+    position: relative;
+    left: 50%;
+    float: left;
+    margin-top: 60px;
+}
+
+.pageinator ul li{
+    position: relative;
+    list-style-type: none;
+    float: left;
+    color: #626262;
+    right: 50%;
+}
+
+
+.pageinator ul li a{
+    color: #626262;
+    display: block;
+    padding: 17px 20px;
+    border: 1px solid #dadada;
+    border-radius: 5px;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+
+.pageinator ul li a:hover{
+    background: #dadada;
+}
+
+
+
+/*_________________________kabinetAgenta______________________________*/
+/*_________________________kabinetAgenta______________________________*/
+/*_________________________kabinetAgenta______________________________*/
+/*_________________________kabinetAgenta______________________________*/
+
+
+.otzivi-tender{
+    position: absolute; 
+    width: 100%; /* Ширина слоя в пикселах */
+    top: 70px; /* Положение слоя от верхнего края */
+    background: url(https://sadelserradilmener.files.wordpress.com/2010/10/jersey-city-panorama-lq.jpg) #ebebeb no-repeat 0px 0 ;
+    background-size:100% 100%;
+    height: 185px;
+    text-align: center;
+    transition: bottom .2s linear;
+    z-index: 1;
+    color: #fff;
+    font:30px/1 Arial,sans-serif;
+    text-transform: uppercase;
+    min-width: 1000px;
+    
+}
+
+.otzivi-tender-head-top div{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    max-width:35%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+}
+
+
+.otzivi-tender:after{
+    content:"";
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    background:rgba(0,0,0,.5);
+}
+
+
+
+.otzivi-tender-head-bottom{
+    margin-top: 255px;
+    background: #ebebeb;
+    height: 65px;
+}
+
+
+.tender-info{
+    height: 65px;
+}
+
+.tender-info-left div{
+    margin-left: 25px;
+}
+.tender-info-left, .tender-info-right{
+    padding: 0;
+    padding-top: 25px;
+    color: #595959;
+    font:16px/1 Arial,sans-serif;
+}
+
+.tender-info-right div{
+    float: right;
+    margin-right: 25px;
+}
+
+
+/*ТАБЛИЦА*/
+/*ЗАГОЛОВОК*/
+
+.tender-otzivi-zag{
+    margin-top: 70px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #000;
+    font:14px/1 Helvetica,sans-serif;
+    font-weight: bold;
+    color: #131313;    
+}
+
+.tender-otzivi-zag .col-xs-2{
+    padding-left: 0;
+}
+
+/*СПИСОК*/
+
+.tender-otzivi-generate{
+    margin-top: 25px;
+    height: 60px;
+    text-transform: none;
+    font-size: 14px;
+    padding-bottom: 20px;
+    padding-right: 0;
+    border-bottom: 1px solid #8e8e8e;
+}
+
+.tender-otzivi-generate .col-xs-2{
+    padding-left: 0;
+}
+
+.tender-otzivi-generate .col-xs-2 p{
+    padding-top: 12px;
+}
+
+
+.tender-otzivi-button-coment{
+    padding-right: 0;
+}
+
+.mail-answer{
+    margin-top: 10px;
+}
+
+.mail-answer i{
+    margin-right:10px;
+}
+
+
+
+/*_________________________tenderTarif______________________________*/
+/*_________________________tenderTarif______________________________*/
+/*_________________________tenderTarif______________________________*/
+/*_________________________tenderTarif______________________________*/
+
+
+
+.tarif-tender{
+    position: absolute; 
+    width: 100%; /* Ширина слоя в пикселах */
+    top: 70px; /* Положение слоя от верхнего края */
+    background: url(https://sadelserradilmener.files.wordpress.com/2010/10/jersey-city-panorama-lq.jpg) #ebebeb no-repeat;
+    background-size:100% 100%;
+    height: 185px;
+    text-align: center;
+    transition: bottom .2s linear;
+    z-index: 1;
+    color: #fff;
+    font:30px/1 Helvetica,sans-serif;
+    text-transform: uppercase;
+    
+}
+
+.tarif-tender-head-top div{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    max-width:35%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+}
+
+
+.tarif-tender:after{
+    content:"";
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    background:rgba(0,0,0,.5);
+}
+
+
+
+.tarif-tender-head-bottom{
+    margin-top: 185px;
+    padding-top: 30px;
+    background: #ebebeb;
+    height: 65px;
+}
+
+
+
+.tarif-tender-list{
+    position: relative;
+    text-align: center;
+    margin-top: 300px;
+    overflow: hidden;
+    padding-top: 30px;
+}
+
+.tarif{
+    width: 170px;
+    border: 2px solid #ebebeb;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+    transition:  .3s linear;
+}
+
+.tarif:hover{
+    margin-top: -30px;
+    transition:  .3s linear;
+}
+
+
+.tarif .tarif-head{
+    display: block;
+    background: #f9f9f9;
+    padding: 25px 0;
+    text-transform: uppercase;
+    color: #757575;
+    font:16px/1 Helvetica,sans-serif;
+}
+.tarif .tarif-body{
+    margin: 0 10px;
+}
+.tarif .tarif-body .price{
+    padding: 30px 0;
+    color: #fec053;
+    font:36px/1 Helvetica,sans-serif;
+    line-height: 20px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.tarif .tarif-body .price .dollar{
+    vertical-align: super;
+    font-size: 18px;
+    
+}
+.tarif .tarif-body .text{
+    color: #d1d1d1;
+    font:18px/1 Helvetica,sans-serif;
+}
+
+.tarif .tarif-body .otzivi{
+    padding: 30px 0;
+    color: #666666;
+    line-height: 25px;
+    font-weight: bold;
+}
+
+.tarif .tarif-body .otzivi i{
+    margin-right: 5px;
+}
+
+.tarif .tarif-body button[type=submit]{
+    margin-bottom: 25px;
+    width: 100%;
+    padding: 15px 0;
+    background: transparent;
+    border: 1px solid #ebebeb;
+    border-radius: 5px;
+    color: #7a7a7a;
+    text-transform: uppercase;
+    font:14px/1 Helvetica,sans-serif;
+}
+.tarif .tarif-body button[type=submit]:hover{
+    background: #ebebeb;
+}
+
+
+/*_________________________FOOTER______________________________*/
+/*_________________________FOOTER______________________________*/
+/*_________________________FOOTER______________________________*/
+/*_________________________FOOTER______________________________*/
+
+.footer{
+    background: #464646;
+    display: block;
+    overflow: hidden;
+    min-height: 75px;
+}
+.futer-ul{
+    float: left;
+}
+.futer-ul li{
+    float: left;
+    list-style-type: none;
+    margin: 5px 0;
+}
+.footer-content-left ul{
+    margin-top: 25px;
+}
+.footer-content-left ul li{
+    margin-right: 10px;
+}
+.footer-content-left ul li a{
+    color: #959595;
+    text-decoration: none;
+    font:12px/1 Helvetica,sans-serif;
+    text-transform: uppercase;    
+}
+.footer-content-left ul li a:hover{
+    color: #7c7a7a;
+}
+.footer-content-socials ul{
+    float: right;
+    margin-right: 30px;
+    margin-top: 20px;
+}
+.footer-content-socials ul li{
+    margin-left: 15px;
+}
+.footer-content-socials ul li i{
+    color: #cdcdcd;
+}
+.footer-content-socials ul li i:hover{
+        color: #7c7a7a;
+}
+
+/*_________________________FOOTER______________________________*/
+/*_________________________FOOTER______________________________*/
+/*_________________________FOOTER______________________________*/
+/*_________________________FOOTER______________________________*/
+
+.footer{
+    position: fixed;
+    background: #464646;
+    display: block;
+    overflow: hidden;
+    min-height: 75px;
+    width: 100%;
+    bottom: 0;
+}
+.futer-ul{
+    float: left;
+}
+.futer-ul li{
+    float: left;
+    list-style-type: none;
+    margin: 5px 0;
+}
+.footer-content-left ul{
+    margin-top: 25px;
+}
+.footer-content-left ul li{
+    margin-right: 10px;
+}
+.footer-content-left ul li a{
+    color: #959595;
+    text-decoration: none;
+    font:12px/1 HelveticaLight,sans-serif;
+    text-transform: uppercase;    
+}
+.footer-content-left ul li a:hover{
+    color: #7c7a7a;
+}
+.footer-content-socials ul{
+    float: right;
+    margin-right: 30px;
+    margin-top: 20px;
+}
+.footer-content-socials ul li{
+    margin-left: 15px;
+}
+.footer-content-socials ul li i{
+    color: #cdcdcd;
+}
+.footer-content-socials ul li i:hover{
+        color: #7c7a7a;
+}
+
+/*_________________________MOBILE VERSION______________________________*/
+/*_________________________MOBILE VERSION______________________________*/
+/*_________________________MOBILE VERSION______________________________*/
+/*_________________________MOBILE VERSION______________________________*/
+
+
+
+/*INDEX.HTML*/
+
+
+
+@media all and (max-width: 1120px){
+    .logo{left: 15px;}
+    .header-menu{left: 175px;}
+    .log-reg{right: 15px;}
+}
+
+
+@media all and (max-width: 880px){
+    
+/*ТЕНДЕР МЕНЮ*/
+    .logo{left: 15px;}
+    
+    .header{
+        position: fixed; 
+        width: 100%;
+        padding: 10px; 
+        background: #fff;
+        z-index: 9999;
+    }    
+    .header-menu{left: 175px;}
+    .tender-menu{padding-top: 10px; overflow:visible; opacity: 1;}
+    .tender-menu .col-xs-2{width: 100%; text-align: center; margin: 10px 0 0 0; padding: 0;}
+    
+    .center-layer.active{ bottom: 0; }
+    .tender-menu.active{height: 0; }
+    
+    .next-button{ display:inline-block;}
+    
+    
+   .tender-menu #people_sum, #stars_sum{ margin-top: 0;  left:50%; transform: translateX(-50%); height: 25px;}
+    
+    
+    .tender-menu .col-xs-2 p{ text-decoration: underline; margin: 0; padding: 0;}
+    .tender-menu #people p, .tender-menu #stars_sum p,  .tender-menu #budjet p{margin-bottom: 0;}
+    .tender-menu #budjet input, .tender-menu #country input{margin-top: 0;}
+    .tender-menu .input{width: 150px; margin-left: 0; }
+    .country .input { margin-top: 0;}
+    
+    .next-button{margin: 10px;}
+    
+    .center-layer-title{ font-size: 18px;}
+    .center-layer-text{display: block; font-size: 14px; line-height: 1.2; margin-top: 15px; width: 100%;}
+    .view-tenders{ margin-top: 15px; padding: 10px 15px;}
+    .center-layer-head{max-width:100%; }
+
+    
+    
+    
+    
+    
+    .center-layer-title{ font-size: 18px;}
+    .center-layer-text{display: block; font-size: 14px; line-height: 1.2; margin-top: 15px; width: 100%;}
+    .view-tenders{ margin-top: 15px; padding: 10px 15px;}
+    .center-layer-head{max-width:100%; }
+    
+    
+    
+/*MENU*/
+    .modal-menu.active{overflow-x: scroll;}
+    .content-menu{margin-top: 10px;}
+    .navigation-menu, .contacts-menu{ width: 100%; margin: 0;  padding: 0;}
+    .navigation ul{ width: 100%; margin: 0; padding: 0; height: auto;}
+    .navigation li{margin: 0 auto; width: 0px; width: 60%;}
+    .navigation li a { padding: 10px 0;}
+    .contacts{padding: 0; margin-top: 50px;  float: none;}
+    .hot-line-number{display: block; margin: 0 auto; margin-bottom: 0px;}
+    .button-zvonok {display: block; margin: 0 auto; margin-bottom: 25px; display: none;}
+    .contacts input[type=text]{display: block; margin: 0 auto; margin-bottom: 25px; display: none;}
+    .contacts-menu{height: 200px;}
+    
+    .button-send{display: block; margin: 0 auto; display: none;}
+    .social ul li{padding-top: 20px;}
+
+}
+
+@media all and (max-width: 450px){
+    .header .logo{display: none;}
+    .header-menu{left: 15px;}
+}
+
+
+
+
+/*formRegistration.HTML*/
+@media screen and (max-width: 960px){
+    .form-registration-tourist{width: 100%;} 
+    .form-registration-agent{width: 100%; overflow-y: scroll;}
+}
+
+
+@media screen and (max-width: 600px){
+    .form-group .form-control-registration{width: 75%;}
+    .button-registration input[type=button]{width: 70%;}
+    .form-registration .title-registration{font-size: 24px;}
+}
+
+/*tenderTarif.html*/
+@media screen and (max-width: 1080px){
+    .tarif-plan{width: 180px; margin-top: 10px;}
+    .tarif-tender-list .col-xs-1{display: none;} 
+}
+@media screen and (max-width: 920px){
+    .tarif:hover{margin-top: 0;}
+}
+@media screen and (max-width: 560px){
+    .tarif-plan{width: 50%;}
+    #tarif-plan-unlimited{width: 100%;}
+}
+@media screen and (max-width: 400px){
+    .tarif-plan{width: 100%;}
+}

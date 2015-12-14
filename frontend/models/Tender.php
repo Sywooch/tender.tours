@@ -9,18 +9,10 @@ use \yii\behaviors\TimestampBehavior;
 
 
 class Tender extends ActiveRecord //implements IdentityInterface
-{
-    
+{    
     public static function tableName()
     {
         return '{{%tender}}';
-    } 
-    
-    public function rules()
-    {
-        return [
-            [['HEADER', 'COUNTRY', 'CITY', 'DATE_FORWARD', 'DATE_BACK', 'STARS', 'TRANSPORT', 'FEED',  'BUDGET', 'PEOPLE_SUM'], 'required'],
-        ];
     }
 
     public static function findIdentity($id)

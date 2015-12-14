@@ -1,160 +1,204 @@
+/*ШРИФТ*/
+@font-face{
+    font-family:HelveticaBold;
+    src: url('../fonts/Helvetica/HelveticaBold/HelveticaBold.eot');
+    src: url('../fonts/Helvetica/HelveticaBold/HelveticaBold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Helvetica/HelveticaBold/HelveticaBold.woff') format('woff'),
+         url('../fonts/Helvetica/HelveticaBold/HelveticaBold.ttf') format('truetype'),
+         url('../fonts/Helvetica/HelveticaBold/HelveticaBold.svg#HelveticaBold')  format('svg');
+    font-weight: bolder;
+    font-style: normal; 
+}
 
-/*_________________________REGISTRATION ond LOGIN Modal Window______________________________*/
-/*_________________________REGISTRATION ond LOGIN Modal Window______________________________*/
-/*_________________________REGISTRATION ond LOGIN Modal Window______________________________*/
-/*_________________________REGISTRATION ond LOGIN Modal Window______________________________*/
+@font-face{
+    font-family:HelveticaLight;
+    src: url('../fonts/Helvetica/HelveticaLight/HelveticaLight.eot');
+    src: url('../fonts/Helvetica/HelveticaLight/HelveticaLight.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Helvetica/HelveticaLight/HelveticaLight.woff') format('woff'),
+         url('../fonts/Helvetica/HelveticaLight/HelveticaLight.ttf') format('truetype'),
+         url('../fonts/Helvetica/HelveticaLight/HelveticaLight.svg#HelveticaLight')  format('svg');
+    font-weight: bolder;
+    font-style: italic; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*________________REGISTRATION ond LOGIN Modal Window_____________________*/
+/*________________REGISTRATION ond LOGIN Modal Window_____________________*/
+/*________________REGISTRATION ond LOGIN Modal Window_____________________*/
+/*________________REGISTRATION ond LOGIN Modal Window_____________________*/
 
 .container {
-  margin: 40px auto;
-  width: 320px;
+    margin: 40px auto;    
+    max-width: 320px;
+    font-family: HelveticaLight;
 }
 .login h1 {
-  margin: -20px -20px 21px;
-  line-height: 40px;
-  font-size: 15px;
-  font-weight: bold;
-  color: #555;
-  text-align: center;
-  text-shadow: 0 1px white;
+    margin: -20px -20px 21px;
+    line-height: 40px;
+    color: #8e8e8e;
+    text-align: center;
+    text-shadow: 0 1px white;
+    font:22px/1 HelveticaLight, sans-serif;
+     
 }
 .login p {
-  margin: 20px 0 0;
+    margin: 20px 0 0;
 }
 .login p:first-child {
-  margin-top: 0;
+    margin-top: 0;
 }
-.login input[type=text], .login input[type=password] {
-  width: 278px;
+.login input, .login input{
+    width: 95%;
 }
 .login p.remember_me {
-  float: left;
-  line-height: 31px;
+    float: left;
+    line-height: 31px;
 }
 .login p.remember_me label {
-  font-size: 12px;
-  color: #777;
-  cursor: pointer;
+    font-size: 12px;
+    color: #777;
+    cursor: pointer; 
 }
 .login p.remember_me input {
-  position: relative;
-  bottom: 1px;
-  margin-right: 4px;
-  vertical-align: middle;
+    position: relative;
+    bottom: 1px;
+    margin-right: 4px;
+    vertical-align: middle;
 }
 .login p.submit {
-  text-align: right;
+    text-align: right;
 }
 .login-help {
-  margin: 10px 0;
-  font-size: 11px;
-  color: #555;
-  text-align: center;
-  text-shadow: 0 1px #2a85a1;
+    margin: 10px 0;
+    font-size: 11px;
+    color: #555;
+    text-align: center;
+    text-shadow: 0 1px #2a85a1;
 }
 .login-help a {
-  color: #444;
-  text-decoration: none;
+    color: #444;
+    text-decoration: none;
 }
 .login-help a:hover {
-  color: #9a5a52;
+    color: #9a5a52;
 }
 :-moz-placeholder {
-  color: #c9c9c9 !important;
-  font-size: 13px;
+    color: #c9c9c9 !important;
+    font-size: 13px;
 }
 ::-webkit-input-placeholder {
-  color: #ccc;
-  font-size: 13px;
+    color: #ccc;
+    font-size: 13px;
 }
 input {
-  font-family: 'Lucida Grande', Tahoma, Verdana, sans-serif;
-  font-size: 14px;
+    font-family: HelveticaLight, sans-serif;
+    font-size: 14px;
 }
 input[type=text], input[type=password] {
-  margin: 5px;
-  padding: 0 10px;
-  width: 200px;
-  height: 34px;
-  color: #404040;
-  background: white;
-  border: 1px solid;
-  border-color: #c4c4c4 #d1d1d1 #d4d4d4;
-  border-radius: 2px;
-  outline: 5px solid #eff4f7;
-  -moz-outline-radius: 3px;
-  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
+    margin: 5px;
+    padding: 0 10px;
+    width: 95%;
+    height: 34px;
+    color: #8e8e8e;
+    background: white;
+    border: 1px solid;
+    border-color: #8e8e8e;
+    border-radius: 2px;
+    outline: 5px solid #eff4f7;
+    -moz-outline-radius: 3px;
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
+    outline: none;
 }
 input[type=text]:focus, input[type=password]:focus {
-  border-color: #7dc9e2;
-  outline-color: #dceefc;
-  outline-offset: 0;
+    border-color: #8e8e8e;
+    outline-color: #8e8e8e;
+    outline-offset: 0;
 }
+
+
 input[type=submit] {
-  padding: 0 18px;
-  height: 29px;
-  font-size: 12px;
-  font-weight: bold;
-  color: #527881;
-  text-shadow: 0 1px #e3f1f1;
-  background: #cde5ef;
-  border: 1px solid;
-  border-color: #b4ccce #b3c0c8 #9eb9c2;
-  border-radius: 5px;
-  outline: 0;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  background-image: -webkit-linear-gradient(top, #edf5f8, #cde5ef);
-  background-image: -moz-linear-gradient(top, #edf5f8, #cde5ef);
-  background-image: -o-linear-gradient(top, #edf5f8, #cde5ef);
-  background-image: linear-gradient(to bottom, #edf5f8, #cde5ef);
-  -webkit-box-shadow: inset 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.15);
-  box-shadow: inset 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.15);
+    display: block;
+    margin: 0 auto;
+    width: 30%;
+    height: 29px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #8e8e8e;
+    text-transform: uppercase;
+    background: #fff;
+    border: 1px solid;
+    border: 1px solid #8e8e8e;
+    border-radius: 0px;
+    outline: 0;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+
 }
 #regist input[type=submit] {
     display: block;
-  padding: 0 18px;
-  height: 35px;
-    width: 90px;
+    padding: 0 18px;
+    height: 35px;
+    width: 50%;
     margin: 0 auto;
     text-transform: uppercase;
-  font-size: 12px;
-  font-weight: bold;
-  color: #527881;
-  text-shadow: 0 1px #e3f1f1;
-  background: #cde5ef;
-  border: 1px solid;
-  border-color: #b4ccce #b3c0c8 #9eb9c2;
-  border-radius: 5px;
-  outline: 0;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  background-image: -webkit-linear-gradient(top, #edf5f8, #cde5ef);
-  background-image: -moz-linear-gradient(top, #edf5f8, #cde5ef);
-  background-image: -o-linear-gradient(top, #edf5f8, #cde5ef);
-  background-image: linear-gradient(to bottom, #edf5f8, #cde5ef);
-  -webkit-box-shadow: inset 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.15);
-  box-shadow: inset 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.15);
+    font-size: 12px;
+    font-weight: bold;
+    color: #8e8e8e;
+    border: 1px solid #8e8e8e;
+    border-radius: 0px;
+    outline: 0;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+
 }
 #regist .turist input[type=submit]{
     margin-right: 30px;
 }
+input[type=submit]:hover{
+    background: #ffbf51;
+    border-color: #ffbf51;
+    color: #fff;
+}
+
+#regist input[type=submit]:hover{
+    background: #ffbf51;
+    border-color: #ffbf51;
+    color: #fff;
+}
+
 input[type=submit]:active {
-  background: #cde5ef;
-  border-color: #9eb9c2 #b3c0c8 #b4ccce;
-  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
-  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+    background: #ffbf51;
+    border-color: #ffbf51;
+    color: #fff;
+
 }
 #regist input[type=submit]:active {
-  background: #cde5ef;
-  border-color: #9eb9c2 #b3c0c8 #b4ccce;
-  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
-  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+    background: #ffbf51;
+    border-color: #ffbf51;
+    color: #fff;
 }
+
 .lt-ie9 input[type=text], .lt-ie9 input[type=password] {
-  line-height: 34px;
+    line-height: 34px;
 }
 
 
@@ -171,14 +215,15 @@ input[type=submit]:active {
 
 
 .kabinet-container{
-    max-width:90%;
+    max-width:1200px;
     margin: 0 auto;
+    min-width: 1000px;
 
 }
 
 body{
     background: #fff;
-    font:14px/1 Arial,sans-serif;
+    font:14px/1 HelveticaLight, sans-serif;
     min-height:200px;
     z-index: 1;
     
@@ -189,6 +234,7 @@ body{
 .header {
     height: 70px; /* Высота слоя в пикселах */
     position: relative;
+    background: #fff;
 }
 
 .header-menu {
@@ -226,6 +272,7 @@ body{
     transform: translateY(-50%);
     font-size: 16px;
     text-transform: uppercase;
+    font-family: HelveticaLight;
 }
 
 .account{
@@ -267,11 +314,12 @@ body{
     position: absolute;
     left: 50%;
     top:50%;
-    margin-top:-50px;
+    margin-top:-50px;    
     max-width:35%;
     transform: translate(-50%,-50%);
     z-index: 10;
 }
+
 
 .center-layer-title{
     text-transform: uppercase;
@@ -325,7 +373,7 @@ body{
 
 
 
-.tender-menu #budjet input{
+.tender-menu #budget input{
     margin-top: 27px;
 }
 
@@ -345,6 +393,7 @@ body{
 .tender-menu .col-xs-2 p{
     margin-top: 15px;
     text-decoration: underline;
+    font-family: HelveticaLight;
 }
 
 
@@ -370,10 +419,30 @@ body{
     margin-left: 0;
 }
 
-.country .input{
-    margin-top: 27px;
+.country select{
+    margin-top: 25px;
+    width: 100px;
+    height: 35px;
+    border-radius: 3px;
+    -webkit-appearance: none;
+    background-image: url('../images/arrow-input.png');
+    background-position: right center;
+    background-repeat: no-repeat;
+    line-height: 1em;
+    /* for FF */
+    -moz-appearance: none;
+    text-indent: 0.01px; 
+    text-overflow: '';
+    /* for IE */
+    -ms-appearance: none;
+    appearance: none!important;
 }
 
+#date input{
+    background-image: url('../images/arrow-input.png');
+    background-position: right center;
+    background-repeat: no-repeat;
+}
 
 #reviewMan-input, #reviewStars-input{
     margin-top: 10px;
@@ -388,25 +457,26 @@ body{
     display:block;
     height: 50px;
     width: 120px;
-    border:2px solid #000;
+    border:2px solid #8e8e8e;
     text-align: center;
     padding-top: 16px;
 }
 
 .next-button{
-    color:#000;
+    color:#8e8e8e;
     text-decoration: none;
 }
 
 .next-button:hover{
-    background: #d7d7d7;
+    background: #ffbf51;
+    border-color: #ffbf51;
     text-decoration: none;
-    color: #000;
+    color: #fff;
 }
 
 .next-button:focus{
     text-decoration: none;
-    color: #000;
+    color: #fff;
 }
 
 
@@ -446,6 +516,7 @@ body{
     transition: all .2s linear;
     opacity:0;
     visibility: hidden;
+    background: #fff;
 
 }
 
@@ -462,11 +533,28 @@ body{
 }
 
 
+.tender-menu{
+    position: fixed;
+    left:0;
+    right:0;
+    top:900px;
+    bottom:0;
+    z-index:10;
+    opacity: 0;
+    background: #000;
+    transition:  .6s linear;
+}
+
+.tender-menu.active{
+    opacity: 0.85;
+    top:70px;
+}
+
 
 /*MENU*/
 
 .modal-menu{
-   position: fixed;
+    position: fixed;
     left:0;
     right:0;
     top:900px;
@@ -480,6 +568,7 @@ body{
 .modal-menu.active{
     top: 70px;
     opacity: 0.9;
+    
     
 
 }
@@ -513,7 +602,7 @@ margin-top: 100px;
     display: block;
     padding: 31px 0;
     text-align: center;
-    font:14px/1 Arial,sans-serif;
+    font:14px/1 HelveticaLight,sans-serif;
     text-decoration: none;
     color: #fff;
     text-transform: uppercase;
@@ -544,7 +633,7 @@ margin-top: 100px;
     text-align: left;
     line-height: 25px;
     padding: 40px 0 0 20px;
-    font:16px Arial,sans-serif;
+    font:16px HelveticaLight,sans-serif;
 }
 
 
@@ -576,7 +665,7 @@ margin-top: 100px;
     padding-top: 16px;
     margin-top: 40px;
     color: #fff;
-    font:16px Arial,sans-serif;
+    font:16px HelveticaLight,sans-serif;
 }
 
 .button-send{
@@ -588,7 +677,7 @@ margin-top: 100px;
     text-align: center;
     padding-top: 16px;
     color: #fff;
-    font:16px Arial,sans-serif;
+    font:16px HelveticaLight,sans-serif;
 }
 
 .button-zvonok a, .button-send a{
@@ -693,28 +782,71 @@ margin-top: 100px;
 /*_________________________formRegistration______________________________*/
 /*_________________________formRegistration______________________________*/
 
-.registration-form .title-registration{    
+.form-registration .title-registration{    
     left: 50%;
     text-align: center;
     transform: translateX(-50%);
     text-align: center;
-    font:24px/1 Arial,sans-serif;
+    font:34px/1 HelveticaLight,sans-serif;
     z-index: 10;
-    margin-top: 220px;
+    margin-top: 30px;
     
 }
 
-
-.registration-form .registration{    
+.form-registration{ 
+    position: absolute;
+    width: 100%;
+    top: 70px; 
+    background: url(../images/registration_bg.jpg) no-repeat 0 0 ;
+    background-size: cover;
+    bottom: 0;
     text-align: center;
-    font:24px/1 Arial,sans-serif;
+    transition: bottom .2s linear;
+    color: #fff;    
+    z-index: 1;
+}
+
+.form-registration:before{
+    content:"";
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    background:rgba(0,0,0,.5);
+}
+
+
+.form-registration .registration{    
+    text-align: center;
+    font:24px/1 HelveticaLight,sans-serif;
     margin-top: 150px;
 }
 
 
- .button-registration input{
-    width: 50%;
-    height: 100px;
+ .button-registration input[type=button]{
+    border: 2px solid #fff;
+    height: 80px;
+    width: 200px;
+    background-color: transparent;
+    font:24px/1 HelveticaLight,sans-serif;
+    transition:  .6s linear;
+    opacity: 1;
+}
+
+
+
+
+
+.form-registration-transition .close-registration{
+    position: fixed;
+    float: left;
+    margin-top: 15px;
+    display: block;
+    color: #fff;
+    cursor: pointer;
+    z-index: 200;
+    
 }
 
 /*ВСПЛЫВАЮЩИЕ ФОРМЫ РЕГИСТРАЦИИ*/
@@ -723,7 +855,6 @@ margin-top: 100px;
 
 .form-registration-tourist{
     position: fixed;
-    left:50%;
     right:0;
     top:900px;
     bottom:0;
@@ -731,23 +862,29 @@ margin-top: 100px;
     opacity: 0;
     background: #000;
     transition:  .6s linear;
+    overflow:scroll;
 }
 
 .form-registration-tourist.active{
     top: 70px;
     opacity: 0.9;
+    overflow:hidden;
+    right: 0;    
 }
 
 #button-agent.active{
-    display: none;
+    opacity: 0;
 }
 
+#phone-number-tourist{
+    width: 200px;
+}
 
 .form-registration-tourist .send-number-tourist{
-    margin-top: 200px;
+    margin-top:20px;
     text-align: center;
     color: #fff;
-    font:20px/1 Arial,sans-serif;
+    font:20px/1 HelveticaLight,sans-serif;
     font-weight: 500;
 }
 
@@ -761,154 +898,222 @@ margin-top: 100px;
     color: #fff;
 }
 
-.form-registration-tourist .send-number-tourist input[type=button]{
+.form-registration-tourist .send-number-tourist button[type=submit]{
     margin-top: 30px;
     background: #000;
     width: 200px;
     height: 50px;
-    font:16px/1 Arial,sans-serif;
+    font:16px/1 HelveticaLight,sans-serif;
+    color: #fff;
 }
-
-
-.form-registration-tourist .send-number-tourist input[type=button]:hover{
-    background: #fff;
-    color: #000;
-}
-
 
 /*РЕГИСТРАЦИЯ агента*/
 
 .form-registration-agent{
-   position: absolute;
+   position: fixed;
     left:0;
     right:50%;
-    top:900px;
     bottom:0;
     z-index: 10;
     opacity: 0;
+    top: 900px;
     background: #000;
-    transition:  .6s linear;    
+    transition:  .6s linear;
+    overflow:hidden;
 }
 
 .form-registration-agent.active{
     top: 70px;
     opacity: 0.9;
-    
-
 }
 
 #button-tourist.active{
-    display: none;
+    opacity: 0;
+}
+
+.registration-agent h2{
+    text-align: center;
+    color: #fff;
 }
 
 
+.form-horizontal{
+    width: 400px;
+}
+
+.control-label{
+    text-align: center; 
+    color: #fff;
+}
+  
+.form-group{
+    margin-top: 30px;
+}
+
+.form-group .form-control-registration{
+    display: block; 
+    margin: 0 auto; 
+    left: -50%;
+    background: #000;
+    outline-color: transparent;
+    color: #fff;  
+    width: 300px;
+}
+
+
+.form-group .form-control-registration:focus{
+    outline:none;
+}
+
+.form-group .form-control-registration.denger{
+    outline-color: #7e2424;
+}
+
+.registration-agent button[type=submit]{
+    margin:40px auto;
+    display: block;
+    background: #000;
+    width: 200px;
+    height: 50px;
+    font:16px/1 HelveticaLight,sans-serif;
+    color: #fff;
+}
+
+.registration-agent input[type=file]{
+    margin: 0 auto;
+    color: #fff;
+    background: #000;
+}
+
+
+
 /*_________________________kabinetTourist______________________________*/
 /*_________________________kabinetTourist______________________________*/
 /*_________________________kabinetTourist______________________________*/
 /*_________________________kabinetTourist______________________________*/
+
 
 
 .kabinet-tourist{
-    margin-top: 120px;
+    position: absolute; 
+    width: 100%; /* Ширина слоя в пикселах */
+    top: 70px; /* Положение слоя от верхнего края */
+    background: url(../images/city-bg.jpg) #ebebeb no-repeat 0px 0 ;
+    background-size:100% 100%;
+    height: 185px;
+    text-align: center;
+    transition: bottom .2s linear;
+    z-index: 1;
+    color: #fff;
+    font:30px/1 HelveticaLight,sans-serif;
+    text-transform: uppercase;
+    min-width: 1000px;
+    
 }
 
-/*HEADER NAVIGATION*/
-
-.search{
+.kabinet-tourist-head-top div{
     position: absolute;
-    right:  200px;
+    left: 50%;
     top:50%;
-    transform: translateY(-50%);
-    font-size: 16px;
+    max-width:35%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+}
+
+
+.kabinet-tourist:after{
+    content:"";
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    background:rgba(0,0,0,.5);
+}
+
+
+
+
+/*ТАБЛИЦА*/
+/*ЗАГОЛОВОК*/
+
+.kabinet-tourist-zag{
+    margin-top: 70px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #8e8e8e;
+    font:14px/1 HelveticaLight,sans-serif;
+    font-weight: bold;
+    color: #131313; 
     text-transform: uppercase;
 }
 
-.search-bt{
-    position: absolute;
-    right: 170px;
-    top:50%;
-    transform: translateY(-50%);
-    font-size: 16px;
-    text-transform: uppercase;
-    cursor: pointer;
+.kabinet-tourist-zag {
+    margin-top: 300px;
 }
 
-.out-bt{
-    position: absolute;
-    right: 20px;
-    top:50%;
-    transform: translateY(-50%);
-    font-size: 16px;
-    text-transform: uppercase;
-    cursor: pointer;
+.kabinet-tourist-zag .col-xs-2, .col-xs-1{
+    padding-left: 0;
 }
 
-.search input[type=search]{
-    height: 35px;
+/*СПИСОК*/
+
+.kabinet-tourist-generate{
+    margin-top: 25px;
+    height: 60px;
+    text-transform: none;
+    font-size: 14px;
+    padding-bottom: 20px;
+    padding-right: 0;
+    border-bottom: 1px solid #8e8e8e;
 }
 
-
-.kabinet-link:nth-child(3){
-    margin-right: 400px;
+.kabinet-tourist-generate .col-xs-2, .col-xs-1{
+    padding-left: 0;
 }
 
-.kabinet-link a{
-    margin-left: 20px;
-    color: #000;
+.kabinet-tourist-generate .col-xs-2 p, .col-xs-1 p{
+    padding-top: 12px;
 }
 
-.kabinet-link a:hover{
-    text-decoration: underline;
-}
-
-/*КАБИНЕТ-ТУРИСТ-МЕНЮ*/
-
-
-.kabinet-tourist-menu{
-    margin-bottom:70px; 
-}
-
-.kabinet-tourist-menu li{
+.kabinet-tourist-generate #tourist div{
     float: left;
-    list-style-type: none;
-    display: block;
-}
-
-.kabinet-tourist-menu li a{
-    padding: 15px 30px;
-    margin-right: 10px;
-    border: 1px solid #000;
-    color: #000;
-    text-decoration: none;
-    border-radius: 5px;
-}
-.kabinet-tourist-menu li a:hover{
-    background: #e6e6e8;
-}
-
-.kabinet-tourist-menu li a:focus{
-    background: #e6e6e8;
 }
 
 
-
-/*TABLE TOURSE*/
-
-.glyphicon{
-    margin-right: 5px;
+#correct-button{
+    padding-right: 0;
+}
+#correct-button button{
+    width: 100%;
+    height: 45px;
+    margin-top: -5px;
+    background: transparent;
+    border: 2px solid #595959;
+    text-transform: uppercase;
+    color: #595959;
 }
 
+#correct-button button:hover{
+    background: #ffbf51;
+    color: #fff;
+    border-color: #ffbf51;
+}
 
-/*_________________________List______________________________*/
-/*_________________________List______________________________*/
-/*_________________________List______________________________*/
-/*_________________________List______________________________*/
+/*_________________________tenderBoard______________________________*/
+/*_________________________tenderBoard______________________________*/
+/*_________________________tenderBoard______________________________*/
+/*_________________________tenderBoard______________________________*/
 
 /*ВЕРХНИЙ ФИЛЬТР*/
 
 
-.tender-list-select{
-    margin-top: 100px;
+.tender-board{
+    margin-top: 20px;
+    border-top: 2px solid #d0d0d0;
+    box-shadow: inset 0 0 6px 0 rgba(0,0,0,0.3);
+    width: 100%;
+    border-bottom: 1px solid #ededed;
+    background: #fcfcfc;
 }
 
 .tender-list-select > *{
@@ -925,6 +1130,29 @@ margin-top: 100px;
 .tender-list-select .col-xs-2{
     padding-left: 0;
 }
+
+.tender-list-select .col-xs-2 select{
+    background: transparent;
+    border: 1px solid #8e8e8e;
+    color: #8e8e8e;
+    border-radius: 3px;
+    -webkit-appearance: none;
+    background-image: url('../images/arrow-input.png');
+    background-position: right center;
+    background-repeat: no-repeat;
+    line-height: 1em;
+    /* for FF */
+    -moz-appearance: none;
+    text-indent: 0.01px; 
+    text-overflow: '';
+    /* for IE */
+    -ms-appearance: none;
+    appearance: none!important;
+}
+.tender-list-select .col-xs-2 select option >*{
+    color: #8e8e8e;
+}
+
 
 .tender-list-select .select {
     width: 80%;
@@ -952,7 +1180,7 @@ margin-top: 100px;
     background: #8e8e8e;
     text-align: center;
     padding-top: 12px;
-    font:12px/1 Arial,sans-serif;
+    font:12px/1 HelveticaLight,sans-serif;
     color:#fff;
     text-decoration: none;
     font-weight: 600;
@@ -979,10 +1207,11 @@ margin-top: 100px;
 .tender-list-zag{
     margin-top: 70px;
     padding-bottom: 15px;
-    border-bottom: 1px solid #000;
-    font:14px/1 Arial,sans-serif;
+    border-bottom: 2px solid #131313;
+    font:14px/1 HelveticaLight,sans-serif;
     font-weight: bold;
     color: #131313;
+    text-transform: uppercase;
 }
 
 .tender-list-zag .col-xs-2{
@@ -997,7 +1226,7 @@ margin-top: 100px;
     font-size: 14px;
     padding-bottom: 20px;
     padding-right: 0;
-    border-bottom: 1px solid #8e8e8e;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .tender-list-generate .col-xs-2{
@@ -1007,7 +1236,6 @@ margin-top: 100px;
 .tender-list-generate .col-xs-2 p{
     padding-top: 12px;
 }
-
 
 .tender-list-button-coment{
     padding-right: 0;
@@ -1021,7 +1249,7 @@ margin-top: 100px;
     background: #fff;
     text-align: center;
     padding-top: 12px;
-    font:12px/1 Arial,sans-serif;
+    font:12px/1 HelveticaLight,sans-serif;
     color:#8e8e8e;
     text-decoration: none;
     margin-right: 0;
@@ -1085,25 +1313,26 @@ margin-top: 100px;
 
 
 
-/*_________________________otziviPoTenderam______________________________*/
-/*_________________________otziviPoTenderam______________________________*/
-/*_________________________otziviPoTenderam______________________________*/
-/*_________________________otziviPoTenderam______________________________*/
+/*_________________________kabinetAgenta______________________________*/
+/*_________________________kabinetAgenta______________________________*/
+/*_________________________kabinetAgenta______________________________*/
+/*_________________________kabinetAgenta______________________________*/
 
 
 .otzivi-tender{
     position: absolute; 
     width: 100%; /* Ширина слоя в пикселах */
     top: 70px; /* Положение слоя от верхнего края */
-    background: url(../images/bg-image2.png) #ebebeb no-repeat 0px 0 ;
-    background-size:cover;
+    background: url(../images/city-bg.jpg) #ebebeb no-repeat 0px 0 ;
+    background-size:100% 100%;
     height: 185px;
     text-align: center;
     transition: bottom .2s linear;
     z-index: 1;
     color: #fff;
-    font:30px/1 Arial,sans-serif;
+    font:30px/1 HelveticaLight,sans-serif;
     text-transform: uppercase;
+    min-width: 1000px;
     
 }
 
@@ -1130,7 +1359,7 @@ margin-top: 100px;
 
 
 .otzivi-tender-head-bottom{
-    margin-top: 185px;
+    margin-top: 255px;
     background: #ebebeb;
     height: 65px;
 }
@@ -1140,16 +1369,20 @@ margin-top: 100px;
     height: 65px;
 }
 
-
+.tender-info-left div{
+    margin-left: 25px;
+}
 .tender-info-left, .tender-info-right{
     padding: 0;
     padding-top: 25px;
     color: #595959;
-    font:16px/1 Arial,sans-serif;
+    font:16px/1 HelveticaLight,sans-serif;
+    text-transform: uppercase;
 }
 
 .tender-info-right div{
     float: right;
+    margin-right: 25px;
 }
 
 
@@ -1159,10 +1392,11 @@ margin-top: 100px;
 .tender-otzivi-zag{
     margin-top: 70px;
     padding-bottom: 15px;
-    border-bottom: 1px solid #000;
-    font:14px/1 Arial,sans-serif;
+    border-bottom: 1px solid #8e8e8e;
+    font:14px/1 HelveticaLight,sans-serif;
     font-weight: bold;
-    color: #131313;
+    color: #131313; 
+    text-transform: uppercase;
 }
 
 .tender-otzivi-zag .col-xs-2{
@@ -1179,6 +1413,7 @@ margin-top: 100px;
     padding-bottom: 20px;
     padding-right: 0;
     border-bottom: 1px solid #8e8e8e;
+    text-transform: uppercase;
 }
 
 .tender-otzivi-generate .col-xs-2{
@@ -1203,63 +1438,313 @@ margin-top: 100px;
 }
 
 
+
+/*_________________________tenderTarif______________________________*/
+/*_________________________tenderTarif______________________________*/
+/*_________________________tenderTarif______________________________*/
+/*_________________________tenderTarif______________________________*/
+
+
+
+.tarif-tender{
+    position: absolute; 
+    width: 100%; /* Ширина слоя в пикселах */
+    top: 70px; /* Положение слоя от верхнего края */
+    background: url(https://sadelserradilmener.files.wordpress.com/2010/10/jersey-city-panorama-lq.jpg) #ebebeb no-repeat;
+    background-size:100% 100%;
+    height: 185px;
+    text-align: center;
+    transition: bottom .2s linear;
+    z-index: 1;
+    color: #fff;
+    font:30px/1 HelveticaLight,sans-serif;
+    text-transform: uppercase;
+    
+}
+
+.tarif-tender-head-top div{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    max-width:35%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+}
+
+
+.tarif-tender:after{
+    content:"";
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    background:rgba(0,0,0,.5);
+}
+
+
+
+.tarif-tender-head-bottom{
+    margin-top: 185px;
+    padding-top: 30px;
+    background: #ebebeb;
+    height: 65px;
+}
+
+
+
+.tarif-tender-list{
+    position: relative;
+    text-align: center;
+    margin-top: 300px;
+    overflow: hidden;
+    padding-top: 30px;
+}
+
+.tarif{
+    width: 170px;
+    border: 2px solid #ebebeb;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+    transition:  .3s linear;
+}
+
+.tarif:hover{
+    margin-top: -30px;
+    transition:  .3s linear;
+}
+
+
+.tarif .tarif-head{
+    display: block;
+    background: #f9f9f9;
+    padding: 25px 0;
+    text-transform: uppercase;
+    color: #757575;
+    font:16px/1 HelveticaLight,sans-serif;
+}
+.tarif .tarif-body{
+    margin: 0 10px;
+}
+.tarif .tarif-body .price{
+    padding: 30px 0;
+    color: #fec053;
+    font:36px/1 HelveticaLight,sans-serif;
+    line-height: 20px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.tarif .tarif-body .price .dollar{
+    vertical-align: super;
+    font-size: 18px;
+    
+}
+.tarif .tarif-body .text{
+    color: #d1d1d1;
+    font:18px/1 HelveticaLight,sans-serif;
+}
+
+.tarif .tarif-body .otzivi{
+    padding: 30px 0;
+    color: #666666;
+    line-height: 25px;
+    font-weight: bold;
+}
+
+.tarif .tarif-body .otzivi i{
+    margin-right: 5px;
+}
+
+.tarif .tarif-body button[type=submit]{
+    margin-bottom: 25px;
+    width: 100%;
+    padding: 15px 0;
+    background: transparent;
+    border: 1px solid #ebebeb;
+    border-radius: 5px;
+    color: #7a7a7a;
+    text-transform: uppercase;
+    font:14px/1 HelveticaLight,sans-serif;
+}
+.tarif .tarif-body button[type=submit]:hover{
+    background: #ebebeb;
+}
+
+
+/*_________________________FOOTER______________________________*/
+/*_________________________FOOTER______________________________*/
+/*_________________________FOOTER______________________________*/
+/*_________________________FOOTER______________________________*/
+
+.footer{
+    position: fixed;
+    background: #464646;
+    display: block;
+    overflow: hidden;
+    min-height: 75px;
+    width: 100%;
+    bottom: 0;
+}
+.futer-ul{
+    float: left;
+}
+.futer-ul li{
+    float: left;
+    list-style-type: none;
+    margin: 5px 0;
+}
+.footer-content-left ul{
+    margin-top: 25px;
+}
+.footer-content-left ul li{
+    margin-right: 10px;
+}
+.footer-content-left ul li a{
+    color: #959595;
+    text-decoration: none;
+    font:12px/1 HelveticaLight,sans-serif;
+    text-transform: uppercase;    
+}
+.footer-content-left ul li a:hover{
+    color: #7c7a7a;
+}
+.footer-content-socials ul{
+    float: right;
+    margin-right: 30px;
+    margin-top: 20px;
+}
+.footer-content-socials ul li{
+    margin-left: 15px;
+}
+.footer-content-socials ul li i{
+    color: #cdcdcd;
+}
+.footer-content-socials ul li i:hover{
+        color: #7c7a7a;
+}
+
+
+
+
 /*_________________________MOBILE VERSION______________________________*/
 /*_________________________MOBILE VERSION______________________________*/
 /*_________________________MOBILE VERSION______________________________*/
 /*_________________________MOBILE VERSION______________________________*/
 
-@media screen and (max-width: 1120px){
+
+
+/*INDEX.HTML*/
+
+
+
+@media all and (max-width: 1120px){
     .logo{left: 15px;}
     .header-menu{left: 175px;}
     .log-reg{right: 15px;}
 }
 
 
-@media screen and (max-width: 880px){
+@media all and (max-width: 880px){
     
 /*ТЕНДЕР МЕНЮ*/
     .logo{left: 15px;}
+    
+    .header{
+        position: fixed; 
+        width: 100%;
+        padding: 10px; 
+        background: #fff;
+        z-index: 9999;
+    }    
     .header-menu{left: 175px;}
-    
-    
-    
-    .tender-menu{padding-top: 10px;}
+    .tender-menu{padding-top: 10px; overflow:visible; opacity: 1;}
     .tender-menu .col-xs-2{width: 100%; text-align: center; margin: 10px 0 0 0; padding: 0;}
-    .center-layer.active{ bottom:450px;}
-    .tender-menu.active{ opacity: 1; height:450px; }
+    
+    .center-layer.active{ bottom: 0; }
+    .tender-menu.active{height: 0; }
+    
     .next-button{ display:inline-block;}
-   #reviewMan-input, #reviewStars-input{ margin-top: 0;  left:50%; transform: translateX(-50%); height: 25px;}
+    
+    
+   .tender-menu #reviewMan-input, #reviewStars-input{ margin-top: 0;  left:50%; transform: translateX(-50%); height: 25px;}
+    
+    
     .tender-menu .col-xs-2 p{ text-decoration: underline; margin: 0; padding: 0;}
-    .tender-menu #people p, .tender-menu #stars p,  .tender-menu #budjet p{margin-bottom: 0;}
-    .tender-menu #budjet input, .tender-menu #country input{margin-top: 0;}
-    .tender-menu .input{width: 150px; margin-left: 0;}
+    .tender-menu #people p, .tender-menu #stars p,  .tender-menu #budget p{margin-bottom: 0;}
+    .tender-menu #budget input, .tender-menu #country input{margin-top: 0;}
+    .tender-menu .input{width: 150px; margin-left: 0; }
     .country .input { margin-top: 0;}
     
+    .next-button{margin: 10px;}
+    
+    .center-layer-title{ font-size: 18px;}
+    .center-layer-text{display: block; font-size: 14px; line-height: 1.2; margin-top: 15px; width: 100%;}
+    .view-tenders{ margin-top: 15px; padding: 10px 15px;}
+    .center-layer-head{max-width:100%; }
 
+    
+    
+    
+    
     
     .center-layer-title{ font-size: 18px;}
     .center-layer-text{display: block; font-size: 14px; line-height: 1.2; margin-top: 15px; width: 100%;}
     .view-tenders{ margin-top: 15px; padding: 10px 15px;}
     .center-layer-head{max-width:100%; }
     
-
+    
     
 /*MENU*/
-    
+    .modal-menu.active{overflow-x: scroll;}
     .content-menu{margin-top: 10px;}
     .navigation-menu, .contacts-menu{ width: 100%; margin: 0;  padding: 0;}
     .navigation ul{ width: 100%; margin: 0; padding: 0; height: auto;}
-    .navigation li{margin: 0 auto;}
-    .navigation li a { padding: 20px;}
-    .contacts{padding: 0; margin-top: 70px;  float: none;}
-    .hot-line-number{display: block; margin: 0 auto; margin-bottom: 50px;}
-    .button-zvonok {display: block; margin: 0 auto; margin-bottom: 25px;}
-    .contacts input[type=text]{display: block; margin: 0 auto; margin-bottom: 25px;}
-    .button-send{display: block; margin: 0 auto;}
+    .navigation li{margin: 0 auto; width: 0px; width: 60%;}
+    .navigation li a { padding: 10px 0;}
+    .contacts{padding: 0; margin-top: 50px;  float: none;}
+    .hot-line-number{display: block; margin: 0 auto; margin-bottom: 0px;}
+    .button-zvonok {display: block; margin: 0 auto; margin-bottom: 25px; display: none;}
+    .contacts input[type=text]{display: block; margin: 0 auto; margin-bottom: 25px; display: none;}
+    .contacts-menu{height: 200px;}
+    
+    .button-send{display: block; margin: 0 auto; display: none;}
+    .social ul li{padding-top: 20px;}
 
 }
 
-@media screen and (max-width: 450px){
+@media all and (max-width: 450px){
     .header .logo{display: none;}
     .header-menu{left: 15px;}
+}
+
+
+
+
+/*formRegistration.HTML*/
+@media screen and (max-width: 960px){
+    .form-registration-tourist{width: 100%;} 
+    .form-registration-agent{width: 100%; overflow-y: scroll;}
+}
+
+
+@media screen and (max-width: 600px){
+    .form-group .form-control-registration{width: 75%;}
+    .button-registration input[type=button]{width: 70%;}
+    .registration-form .title-registration{font-size: 24px;}
+}
+
+/*tenderTarif.html*/
+@media screen and (max-width: 1080px){
+    .tarif-plan{width: 180px; margin-top: 10px;}
+    .tarif-tender-list .col-xs-1{display: none;} 
+}
+@media screen and (max-width: 920px){
+    .tarif:hover{margin-top: 0;}
+}
+@media screen and (max-width: 560px){
+    .tarif-plan{width: 50%;}
+    #tarif-plan-unlimited{width: 100%;}
+}
+@media screen and (max-width: 400px){
+    .tarif-plan{width: 100%;}
 }

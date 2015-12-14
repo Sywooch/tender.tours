@@ -4,26 +4,15 @@ namespace frontend\models;
 
 use Yii;
 
-/**
- * @property string $USERNAME
- * @property string $EMAIL
- * @property integer $TYPE
- * @property string $CREATED_AT
- */
 class RegistrationForm extends Model {
-
-    // 2. Создать паблик свойства по таблице user_info и user
-    // Только те поля, которые будут в формах регистрации (турист, агент, тендер)
-    // Этих полей должно быть достаточно, чтобы заполнть таблицы user и user_info
-    public $username; // user_info
-    public $email;    // user
-    public $company;  // user_info
-    public $phone;    // user_info
-    public $faddress; // user_info
-    public $jaddres;  // user_info
-    public $edrpou;   // user_info
-
-    // 3. Заполнить правила по паблик полям по максимуму
+    public $username;
+    public $email;
+    public $company;
+    public $phone;
+    public $faddress;
+    public $jaddres;
+    public $edrpou; // ADD RULES
+    public $edrpou_scan;
 
     public function rules() {
         return [

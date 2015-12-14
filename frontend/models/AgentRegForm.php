@@ -4,7 +4,6 @@ namespace frontend\models;
 
 use Yii;
 use yii\base\Model;
-use yii\db\Connection;
 
 /**
  * @property string $USERNAME
@@ -12,17 +11,13 @@ use yii\db\Connection;
  * @property integer $TYPE
  * @property string $CREATED_AT
  */
-class AgentRegForm extends Model {   
-    
-    // 2. Создать паблик свойства по таблице user_info и user
-    // Только те поля, которые будут в формах регистрации (турист, агент, тендер)
-    // Этих полей должно быть достаточно, чтобы заполнть таблицы user и user_info
-    public $company;    // agent
-    public $phone;  // agent
-    public $faddress;  // agent
-    public $jaddress;  // agent
-    public $edrpou;  // agent
-    public $edrpouscan;  // agent
+class AgentRegForm extends Model {
+    public $company;
+    public $phone;
+    public $faddress;
+    public $jaddress;
+    public $edrpou;
+    public $edrpouscan;
 
     public function rules() {
         return [
@@ -30,10 +25,10 @@ class AgentRegForm extends Model {
             ['phone', 'string', 'max' => 20],
         ];
     }
-
-    public function attributeLabels() {
-        return [
-            'phone' => Yii::t('app', 'Телефон'),
-        ];
-    }
+//
+//    public function attributeLabels() {
+//        return [
+//            'phone' => Yii::t('app', 'Телефон'),
+//        ];
+//    }
 }

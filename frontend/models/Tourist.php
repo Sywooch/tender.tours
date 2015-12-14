@@ -2,11 +2,8 @@
 
 namespace frontend\models;
 
-use Yii;
 use \yii\db\ActiveRecord;
-use \yii\web\IdentityInterface;
-use \yii\behaviors\TimestampBehavior;
-
+//use \yii\web\IdentityInterface;
 
 class Tourist extends ActiveRecord //implements IdentityInterface
 {
@@ -14,14 +11,6 @@ class Tourist extends ActiveRecord //implements IdentityInterface
     public static function tableName()
     {
         return '{{%tourist}}';
-    }
-    
-    public function rules()
-    {
-        return [
-            ['PHONE', 'required'],          
-            ['PHONE', 'string', 'max' => 20],
-        ];
     }
 
     public static function findIdentity($id)

@@ -12,10 +12,7 @@ class LoginForm extends Model {
     public $password;
     
     private $_user;
-    
-    /**
-     * @inheritdoc
-     */
+
     public function rules() {
         return [
             [['username', 'password'], 'required'],
@@ -43,8 +40,11 @@ class LoginForm extends Model {
     
     public function login()
     {
-        if ($this->validate()) {            
-            return Yii::$app->user->login($this->getUser(), 3600 * 24 * 30);
+        if ($this->validate()) {
+            $user = $this->getUser();
+            Yii::$app->session->open();
+            Yii::$app->session->set('user', $user);
+            return Yii::$app->user->login($user, 3600 * 24 * 30);
         } else {
             return false;
         }

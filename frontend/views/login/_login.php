@@ -11,7 +11,7 @@ $emailHasError = (/* if */ $model->hasErrors('password')) ? 'has-error' : /* els
 
 <div class="login">
     <h1>Войти в личный кабинет</h1>
-    <form method="post" action="/login" name="LoginForm" id="login">
+    <form method="post" action="/login" name="LoginForm" id="LoginForm">
         <input type="hidden" name="_csrf" value="<?=Yii::$app->request->getCsrfToken()?>" />
         
         <div class="form-group <?= $nameHasError ?> has-feedback">

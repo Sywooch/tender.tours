@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>MAIN</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/new_style.css">
+    <link rel="stylesheet" href="css/checkbox.css">
+    <link rel="stylesheet" href="css/style-raiting.css">
+    <link rel="stylesheet" href="css/style-raiting-man.css">
+    <link rel="stylesheet" href="css/calendar-ui.css">
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body>  
+   
+<!--   
+<header class="header main-container">
+    <div class="logo">
+        <a href="">tender.tours</a>
+    </div>
+    <div id="header-menu" class="header-menu glyphicon glyphicon-align-justify"></div>
+    <div class="log-reg">
+        <span id="log" class="account">Вход</span>
+        <span id="reg" class="account">Регистрация</span>
+    </div>
+</header>-->
+
+<div class="log-reg-form main-container">
+    <ul class="log-reg-links col-xs-3">
+        <li id="reg_agent_btn" value="Агент" class="agent">Агент</li>
+        <li id="reg_tourist_btn" value="Турист" class="tourist">Турист</li>
+    </ul>
+</div>
+<div class="login-form-container main-container">
+    <div class="login-form col-xs-3">
+        <form action="">
+            <input type="text" placeholder="Логин"><br>
+            <input type="text" placeholder="Пароль"><br>
+            <button>Войти</button>
+        </form>
+    </div>
+</div>                                                     
+                                                        
+<div id="menu" class="modal-menu">
+    <div class="content-menu main-container">
+        <div id="navigation-menu" class="navigation-menu col-xs-6">
+            <nav class="navigation">
+                <ul>
+                    <li><a href="#">туристам</a></li>
+                    <li><a href="#">турагентам</a></li>
+                    <li><a href="#">просмотреть тендера</a></li>
+                    <li><a href="#">тарифы</a></li>
+                    <li><a href="#">о сервисе</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="contacts-menu" class="contacts-menu col-xs-6">                        
+            <div class="contacts">
+                <div class="hot-line-number"><p>050 837 39 53<br><span>Горячая линия</span></p></div>
+                <div class="button-zvonok"><a id="zvonok" class="zvonok" href="#">Заказать звонок</a></div>
+                <p><input type="text" name="client-number" value="" placeholder="Введите номер"></p>
+                <div class="button-send"><a id="send" class="sebd" href="#">Отправить</a></div>
+            </div>
+        </div>
+        <div id="social" class=" social col-xs-12">
+            <div class="social">
+                <ul>
+                    <li><a href="#"><i class="fa fa-vk fa-2x"></i></a></li>
+                    <li><a href="#"><i class="fa fa-facebook fa-2x"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus fa-2x"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter fa-2x"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+<div id="center-layer" class="center-layer">
+    <div id="center-layer-head" class="center-layer-head">
+        <div class="center-layer-text">Проект My Tender представляет собой платформу, на которой взаимодействуют две категории аудитории.</div>
+        <a class="view-tenders" href="list.html">ПОСМОТРЕТЬ ТЕНДЕРА</a>
+        <a class="view-tenders" id="publication" href="#">размесить тендер</a>
+    </div>
+</div>
+
+
+    <div id="registration" class="registration row">
+       <i id="registration-close" class="fa fa-times fa-2x"></i>
+       <div class="main-container row">
+           <div class="form-registration">
+            <?= Html::errorSummary($model, ['class' => 'errors', 'style' => 'color: red;']) ?>
+            <form name="TestRegistrationForm" action="/test/registration" autocomplete="off">
+                <p>Регистрация</p>
+                <input type="hidden" name="_csrf" value="<?= Yii::$app->request->getCsrfToken() ?>" />
+                <input type="hidden" name="type" value="<?= $model->type ?>" />
+
+                <input type="text" name="name" value="<?= $model->name ?>"  placeholder="Ваше имя"><i id="fa-name" class="fa fa-check fa-lg"></i><br>
+
+                <input id="email" type="text" name="email" value="<?= $model->email ?>" placeholder="Ваш Email"><i id="fa-email" class="fa fa-check fa-lg"></i><br>
+
+                <input type="text" name="phone" value="<?= $model->phone ?>" placeholder="Ваш телефон"><i id="fa-phone" class="fa fa-check fa-lg"></i><br>
+
+                <input type="submit" value="Зарегистрироваться">
+            </form>
+           </div>
+        </div>
+    </div>
+
+<div id="tender-menu" class="registration registration-tender">
+   <i id="tender-menu-close" class="fa fa-times fa-2x"></i>
+       <div class="main-container row">
+           <div id="form-registration-tourist-tender" class="form-registration form-registration-tender">
+            <form autocomplete="off" id="form-registration-tender">
+                <p>Регистрация</p>
+                <input type="text" name="country_from" placeholder="Страна откуда"><i class="fa fa-check fa-lg"></i><br>
+
+                <input type="text" name="email" placeholder="Горд откуда"><i class="fa fa-check fa-lg"></i><br>
+
+                <input type="text" name="country_to"  placeholder="Страна куда"><i class="fa fa-check fa-lg"></i><br>
+                
+                <input type="text" name="city_to"  placeholder="Город куда"><i class="fa fa-check fa-lg"></i><br>
+                
+                <input type="text" id="datepicker1" placeholder="Дата заезда">
+                    <div id="checked-input" class="checked-input-date-to">
+                       <span>Любое</span>
+                        <input id="check-1" type="checkbox" name="checked"/>
+                        <label title="gorgeous" for="check-1"></label>
+                    </div>
+                   
+                <input type="text" id="datepicker2" placeholder="Дата выезда">
+                     <div id="checked-input" class="checked-input-date-from">
+                       <span>Любое</span>
+                        <input id="check-2" type="checkbox" name="checked"/>
+                        <label title="gorgeous" for="check-2"></label>
+                    </div>
+
+                <div id="reviewStars-input">
+                    <div class="title-raiting">Звезды:</div>
+                    <input id="star-4" type="radio" name="reviewStars"/>
+                    <label title="gorgeous" for="star-4"></label>
+
+                    <input id="star-3" type="radio" name="reviewStars"/>
+                    <label title="good" for="star-3"></label>
+
+                    <input id="star-2" type="radio" name="reviewStars"/>
+                    <label title="regular" for="star-2"></label>
+
+                    <input id="star-1" type="radio" name="reviewStars"/>
+                    <label title="poor" for="star-1"></label>
+
+                    <input id="star-0" type="radio" name="reviewStars"/>
+                    <label title="bad" for="star-0"></label>  
+                </div>
+                  <div id="checked-input" class="checked-input-stars">
+                            <span>Любое</span>
+                            <input id="check-3" type="checkbox" name="checked"/>
+                            <label title="gorgeous" for="check-3"></label>
+                        </div>
+                   
+                <div id="reviewMan-input">
+                    <div class="title-raiting">Людей:</div>
+                    <input id="man-4" type="radio" name="reviewMan"/>
+                    <label title="gorgeous" for="man-4"></label>
+
+                    <input id="man-3" type="radio" name="reviewMan"/>
+                    <label title="good" for="man-3"></label>
+
+                    <input id="man-2" type="radio" name="reviewMan"/>
+                    <label title="regular" for="man-2"></label>
+
+                    <input id="man-1" type="radio" name="reviewMan"/>
+                    <label title="poor" for="man-1"></label>
+
+                    <input id="man-0" type="radio" name="reviewMan"/>
+                    <label title="bad" for="man-0"></label>
+                </div>
+                
+                <input type="text" name="budget"  placeholder="бюджет"><i class="fa fa-check fa-lg"></i><br>
+                
+                <input type="text" name="feed"  placeholder="Питание"><i class="fa fa-check fa-lg"></i><br>
+                
+                <input type="text" name="transport"  placeholder="Транспорт"><i class="fa fa-check fa-lg"></i><br>
+
+                <input id="next-step-2-registration" type="submit" value="Продолжить">
+            </form>        
+           </div>
+           
+           <div id="form-registration-tourist-after-tender" class="form-registration">
+            <?= Html::errorSummary($model, ['class' => 'errors', 'style' => 'color: red;']) ?>
+            <form name="TestRegistrationForm" action="/test/registration" autocomplete="off">
+                <p>Регистрация</p>
+                <input type="hidden" name="_csrf" value="<?= Yii::$app->request->getCsrfToken() ?>" />
+                <input type="hidden" name="type" value="<?= $model->type ?>" />
+
+                <input type="text" name="name" value="<?= $model->name ?>"  placeholder="Ваше имя"><i id="fa-name" class="fa fa-check fa-lg"></i><br>
+
+                <input id="email" type="text" name="email" value="<?= $model->email ?>" placeholder="Ваш Email"><i id="fa-email" class="fa fa-check fa-lg"></i><br>
+
+                <input type="text" name="phone" value="<?= $model->phone ?>" placeholder="Ваш телефон"><i id="fa-phone" class="fa fa-check fa-lg"></i><br>
+
+                <input type="submit" value="Зарегистрироваться">
+            </form>
+           </div>
+           
+           
+        </div>
+</div>  
+
+ 
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
