@@ -116,9 +116,11 @@ body{
     display: none;
 }
 
-.log-reg-links li{
+.log-reg-links input{
     padding: 20px 0;
-    list-style-type: none;
+    width: 100%;
+    background: #fff;
+    border: none;
     cursor: pointer;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -128,7 +130,7 @@ body{
     letter-spacing: 2px;
 }
 
-.log-reg-links li:hover{
+.log-reg-links input:hover{
 /*    background: #f2f2f2;*/
     background: #c69c6d; 
 }
@@ -170,7 +172,7 @@ body{
     width: 70%;
     text-align: left;
     border-bottom: 1px solid #000;
-    font:16px/1 HelveticaLight, sans-serif;
+    font: HelveticaLight, sans-serif;
     outline: none;
 }
 
@@ -195,7 +197,7 @@ body{
     position: absolute; 
     width: 100%; 
     top: 70px; 
-    background: url(../images/bg-image-min.png) no-repeat 0 0 ;
+    background: url(/images/background.jpg) no-repeat 0 0 ;
     background-size: cover;
     bottom: 0;
     text-align: center;
@@ -271,6 +273,8 @@ body{
     transition:  .6s linear;
     margin: 0 auto;
     overflow-x: auto;
+    display: none;
+    
 }
 
 #tender-menu{
@@ -279,7 +283,7 @@ body{
 
 .registration.active{
     opacity: 0.95;
-    top:70px;
+    display: block;
 }
 
 #registration .fa-times, #tender-menu .fa-times{
@@ -295,7 +299,7 @@ body{
 /*REGISTRATION*/
 
 .form-registration{
-    position: absolute;
+    position: relative;
     left: 50%;
 /*    top:50%;    */
     transform: translate(-50%,50%);
@@ -347,7 +351,7 @@ body{
     width: 100%;
     text-align: left;
     border-bottom: 1px solid #acacac;
-    font:16px/1 HelveticaLight, sans-serif;
+    font: HelveticaLight, sans-serif;
     outline: none;
 }
 
@@ -499,7 +503,7 @@ margin-top: 100px;
 	height:25px;
 	margin-left:-15px;
 	content:'';
-	background:url(../images/phone.png) no-repeat ;
+	background:url(/images/phone.png) no-repeat ;
 }
 
 

@@ -58,7 +58,7 @@ AppAsset::register($this);
                 </form>
             </div>
         </div>           
-        <div id="registration-registration" class="registration">afasfasf</div>
+        <div id="registration" class="registration"></div>
 
         <div id="menu" class="modal-menu">
             <div class="content-menu main-container">

@@ -3,10 +3,8 @@
 use yii\helpers\Html;
 ?>
 
-
-    <i id="registration-close" class="fa fa-times fa-2x"></i>
-    <div class="main-container row">
-        <div class="form-registration">
+    
+<!--        <div class="form-registration">
             <?= Html::errorSummary($model, ['class' => 'errors', 'style' => 'color: red;']) ?>
             <form name="TestRegistrationForm" action="/index/registration" autocomplete="off">
                 <p>Регистрация</p>
@@ -21,5 +19,4 @@ use yii\helpers\Html;
 
                 <input type="submit" value="Зарегистрироваться">
             </form>
-        </div>
-    </div>
+        </div>-->

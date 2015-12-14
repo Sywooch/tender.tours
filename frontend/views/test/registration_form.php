@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 ?>
 
-<div id="registration" class="registration row">
+
     <i id="registration-close" class="fa fa-times fa-2x"></i>
     <div class="main-container row">
         <div class="form-registration">
@@ -23,4 +23,3 @@ use yii\helpers\Html;
             </form>
         </div>
     </div>
-</div>
