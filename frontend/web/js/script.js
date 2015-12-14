@@ -82,24 +82,15 @@ $(document).ready(function(){
                 
 //    регистрация агента
             
-    $("#reg_tourist_btn").click(function () {
-        document.getElementById("registration").classList.toggle("active");
-        loadRegForm('tourist');
-        $("#reg_agent_btn").click(function () {
-            document.getElementById("registration").classList.toggle("active");
-            loadRegForm('agent');
-        });
-    });
-
-    $("#reg_agent_btn").click(function () {
-        document.getElementById("registration").classList.toggle("active");
-        loadRegForm('agent');
-        $("#reg_tourist_btn").click(function () {
-            document.getElementById("registration").classList.toggle("active");
-            loadRegForm('tourist');
-
-        });
-    });
+              $("#reg_tourist_btn").click(function(){
+                document.getElementById("registration").classList.toggle("active");
+                loadRegForm('tourist');
+              });
+              
+              $("#reg_agent_btn").click(function(){
+                document.getElementById("registration").classList.toggle("active");
+                loadRegForm('agent');
+              });
                 
     
             $("#next-step-2-registration").click(function(){
